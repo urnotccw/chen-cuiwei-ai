@@ -358,13 +358,14 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .cat-search-row span, .cat-search-row button { padding: 8px; border: 1px solid #dfe6da; border-radius: 9px; background: #fff; color: #8b9486; font-size: 7px; text-align: left; }
 .cat-search-row button { color: #3d4938; font-weight: 700; }
 .cat-inventory-list { display: grid; gap: 7px; }
-.cat-inventory-list article { display: grid; grid-template-columns: 44px 1fr auto; gap: 9px; align-items: center; padding: 9px; border-radius: 13px; background: #fff; box-shadow: 0 4px 14px rgba(54,79,44,.06); cursor: pointer; transition: transform .16s ease, box-shadow .16s ease; }
-.cat-inventory-list article:hover { box-shadow: 0 7px 20px rgba(54,79,44,.13); transform: translateY(-1px); }
-.cat-inventory-list article > img { width: 44px; height: 44px; object-fit: contain; border-radius: 9px; background: #f7f9f5; }
-.cat-inventory-list article > div:nth-child(2) { display: grid; gap: 2px; min-width: 0; }
-.cat-inventory-list article strong { overflow: hidden; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
-.cat-inventory-list article small { color: #7b8576; font-size: 6.5px; }
-.cat-inventory-list article span { color: var(--cat-green); font-size: 7px; font-weight: 800; }
+.cat-inventory-item { display: grid; grid-template-columns: 44px 1fr auto; gap: 9px; align-items: center; padding: 9px; border-radius: 13px; background: #fff; box-shadow: 0 4px 14px rgba(54,79,44,.06); cursor: pointer; transition: transform .16s ease, box-shadow .16s ease; }
+.cat-inventory-item:hover { box-shadow: 0 7px 20px rgba(54,79,44,.13); transform: translateY(-1px); }
+.cat-inventory-item > img { width: 44px; height: 44px; object-fit: contain; border-radius: 9px; background: #f7f9f5; }
+.cat-inventory-item > div:nth-child(2) { display: grid; gap: 2px; min-width: 0; }
+.cat-inventory-item strong { overflow: hidden; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.cat-inventory-item small { color: #7b8576; font-size: 6.5px; }
+.cat-inventory-item span { color: var(--cat-green); font-size: 7px; font-weight: 800; }
+.cat-restock-badge { display: inline-block; margin-left: 5px; padding: 2px 4px; color: #9a3f2f; border-radius: 999px; background: #fff0eb; font-size: 5.5px; font-style: normal; }
 .cat-stepper { display: flex !important; align-items: center; gap: 3px !important; }
 .cat-stepper button { display: grid; place-items: center; width: 19px; height: 19px; border-radius: 6px; background: #edf5e6; font-size: 12px; }
 .cat-stepper b { min-width: 12px; font-size: 8px; text-align: center; }
@@ -386,6 +387,7 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .cat-med-card > p { display: flex; justify-content: space-between; margin: 7px 0 10px; color: #6b7566; font-size: 7px; }
 .cat-med-card > button { width: 100%; padding: 9px; color: #fff; border-radius: 9px; background: var(--cat-coral); font-size: 8px; font-weight: 800; }
 .cat-med-card > button:disabled { background: #97a092; cursor: default; }
+.cat-med-list { display: grid; gap: 8px; }
 .cat-med-tip { display: grid; grid-template-columns: 27px 1fr; gap: 8px; align-items: center; padding: 11px; }
 .cat-med-tip img { width: 23px; }
 .cat-med-tip span { display: grid; gap: 3px; }
@@ -431,6 +433,16 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .cat-edit-form label { display: grid; gap: 5px; color: #667060; font-size: 7px; font-weight: 800; }
 .cat-edit-form input, .cat-edit-form select, .cat-edit-form textarea { width: 100%; min-width: 0; padding: 9px 10px; color: #1d251a; border: 1px solid #dce5d7; border-radius: 9px; outline: 0; background: #fff; font: 500 9px/1.35 inherit; resize: none; }
 .cat-edit-form input:focus, .cat-edit-form select:focus, .cat-edit-form textarea:focus { border-color: #91bd61; box-shadow: 0 0 0 2px rgba(196,240,103,.28); }
+.cat-check-row { display: flex !important; grid-template-columns: 17px 1fr; align-items: center; gap: 7px !important; padding: 9px 10px; border: 1px solid #dce5d7; border-radius: 9px; background: #fff; }
+.cat-check-row input { width: 14px !important; height: 14px; padding: 0 !important; accent-color: #76a346; }
+.cat-check-row span { color: #35412f; font-size: 8px; }
+.cat-upload-field { position: relative; display: grid !important; grid-template-columns: 62px 1fr; grid-template-rows: auto 1fr; column-gap: 12px !important; align-items: center; min-height: 72px; padding: 9px; border: 1px dashed #cbd8c4; border-radius: 11px; background: #f5faef; cursor: pointer; }
+.cat-upload-field > span { grid-column: 2; align-self: end; color: #35412f; font-size: 8px; }
+.cat-upload-field input { position: absolute; width: 1px !important; height: 1px; padding: 0 !important; opacity: 0; }
+.cat-upload-field > i { grid-column: 2; align-self: start; color: var(--cat-green); font-size: 7px; font-style: normal; }
+.cat-upload-preview, .cat-upload-placeholder { grid-column: 1; grid-row: 1 / 3; display: grid; place-items: center; width: 62px; height: 62px; object-fit: cover; border-radius: 10px; background: #e9f2e1; }
+.cat-upload-preview.is-avatar { border-radius: 50%; }
+.cat-upload-placeholder { color: #73945d; font-size: 24px; }
 .cat-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
 .cat-save-button { width: 100%; padding: 10px !important; color: #17300d !important; border-radius: 9px !important; background: var(--cat-lime) !important; font-size: 8px !important; font-weight: 900 !important; }
 .cat-modal-actions { display: grid; grid-template-columns: .65fr 1fr; gap: 8px; }
