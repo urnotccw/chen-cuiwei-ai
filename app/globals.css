@@ -849,6 +849,10 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .pipeline-list { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 0; border-top: 1px solid var(--case-line); list-style: none; }
 .pipeline-list li { display: grid; grid-template-columns: 34px 1fr; gap: 15px; min-height: 175px; padding: 20px 18px; border-right: 1px solid var(--case-line); border-bottom: 1px solid var(--case-line); }
 .pipeline-list li:nth-child(3n) { border-right: 0; }
+.case-study-environment .environment-pipeline-section { padding: clamp(24px, 2.6vw, 46px) 0; }
+.case-study-environment .environment-pipeline-section .pipeline-list li { grid-template-columns: 28px 1fr; gap: 12px; min-height: 116px; padding: 16px clamp(14px, 1.35vw, 24px); }
+.case-study-environment .environment-pipeline-section .pipeline-list strong { margin-bottom: 6px; font-size: clamp(16px, 1.18vw, 22px); }
+.case-study-environment .environment-pipeline-section .pipeline-list p { line-height: 1.55; }
 .pipeline-list li > span, .asset-process li > span { font: 700 clamp(7px, .56vw, 10px)/1 var(--font-label); letter-spacing: .12em; opacity: .55; }
 .pipeline-list strong, .asset-process strong { display: block; margin-bottom: 9px; font-family: var(--font-editorial); font-size: clamp(17px, 1.35vw, 25px); font-weight: 600; }
 .pipeline-list p, .asset-process p { margin: 0; font-family: var(--font-editorial); font-size: clamp(9px, .72vw, 13px); line-height: 1.65; }
@@ -1123,6 +1127,8 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .case-evidence-grid.two-up, .case-evidence-grid.three-up { grid-template-columns: 1fr; }
   .pipeline-list { grid-template-columns: 1fr; }
   .pipeline-list li, .pipeline-list li:nth-child(3n) { min-height: 0; border-right: 0; }
+  .case-study-environment .environment-pipeline-section { padding: 28px 0; }
+  .case-study-environment .environment-pipeline-section .pipeline-list li { min-height: 0; padding: 14px 0; }
   .research-grid { grid-template-columns: 1fr; }
   .asset-process { grid-template-columns: 1fr; }
   .asset-process li { min-height: 0; border-right: 0; border-bottom: 1px solid var(--case-line); }

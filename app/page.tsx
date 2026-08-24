@@ -722,8 +722,7 @@ export default function Home() {
                   <section><p className="case-label">STRATEGY / 策略</p><h4>先验证空间，再补充视觉复杂度</h4><p>先用白盒确认构图与动线，再分层处理资产、灯光、人物和氛围；把每轮 AI 结果转译为可执行的场景修改项。</p></section>
                 </div>
 
-                <section className="case-section" aria-labelledby="environment-pipeline-title">
-                  <div className="case-section-heading"><p>02 / 室内场景迭代</p><h4 id="environment-pipeline-title">从白盒到最终氛围的七步收敛</h4></div>
+                <section className="case-section environment-pipeline-section" aria-label="室内场景迭代">
                   <ol className="pipeline-list">
                     <li><span>01</span><div><strong>搭建白盒</strong><p>先确定破旧废弃别墅的房间结构和核心机位。</p></div></li>
                     <li><span>02</span><div><strong>补充资产</strong><p>根据叙事设定增加家具、杂物与空间层次。</p></div></li>
