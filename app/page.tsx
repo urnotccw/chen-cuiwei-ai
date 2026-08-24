@@ -281,6 +281,41 @@ export default function Home() {
                     <a href="#project-01">BACK TO PROJECT TOP ↑</a>
                   </footer>
                 </section>
+
+                <section id="blue-spaces" className="space-prop-section" aria-labelledby="space-prop-title">
+                  <header className="space-prop-header">
+                    <span>BLUE / SPACE &amp; PROP DESIGN</span>
+                    <span>STEP 03</span>
+                  </header>
+
+                  <div className="space-prop-intro">
+                    <div>
+                      <p>03 / 空间与道具</p>
+                      <h3 id="space-prop-title">空间站与<br />航行器设定</h3>
+                    </div>
+                    <p>空间站内部围绕观察、控制与维护三类功能展开。冷灰金属结构建立理性的航天环境，暖黄色储物舱与航行器上的金色结构则成为贯穿场景与道具的识别色。</p>
+                  </div>
+
+                  <div className="space-prop-grid">
+                    <figure className="space-command">
+                      <img src="/blue-space-command.png" alt="空间站控制舱的驾驶席、工作台、顶部结构与整体空间设定" />
+                      <figcaption><span>SPACE 01</span> CONTROL DECK / 控制与观察</figcaption>
+                    </figure>
+                    <figure className="space-equipment">
+                      <img src="/blue-space-equipment.png" alt="空间站设备舱、舷窗、仪器墙与维护区域设定" />
+                      <figcaption><span>SPACE 02</span> EQUIPMENT BAY / 设备与维护</figcaption>
+                    </figure>
+                    <figure className="space-shuttle">
+                      <img src="/blue-prop-shuttle.png" alt="黑金配色航行器的前后、侧面、顶部与底部多视图设定" />
+                      <figcaption><span>PROP 01</span> SHUTTLE / 航行器多视图</figcaption>
+                    </figure>
+                  </div>
+
+                  <footer className="space-prop-footer">
+                    <span>FUNCTION / CONTINUITY / VISUAL LANGUAGE</span>
+                    <a href="#blue-characters">PREVIOUS · CHARACTER DESIGN ↑</a>
+                  </footer>
+                </section>
               </>
             )}
           </section>
