@@ -35,7 +35,7 @@ export default function Home() {
       tools: ["FIGMA", "CODEX", "GPT-IMAGE"],
       hero: "/portfolio-p03-ui.jpg",
       heroAlt: "一只喵管家微信小程序的四个核心界面",
-      summary: "从养猫记录分散的真实痛点出发，完成需求拆解、功能架构与可演示交互版本。",
+      summary: "围绕养猫健康记录、物资库存与周期提醒，完成从需求拆解、信息架构到可演示交互版本的 0—1 产品验证。",
     },
     {
       number: "04",
@@ -163,7 +163,7 @@ export default function Home() {
               <a href="#works">BACK TO INDEX ↑</a>
             </header>
 
-            <div className={`project-hero-layout${project.number === "01" ? " is-video-layout" : ""}`}>
+            <div className={`project-hero-layout${project.number === "01" ? " is-video-layout" : project.number === "03" ? " is-phone-layout" : ""}`}>
               <div className="detail-heading">
                 <p className="detail-number">{project.number}</p>
                 <div>
@@ -171,6 +171,16 @@ export default function Home() {
                   <h2 id={`project-title-${project.number}`}>{project.title}</h2>
                 </div>
                 <p className="detail-type">{project.type}</p>
+                {project.number === "03" && (
+                  <div className="phone-project-intro">
+                    <p>一只喵管家是一款面向养猫用户的轻量健康管理小程序，把散落在备忘录、相册与购物软件中的照护信息，收拢到一个持续可用的管理入口。</p>
+                    <dl>
+                      <div><dt>CORE PROBLEM</dt><dd>记录分散、提醒易忘、库存难管理</dd></div>
+                      <div><dt>SOLUTION</dt><dd>档案 / 库存 / 药箱 / 相册四个任务模块</dd></div>
+                      <div><dt>PROTOTYPE</dt><dd>可演示微信小程序交互版本</dd></div>
+                    </dl>
+                  </div>
+                )}
               </div>
 
               {project.number === "01" ? (
@@ -506,11 +516,6 @@ export default function Home() {
                     <div><dt>WORKFLOW</dt><dd>Figma / Codex / GPT-image</dd></div>
                   </dl>
                 </div>
-
-                <figure className="case-lead-media">
-                  <img src="/portfolio-p03-ui.jpg" alt="一只喵管家的档案、库存、药箱和相册界面" />
-                  <figcaption><span>FINAL INTERFACE</span> 四个核心任务形成统一的猫咪健康管理入口</figcaption>
-                </figure>
 
                 <div className="case-problem-grid">
                   <section>
