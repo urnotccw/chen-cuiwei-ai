@@ -21,13 +21,13 @@ export default function Home() {
     },
     {
       number: "02",
-      title: "AI 网页小游戏",
-      type: "AI 辅助网页小游戏开发",
-      english: "AI-ASSISTED WEB GAME",
-      tools: ["GPT", "GPT-IMAGE"],
+      title: "五行星轨",
+      type: "AI 辅助网页策略卡牌游戏",
+      english: "AI-ASSISTED STRATEGY CARD GAME",
+      tools: ["GPT", "GPT-IMAGE", "JAVASCRIPT"],
       hero: null,
       heroAlt: "",
-      summary: "项目图片与详细内容将在下一步补充。",
+      summary: "以五行生克与二十八宿为核心规则，完成从玩法策划、系统拆解到可在线体验版本的 AI 辅助开发。",
     },
     {
       number: "03",
@@ -148,7 +148,7 @@ export default function Home() {
         <div className="project-index" aria-label="项目目录">
           {projects.map((project) => (
             <a className="project-row" href={`#project-${project.number}`} key={project.number}>
-              <span className={`project-backdrop${project.number === "01" ? " blue-index-cover" : ""}`} aria-hidden="true" />
+              <span className={`project-backdrop${project.number === "01" ? " blue-index-cover" : project.number === "02" ? " wuxing-index-cover" : ""}`} aria-hidden="true" />
               <p className="project-number">{project.number}</p>
               <div className="project-name">
                 <h3>{project.title}</h3>
@@ -185,7 +185,7 @@ export default function Home() {
               <a href="#works">BACK TO INDEX ↑</a>
             </header>
 
-            <div className={`project-hero-layout${project.number === "01" ? " is-video-layout" : project.number === "03" ? " is-phone-layout" : ""}`}>
+            <div className={`project-hero-layout${project.number === "01" ? " is-video-layout" : project.number === "02" ? " is-game-layout" : project.number === "03" ? " is-phone-layout" : ""}`}>
               <div className="detail-heading">
                 <p className="detail-number">{project.number}</p>
                 <div>
@@ -201,6 +201,12 @@ export default function Home() {
                       <div><dt><span className="fact-label is-lime">SOLUTION</span></dt><dd>档案 / 库存 / 药箱 / 相册四个任务模块</dd></div>
                       <div><dt><span className="fact-label is-blue">PROTOTYPE</span></dt><dd>可演示微信小程序交互版本</dd></div>
                     </dl>
+                  </div>
+                )}
+                {project.number === "02" && (
+                  <div className="game-project-intro">
+                    <p>五行星轨是一款以 <mark>五行生克</mark> 和 <mark>二十八宿</mark> 为规则基础的网页策略卡牌游戏。玩家通过上下两层阵法组合卡牌，在四象星阵中逐步点亮星宿。</p>
+                    <a href="https://urnotccw.github.io/wuxing-game/" target="_blank" rel="noreferrer">进入游戏体验 ↗</a>
                   </div>
                 )}
               </div>
@@ -223,6 +229,11 @@ export default function Home() {
                     </div>
                   </div>
                   <p>INTERACTIVE MINI PROGRAM / WEB PROTOTYPE</p>
+                </div>
+              ) : project.number === "02" ? (
+                <div className="wuxing-game-stage">
+                  <div className="wuxing-browser-bar"><span>LIVE WEB GAME</span><span>urnotccw.github.io/wuxing-game</span><a href="https://urnotccw.github.io/wuxing-game/" target="_blank" rel="noreferrer">OPEN ↗</a></div>
+                  <iframe title="五行星轨网页游戏" src="https://urnotccw.github.io/wuxing-game/" loading="lazy" allow="autoplay" />
                 </div>
               ) : project.hero ? (
                 <figure className="detail-visual case-detail-visual">
@@ -522,6 +533,97 @@ export default function Home() {
                   </footer>
                 </section>
               </>
+            )}
+
+            {project.number === "02" && (
+              <section className="case-study case-study-game" aria-labelledby="game-case-title">
+                <header className="case-study-header"><span>PROJECT 02 / GAME SYSTEM</span><span>AI-ASSISTED WEB GAME</span></header>
+
+                <div className="case-opening">
+                  <div>
+                    <p>01 / 项目概览</p>
+                    <h3 id="game-case-title">把传统五行规则，<br />转成可学习的策略循环</h3>
+                  </div>
+                  <dl className="case-facts">
+                    <div><dt>MY ROLE</dt><dd>玩法策划 / 系统设计 / 视觉设定 / AI 辅助开发</dd></div>
+                    <div><dt>DELIVERABLE</dt><dd>可在线体验的网页策略卡牌游戏</dd></div>
+                    <div><dt>WORKFLOW</dt><dd>GPT / GPT-image / HTML / CSS / JavaScript</dd></div>
+                  </dl>
+                </div>
+
+                <figure className="case-lead-media wuxing-lead-media">
+                  <img src="/wuxing-battle.png" alt="五行星轨首个星宿关卡的策略卡牌战斗界面" />
+                  <figcaption><span>PLAYABLE PROTOTYPE</span> 五行关系、阵法卡槽、角色状态与敌人机制在同一屏内完成决策反馈</figcaption>
+                </figure>
+
+                <div className="case-problem-grid">
+                  <section>
+                    <p className="case-label">PRODUCT CHALLENGE / 产品挑战</p>
+                    <h4>文化规则如何转化为玩家能理解的决策？</h4>
+                    <p>五行生克具有清晰关系，但直接搬进游戏容易变成知识说明。项目需要把抽象规则变成每回合都可观察、可选择、可验证的策略反馈。</p>
+                  </section>
+                  <section>
+                    <p className="case-label">DESIGN STRATEGY / 设计策略</p>
+                    <h4>用双层卡槽，让“关系”成为核心操作</h4>
+                    <p>阵法分为发动区与辅助区；同列卡牌形成相生或相克关系，使玩家通过位置与组合主动创造效果，而不是被动记忆规则。</p>
+                  </section>
+                </div>
+
+                <section className="case-section" aria-labelledby="game-loop-title">
+                  <div className="case-section-heading"><p>02 / 核心循环</p><h4 id="game-loop-title">从选择星宿到完成阵法结算</h4></div>
+                  <ol className="pipeline-list game-loop-list">
+                    <li><span>01</span><div><strong>选择四象篇章</strong><p>从青龙、朱雀、白虎、玄武进入一条由七个星宿组成的关卡路径。</p></div></li>
+                    <li><span>02</span><div><strong>识别敌人机制</strong><p>先阅读护盾、回复、攻击节奏与特殊状态，确定本局优先策略。</p></div></li>
+                    <li><span>03</span><div><strong>抽取五行手牌</strong><p>每回合获得金、木、水、火、土卡牌，并从中选择两张进入阵法。</p></div></li>
+                    <li><span>04</span><div><strong>布置双层阵法</strong><p>上层卡牌发动自身效果，下层卡牌通过同列关系影响上层卡牌。</p></div></li>
+                    <li><span>05</span><div><strong>触发关系结算</strong><p>相生强化主要效果，相克可能削弱效果，也能针对性破除敌人状态。</p></div></li>
+                    <li><span>06</span><div><strong>点亮下一星宿</strong><p>战斗与事件节点交替推进，持续获得回复、护盾、卡牌或阶段增益。</p></div></li>
+                  </ol>
+                </section>
+
+                <section className="case-section" aria-labelledby="game-system-title">
+                  <div className="case-section-heading"><p>03 / 规则系统</p><h4 id="game-system-title">用小结算与大结算制造短期和长期决策</h4></div>
+                  <div className="module-grid game-rule-grid">
+                    <article><span>01 / POSITION</span><h5>发动区 × 3</h5><p>上方三格触发卡牌自身攻击、防御、回复或功能效果，是即时行动层。</p></article>
+                    <article><span>02 / SUPPORT</span><h5>辅助区 × 3</h5><p>下方卡牌不会单独发动，而是与同列上方卡牌形成五行关系。</p></article>
+                    <article><span>03 / SMALL SETTLE</span><h5>单列小结算</h5><p>上下两张牌组成一列后立即验证相生相克，让选择快速获得反馈。</p></article>
+                    <article><span>04 / FULL SETTLE</span><h5>满阵大结算</h5><p>六格填满后，根据三生阵、三克阵、混元阵或普通满阵产生额外收益。</p></article>
+                  </div>
+                  <div className="case-evidence-grid two-up wuxing-evidence-grid">
+                    <figure><img src="/wuxing-map.png" alt="玄武篇章中由七个星宿构成的关卡地图" /><figcaption>PROGRESSION / 四象篇章与七星宿节点</figcaption></figure>
+                    <figure><img src="/wuxing-battle.png" alt="包含五行卡牌、双层阵法与敌人状态的战斗界面" /><figcaption>COMBAT SYSTEM / 手牌、阵法与敌人机制</figcaption></figure>
+                  </div>
+                </section>
+
+                <section className="case-section" aria-labelledby="game-information-title">
+                  <div className="case-section-heading"><p>04 / 信息与体验</p><h4 id="game-information-title">让复杂规则始终有可追踪的反馈</h4></div>
+                  <div className="persona-grid game-feedback-grid">
+                    <article><span>01</span><h5>关系可视化</h5><p>五行关系图、卡槽位置和效果预览共同承担教学，降低玩家来回查阅规则的成本。</p><strong>目标：降低理解门槛</strong></article>
+                    <article><span>02</span><h5>敌人差异化</h5><p>护盾、回流、破除状态等机制要求玩家切换相生爆发、相克干预和防御节奏。</p><strong>目标：避免单一最优解</strong></article>
+                    <article><span>03</span><h5>渐进式成长</h5><p>四象篇章、星宿节点与事件奖励构成长期进度，使短局战斗服务于完整探索目标。</p><strong>目标：建立持续动机</strong></article>
+                  </div>
+                </section>
+
+                <section className="case-conclusion">
+                  <div>
+                    <p className="case-label">AI VALUE / AI 在项目中的作用</p>
+                    <h4>缩短从规则文档到可玩版本的距离</h4>
+                    <p>GPT 用于协助拆解规则、补充异常状态、整理页面逻辑与调试代码；GPT-image 用于快速建立星宿、卡牌和宇宙题材的视觉方向。核心玩法、数值关系与体验取舍仍由人工定义和验证。</p>
+                  </div>
+                  <div>
+                    <p className="case-label">NEXT STEP / 下一步</p>
+                    <h4>用真实玩家数据校正教学与数值</h4>
+                    <p>当前版本已完成在线可玩闭环。下一步重点验证首局理解时间、不同阵法使用率、关卡失败原因与移动端适配，并继续补充事件类型和卡牌构筑深度。</p>
+                  </div>
+                </section>
+
+                <div className="wuxing-play-cta">
+                  <div><span>PLAYABLE NOW</span><strong>亲自进入四象星阵，体验五行卡牌的组合策略。</strong></div>
+                  <a href="https://urnotccw.github.io/wuxing-game/" target="_blank" rel="noreferrer">进入五行星轨 ↗</a>
+                </div>
+
+                <footer className="case-study-footer"><span>RULE / FEEDBACK / ITERATION</span><a href="#works">BACK TO WORK INDEX ↑</a></footer>
+              </section>
             )}
 
             {project.number === "03" && (
