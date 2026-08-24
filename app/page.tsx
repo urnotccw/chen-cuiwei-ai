@@ -152,9 +152,7 @@ export default function Home() {
               <p className="detail-number">{project.number}</p>
               <div>
                 <p className="detail-kicker">{project.english}</p>
-                <h2 id={`project-title-${project.number}`} className={project.number === "01" ? "blue-project-title" : undefined}>
-                  {project.number === "01" ? <>Go and See,<br />My love</> : project.title}
-                </h2>
+                <h2 id={`project-title-${project.number}`}>{project.title}</h2>
               </div>
               <p className="detail-type">{project.type}</p>
             </div>
@@ -196,7 +194,7 @@ export default function Home() {
 
                 <div className="blue-story-copy">
                   <p className="blue-story-label">01 / 故事灵感</p>
-                  <h3 id="blue-background-title">驶向深空，<br />仍记得从哪里出发</h3>
+                  <h3 id="blue-background-title">Go and See，<br />My Love</h3>
                   <div className="blue-story-body">
                     <p>故事灵感来源于旅行者号和歌曲《蓝》。</p>
                     <p>旅行者号在不断远离地球、驶向宇宙深处的过程中，曾将镜头再次转向地球，留下那颗漂浮在浩瀚宇宙中的“暗淡蓝点”。</p>
@@ -255,25 +253,25 @@ export default function Home() {
                       <figcaption>
                         <p>CHARACTER 02 / MEMORY</p>
                         <h4>童年形态 · 故乡记忆</h4>
-                        <span>珊瑚粉连衣裙、双辫与柔软轮廓建立温暖的记忆色彩。她承载故事中关于成长、出发点与“为何远行”的私人情感。</span>
+                        <span>珊瑚粉连衣裙、双辫与柔软轮廓建立温暖的记忆色彩。女孩是父女关系与时间线的情感锚点，让宏大的宇宙远行落回一段具体的家庭记忆。</span>
                       </figcaption>
                     </figure>
 
                     <figure className="character-card">
-                      <img src="/blue-character-senior.png" alt="年长男性深色西装造型的面部、正面、侧面与背面设定" />
+                      <img src="/blue-character-casual.png" alt="女孩父亲年轻时期的深灰 T 恤与牛仔裤造型设定" />
                       <figcaption>
-                        <p>CHARACTER 03 / ORDER</p>
-                        <h4>年长角色 · 秩序与责任</h4>
-                        <span>深色格纹西装、浅蓝衬衫与克制姿态塑造沉稳、可信赖的形象，为宏大的探索任务带来现实中的专业秩序与责任重量。</span>
+                        <p>CHARACTER 03 / FATHER · YOUNG</p>
+                        <h4>年轻父亲 · 日常与陪伴</h4>
+                        <span>这是女孩父亲年轻时期的形象。深灰 T 恤和牛仔裤保留普通生活的质感，让他首先是一位真实、亲近的父亲，也让“故乡”变成可以被回忆的日常。</span>
                       </figcaption>
                     </figure>
 
                     <figure className="character-card">
-                      <img src="/blue-character-casual.png" alt="成年男性深灰 T 恤与牛仔裤造型的面部、正面、侧面与背面设定" />
+                      <img src="/blue-character-senior.png" alt="女孩父亲变老后的深色西装造型设定" />
                       <figcaption>
-                        <p>CHARACTER 04 / HOME</p>
-                        <h4>日常角色 · 生活与牵挂</h4>
-                        <span>深灰 T 恤和牛仔裤弱化职业属性，与航天服形成材质和语境反差，让人物更贴近日常，也让“故乡”成为可被感知的具体生活。</span>
+                        <p>CHARACTER 04 / FATHER · AGED</p>
+                        <h4>年长父亲 · 时间与守望</h4>
+                        <span>这是同一位父亲多年后的状态。银灰短发、深色格纹西装与更克制的姿态强化时间留下的痕迹，也把等待、牵挂与责任沉淀为安静的守望。</span>
                       </figcaption>
                     </figure>
                   </div>
