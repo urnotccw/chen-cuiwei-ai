@@ -799,6 +799,9 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .case-study > * { position: relative; z-index: 1; }
 .case-study-environment { --case-ink: #f3f0e9; --case-line: rgba(255,255,255,.36); --case-panel: rgba(255,255,255,.065); --case-accent: #9db5bc; background: #111315; }
 .case-study-game { --case-ink: #f2eef8; --case-line: rgba(226,215,245,.34); --case-panel: rgba(255,255,255,.055); --case-accent: #a487d4; background: radial-gradient(circle at 76% 8%, rgba(105,75,145,.34), transparent 28%), radial-gradient(circle at 12% 45%, rgba(53,73,115,.2), transparent 32%), #0d0b12; }
+.case-study-game .case-opening { grid-template-columns: minmax(160px, .22fr) minmax(0, 1fr); gap: clamp(26px, 3.8vw, 72px); align-items: start; padding: clamp(28px, 3vw, 54px) 0 clamp(24px, 2.5vw, 44px); }
+.case-study-game .case-opening > div { padding-top: 12px; }
+.case-study-game .case-opening > div > p { margin: 0; }
 .case-study-assets { --case-ink: #1f2a32; --case-line: rgba(31,42,50,.4); --case-panel: rgba(255,255,255,.42); --case-accent: #6bb9dc; background: #dcebf3 url("/work-paper.png") center / cover no-repeat; }
 .case-study-header { display: flex; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid var(--case-line); font: 700 clamp(7px, .54vw, 10px)/1 var(--font-label); letter-spacing: .14em; }
 .case-opening { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(38px, 6vw, 116px); align-items: end; padding: clamp(46px, 6.2vw, 112px) 0 clamp(30px, 4vw, 74px); }
@@ -1045,6 +1048,8 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .iphone-15-device { width: min(72vw, 292px); }
   .case-study { margin: 44px -20px -26px; padding: 22px 20px 30px; }
   .case-opening { grid-template-columns: 1fr; gap: 34px; padding: 48px 0 34px; }
+  .case-study-game .case-opening { grid-template-columns: 1fr; gap: 18px; padding: 26px 0 24px; }
+  .case-study-game .case-opening > div { padding-top: 0; }
   .case-opening h3 { font-size: clamp(40px, 12vw, 58px); }
   .case-facts div { grid-template-columns: 78px 1fr; }
   .case-lead-media { width: 100%; aspect-ratio: auto; }
