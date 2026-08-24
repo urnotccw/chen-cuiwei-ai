@@ -222,9 +222,8 @@ export default function Home() {
                   <div className="character-intro">
                     <div>
                       <p>02 / 人物设定</p>
-                      <h3 id="character-title">角色不是标签，<br />而是通往故事的入口</h3>
                     </div>
-                    <p>人物设定围绕“远行者与被留下的人”展开。统一的正、侧、背视图保证角色在多镜头生成中的身份与服装连续性；白色航行体系与日常服装之间的色温差异，则区分未知宇宙与故乡记忆。</p>
+                    <p id="character-title">人物设定围绕“远行者与被留下的人”展开。统一的正、侧、背视图保证角色在多镜头生成中的身份与服装连续性；白色航行体系与日常服装之间的色温差异，则区分未知宇宙与故乡记忆。</p>
                   </div>
 
                   <div className="heroine-profile">
