@@ -5,11 +5,14 @@
   --tag: #f7f1e8;
   --ink: #2b2118;
   --white: #fffdf6;
+  --font-editorial: "Bodoni 72", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  --font-label: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, "Courier New", monospace;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--white); font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--paper); }
+body { margin: 0; color: var(--white); font-family: var(--font-label); background: var(--paper); }
 a { color: inherit; text-decoration: none; }
 
 .cover-page {
@@ -53,27 +56,27 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -.03em;
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.rail-name { display: flex; flex-direction: column; justify-content: space-between; font-weight: 700; }
-.rail-name span { font: 700 7px "Courier New", monospace; letter-spacing: .11em; }
-.rail-contact { height: 112px; width: 258px; display: flex; flex-direction: column; justify-content: space-between; font: 9px/1.15 "Courier New", monospace; letter-spacing: .04em; }
-.rail-contact b { font: 700 23px/1 "Courier New", monospace; letter-spacing: -.1em; }
+.rail-name { display: flex; flex-direction: column; justify-content: space-between; font-family: var(--font-editorial); font-weight: 600; letter-spacing: .03em; }
+.rail-name span { font: 700 7px var(--font-label); letter-spacing: .13em; }
+.rail-contact { height: 112px; width: 258px; display: flex; flex-direction: column; justify-content: space-between; font: 700 9px/1.15 var(--font-label); letter-spacing: .08em; }
+.rail-contact b { font: 600 23px/1 var(--font-editorial); letter-spacing: -.035em; }
 .rail-name:hover, .rail-contact:hover { transform: translateY(-3px) rotate(-.25deg); box-shadow: 0 7px 12px rgba(76, 45, 14, .18), inset 0 0 0 1px rgba(82, 50, 20, .09); }
 
 .rail-menu { position: absolute; left: -98px; bottom: 2px; display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
-.rail-menu a { display: inline-flex; min-width: 62px; padding: 5px 8px 4px; color: var(--ink); background: rgba(249, 245, 237, .88); font: 700 10px/1 "Courier New", monospace; letter-spacing: .055em; box-shadow: 1px 1px 0 rgba(70,40,10,.13); transition: transform .18s ease, background .18s ease; }
+.rail-menu a { display: inline-flex; min-width: 62px; padding: 5px 8px 4px; color: var(--ink); background: rgba(249, 245, 237, .88); font: 700 10px/1 var(--font-label); letter-spacing: .085em; box-shadow: 1px 1px 0 rgba(70,40,10,.13); transition: transform .18s ease, background .18s ease; }
 .rail-menu a:nth-child(2) { margin-left: 9px; }
 .rail-menu a:nth-child(3) { margin-left: 3px; min-width: 38px; }
 .rail-menu a:nth-child(4) { margin-left: 15px; min-width: 38px; }
 .rail-menu a:hover, .rail-menu .is-active { color: var(--white); background: var(--ink); transform: translateX(5px); }
 
 .cover-content { position: absolute; z-index: 1; inset: 0; }
-.discipline { position: absolute; top: 7.2%; right: 19.1%; margin: 0; text-align: center; font: 500 clamp(8px, .73vw, 13px)/1.16 "Courier New", monospace; letter-spacing: .045em; }
-.year { position: absolute; top: 2.2%; right: 1.2%; margin: 0; writing-mode: vertical-rl; font: 500 clamp(9px, .82vw, 14px)/1 "Courier New", monospace; letter-spacing: .03em; }
+.discipline { position: absolute; top: 7.2%; right: 19.1%; margin: 0; text-align: center; font: 600 clamp(8px, .73vw, 13px)/1.16 var(--font-label); letter-spacing: .085em; }
+.year { position: absolute; top: 2.2%; right: 1.2%; margin: 0; writing-mode: vertical-rl; font: 600 clamp(9px, .82vw, 14px)/1 var(--font-label); letter-spacing: .08em; }
 .title-stack { position: absolute; left: 50.8%; top: 19%; color: var(--white); }
-.kicker { margin: 0 0 12px; font-size: clamp(10px, 1vw, 16px); font-weight: 700; letter-spacing: .22em; }
-h1 { margin: 0; font-size: clamp(53px, 6.55vw, 126px); line-height: .91; font-weight: 700; letter-spacing: .05em; }
-.subtitle { margin: 15px 0 0 5px; font-size: clamp(9px, .83vw, 15px); line-height: 1.5; letter-spacing: .13em; font-weight: 600; }
-.stitch-note { position: absolute; right: 17.5%; bottom: 9%; margin: 0; text-align: right; font: 500 clamp(8px, .64vw, 12px)/1.3 "Courier New", monospace; letter-spacing: .06em; }
+.kicker { margin: 0 0 12px; font-family: var(--font-editorial); font-size: clamp(10px, 1vw, 16px); font-weight: 600; letter-spacing: .24em; }
+h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55vw, 126px); line-height: .88; font-weight: 600; letter-spacing: .025em; }
+.subtitle { margin: 18px 0 0 5px; font-family: var(--font-editorial); font-size: clamp(9px, .83vw, 15px); line-height: 1.6; letter-spacing: .16em; font-weight: 500; }
+.stitch-note { position: absolute; right: 17.5%; bottom: 9%; margin: 0; text-align: right; font: 600 clamp(8px, .64vw, 12px)/1.3 var(--font-label); letter-spacing: .09em; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
