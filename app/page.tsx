@@ -152,7 +152,9 @@ export default function Home() {
               <p className="detail-number">{project.number}</p>
               <div>
                 <p className="detail-kicker">{project.english}</p>
-                <h2 id={`project-title-${project.number}`}>{project.title}</h2>
+                <h2 id={`project-title-${project.number}`} className={project.number === "01" ? "blue-project-title" : undefined}>
+                  {project.number === "01" ? <>Go and See,<br />My love</> : project.title}
+                </h2>
               </div>
               <p className="detail-type">{project.type}</p>
             </div>
@@ -176,7 +178,7 @@ export default function Home() {
                   {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
                 </ul>
               </div>
-              <p>项目图片与详细内容将在下一步补充。</p>
+              <p>{project.number === "01" ? "从故事灵感到角色与镜头设计的 AIGC 动画创作。" : "项目图片与详细内容将在下一步补充。"}</p>
               <nav aria-label={`${project.title} 项目切换`}>
                 <a href={`#${previous}`}>← PREV</a>
                 <a href={`#${next}`}>NEXT →</a>
@@ -184,7 +186,8 @@ export default function Home() {
             </div>
 
             {project.number === "01" && (
-              <section className="blue-background" aria-labelledby="blue-background-title">
+              <>
+                <section className="blue-background" aria-labelledby="blue-background-title">
                 <div className="blue-background-image" aria-hidden="true" />
                 <header className="blue-background-header">
                   <span>BLUE / PROJECT BACKGROUND</span>
@@ -208,7 +211,80 @@ export default function Home() {
                 </figure>
 
                 <p className="pale-dot-note">PALE BLUE DOT<br />VOYAGER / 1977—∞</p>
-              </section>
+                </section>
+
+                <section id="blue-characters" className="character-section" aria-labelledby="character-title">
+                  <header className="character-header">
+                    <span>BLUE / CHARACTER DESIGN</span>
+                    <span>STEP 02</span>
+                  </header>
+
+                  <div className="character-intro">
+                    <div>
+                      <p>02 / 人物设定</p>
+                      <h3 id="character-title">角色不是标签，<br />而是通往故事的入口</h3>
+                    </div>
+                    <p>人物设定围绕“远行者与被留下的人”展开。统一的正、侧、背视图保证角色在多镜头生成中的身份与服装连续性；白色航行体系与日常服装之间的色温差异，则区分未知宇宙与故乡记忆。</p>
+                  </div>
+
+                  <div className="heroine-profile">
+                    <div className="heroine-copy">
+                      <p className="character-index">CHARACTER 01 / THE VOYAGER</p>
+                      <h4>女主角 · 从观察者到远行者</h4>
+                      <p>女主角从实验室研究者逐步进入航行状态。透明镜框和白大褂建立理性、克制的科研身份；贴身训练服强调行动力；完整宇航服则完成她从观察者到探索者的转变。</p>
+                      <p>三套造型保持短发、五官与冷白色系一致，让人物在不同时间与场景中仍具有稳定、可识别的视觉身份。</p>
+                    </div>
+                    <div className="heroine-stages">
+                      <figure>
+                        <img src="/blue-character-scientist.png" alt="女主角研究员造型的面部、正面、侧面与背面设定" />
+                        <figcaption><span>01A</span> RESEARCHER / 理性与观察</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="/blue-character-flight.png" alt="女主角航行训练服造型的面部、正面、侧面与背面设定" />
+                        <figcaption><span>01B</span> FLIGHT SUIT / 行动与准备</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="/blue-character-astronaut.png" alt="女主角宇航服造型的面部、正面、侧面与背面设定" />
+                        <figcaption><span>01C</span> ASTRONAUT / 远行与未知</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+
+                  <div className="supporting-characters">
+                    <figure className="character-card">
+                      <img src="/blue-character-child.png" alt="小女孩粉色连衣裙造型的面部、正面、侧面与背面设定" />
+                      <figcaption>
+                        <p>CHARACTER 02 / MEMORY</p>
+                        <h4>童年形态 · 故乡记忆</h4>
+                        <span>珊瑚粉连衣裙、双辫与柔软轮廓建立温暖的记忆色彩。她承载故事中关于成长、出发点与“为何远行”的私人情感。</span>
+                      </figcaption>
+                    </figure>
+
+                    <figure className="character-card">
+                      <img src="/blue-character-senior.png" alt="年长男性深色西装造型的面部、正面、侧面与背面设定" />
+                      <figcaption>
+                        <p>CHARACTER 03 / ORDER</p>
+                        <h4>年长角色 · 秩序与责任</h4>
+                        <span>深色格纹西装、浅蓝衬衫与克制姿态塑造沉稳、可信赖的形象，为宏大的探索任务带来现实中的专业秩序与责任重量。</span>
+                      </figcaption>
+                    </figure>
+
+                    <figure className="character-card">
+                      <img src="/blue-character-casual.png" alt="成年男性深灰 T 恤与牛仔裤造型的面部、正面、侧面与背面设定" />
+                      <figcaption>
+                        <p>CHARACTER 04 / HOME</p>
+                        <h4>日常角色 · 生活与牵挂</h4>
+                        <span>深灰 T 恤和牛仔裤弱化职业属性，与航天服形成材质和语境反差，让人物更贴近日常，也让“故乡”成为可被感知的具体生活。</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <footer className="character-footer">
+                    <span>CONSISTENCY / IDENTITY / COSTUME</span>
+                    <a href="#project-01">BACK TO PROJECT TOP ↑</a>
+                  </footer>
+                </section>
+              </>
             )}
           </section>
         );
