@@ -775,24 +775,7 @@ export default function Home() {
                   <figcaption><span>ENVIRONMENT ASSET</span> 海上小屋：从整体构图到局部细节的一体化场景</figcaption>
                 </figure>
 
-                <div className="case-problem-grid">
-                  <section><p className="case-label">GOAL / 目标</p><h4>验证不同风格下的完整资产生产能力</h4><p>覆盖风格化场景、工业道具、角色化道具与写实材质，关注的不只是视觉完成度，也包括多视图一致、结构合理和后续复用。</p></section>
-                  <section><p className="case-label">DELIVERY LOGIC / 交付逻辑</p><h4>让每个资产都能被理解、检查和复用</h4><p>通过主视图、背面、侧面和细节图说明结构；材质区分、比例与风格语言保持统一，降低进入后续动画或游戏场景时的沟通成本。</p></section>
-                </div>
-
-                <section className="case-section" aria-labelledby="asset-process-title">
-                  <div className="case-section-heading"><p>02 / 制作流程</p><h4 id="asset-process-title">把视觉目标拆成五个可检查阶段</h4></div>
-                  <ol className="asset-process">
-                    <li><span>01</span><strong>参考与风格定义</strong><p>确定使用场景、轮廓语言、材质倾向和关键识别点。</p></li>
-                    <li><span>02</span><strong>结构与比例</strong><p>先保证大形和功能结构成立，再进入细节建模。</p></li>
-                    <li><span>03</span><strong>拓扑与 UV</strong><p>为材质绘制、变体扩展和后续使用预留清晰结构。</p></li>
-                    <li><span>04</span><strong>材质与磨损</strong><p>用材质层级解释使用方式，而不是只增加表面噪点。</p></li>
-                    <li><span>05</span><strong>渲染与检查</strong><p>用多角度、细节图和统一灯光确认比例、材质和可读性。</p></li>
-                  </ol>
-                </section>
-
-                <section className="case-section" aria-labelledby="asset-library-title">
-                  <div className="case-section-heading"><p>03 / 资产库</p><h4 id="asset-library-title">用不同资产类型验证风格与生产边界</h4></div>
+                <section className="case-section asset-gallery-section" aria-label="作品资产库">
                   <div className="asset-gallery">
                     <figure className="asset-wide"><img src="/portfolio-p05-details.jpg" alt="海上小屋场景的多个局部细节与整体效果" /><figcaption><span>ENVIRONMENT</span><strong>海上小屋</strong><p>整体构图、建筑、船只与水面共同维持轻量化的风格语言。</p></figcaption></figure>
                     <figure><img src="/portfolio-p05-vending.jpg" alt="黄色奖品机的正面、背面、侧面和细节" /><figcaption><span>INDUSTRIAL PROP</span><strong>奖品机</strong><p>多视图验证功能结构与可交互部件。</p></figcaption></figure>
@@ -801,11 +784,6 @@ export default function Home() {
                     <figure><img src="/portfolio-p05-robot.jpg" alt="球形机器人多个角度的三维模型" /><figcaption><span>CHARACTER PROP</span><strong>机器人</strong><p>用可拆分结构和橙灰配色保持识别一致。</p></figcaption></figure>
                     <figure className="asset-wide"><img src="/portfolio-p05-door.jpg" alt="木门的正面和不同开启角度" /><figcaption><span>REALISTIC PROP</span><strong>木门</strong><p>以木纹、金属磨损和开启角度检验写实材质表达。</p></figcaption></figure>
                   </div>
-                </section>
-
-                <section className="case-conclusion">
-                  <div><p className="case-label">PRODUCT VALUE / 对产品的价值</p><h4>理解资产如何影响体验与协作成本</h4><p>3D 资产是体验的一部分，也是团队协作的接口。风格、比例、材质和变体规则越清楚，设计、开发与内容生产之间的返工越少。</p></div>
-                  <div><p className="case-label">NEXT STEP / 下一步</p><h4>补齐游戏资产的标准化交付清单</h4><p>进一步加入命名规则、尺寸单位、碰撞体、LOD、贴图通道与性能预算，让展示作品转化为可以直接进入项目管线的资产包。</p></div>
                 </section>
 
                 <footer className="case-study-footer"><span>SPECIFICATION / REUSE / HANDOFF</span><a href="#works">BACK TO WORK INDEX ↑</a></footer>
