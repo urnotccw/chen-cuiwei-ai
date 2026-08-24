@@ -604,9 +604,14 @@ export default function Home() {
                 </section>
 
                 <section className="enemy-roster" aria-label="五行星轨敌人立绘">
-                  <figure>
-                    <img src="/wuxing-enemy-roster.png" alt="五位五行主题敌人立绘：木灵治疗者、金甲守卫、火羽战士、水蛇术师与岩甲巨兽" />
-                  </figure>
+                  <div className="enemy-roster-grid">
+                    <figure><img src="/wuxing-enemy-jiaomu.png" alt="角木蛟敌人立绘" /></figure>
+                    <figure><img src="/wuxing-enemy-kangjin.png" alt="亢金龙敌人立绘" /></figure>
+                    <figure><img src="/wuxing-enemy-weihuo.png" alt="尾火虎敌人立绘" /></figure>
+                    <figure><img src="/wuxing-enemy-jishui.png" alt="箕水豹敌人立绘" /></figure>
+                    <figure><img src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /></figure>
+                    <figure><img src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /></figure>
+                  </div>
                 </section>
 
                 <div className="wuxing-play-cta">
