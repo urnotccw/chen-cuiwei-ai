@@ -880,6 +880,25 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .case-study-game .game-rule-grid h5 { margin-bottom: 7px; font-size: clamp(18px, 1.42vw, 26px); }
 .case-study-game .game-rule-grid p { line-height: 1.55; }
 .case-study-game .wuxing-evidence-grid { width: min(80%, 1200px); gap: clamp(10px, 1vw, 16px); margin: clamp(20px, 2.4vw, 42px) auto 0; }
+.case-study-pet .case-opening { grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr); gap: clamp(34px, 4.6vw, 86px); align-items: center; padding: clamp(34px, 4vw, 72px) 0 clamp(28px, 3vw, 52px); }
+.case-study-pet .case-opening h3 { font-size: clamp(46px, 3.7vw, 70px); line-height: 1.04; }
+.case-study-pet .case-facts div { padding: 10px 0; }
+.case-study-pet .case-problem-grid { gap: clamp(30px, 4vw, 72px); padding: clamp(32px, 3.7vw, 66px) 0; }
+.case-study-pet .case-problem-grid h4 { margin-bottom: 10px; font-size: clamp(24px, 1.8vw, 34px); }
+.case-study-pet .case-problem-grid section > p:last-child { line-height: 1.62; }
+.case-study-pet .case-section { padding: clamp(38px, 4.2vw, 76px) 0; }
+.case-study-pet .case-section-heading { gap: clamp(18px, 2.4vw, 42px); margin-bottom: clamp(20px, 2.3vw, 38px); }
+.case-study-pet .case-section-heading h4 { font-size: clamp(30px, 2.65vw, 48px); }
+.case-study-pet .persona-grid, .case-study-pet .module-grid { gap: clamp(10px, 1.1vw, 18px); }
+.case-study-pet .persona-grid article { min-height: 172px; padding: clamp(16px, 1.4vw, 24px); }
+.case-study-pet .persona-grid article > span { margin-bottom: clamp(16px, 1.5vw, 26px); }
+.case-study-pet .persona-grid h5 { margin-bottom: 8px; font-size: clamp(20px, 1.45vw, 27px); }
+.case-study-pet .persona-grid p { line-height: 1.55; }
+.case-study-pet .persona-grid strong { left: clamp(16px, 1.4vw, 24px); bottom: clamp(14px, 1.2vw, 20px); }
+.case-study-pet .module-grid article { min-height: 138px; padding: clamp(16px, 1.35vw, 22px); }
+.case-study-pet .module-grid article > span { margin-bottom: clamp(15px, 1.3vw, 22px); }
+.case-study-pet .module-grid h5 { margin-bottom: 7px; font-size: clamp(20px, 1.42vw, 27px); }
+.case-study-pet .module-grid p { line-height: 1.55; }
 .enemy-roster { padding: clamp(38px, 5vw, 90px) 0; border-bottom: 1px solid var(--case-line); }
 .enemy-roster-group > p, .wuxing-card-group > p { margin: 0 0 12px; font: 700 clamp(8px, .66vw, 12px)/1.2 var(--font-label); letter-spacing: .12em; }
 .enemy-roster-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--case-line); background: var(--case-line); }
@@ -1075,6 +1094,14 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .case-study-game .game-rule-grid article { min-height: 0; padding: 16px; }
   .case-study-game .game-rule-grid article > span { margin-bottom: 14px; }
   .case-study-game .wuxing-evidence-grid { width: 100%; margin-top: 22px; }
+  .case-study-pet .case-opening { grid-template-columns: 1fr; gap: 22px; padding: 34px 0 28px; }
+  .case-study-pet .case-opening h3 { font-size: clamp(38px, 10vw, 52px); }
+  .case-study-pet .case-problem-grid { gap: 28px; padding: 34px 0; }
+  .case-study-pet .case-section { padding: 38px 0; }
+  .case-study-pet .case-section-heading { gap: 8px; margin-bottom: 20px; }
+  .case-study-pet .persona-grid article, .case-study-pet .module-grid article { min-height: 0; padding: 16px; }
+  .case-study-pet .persona-grid article > span, .case-study-pet .module-grid article > span { margin-bottom: 15px; }
+  .case-study-pet .persona-grid strong { position: static; margin-top: 12px; }
   .case-section-heading { grid-template-columns: 1fr; gap: 9px; }
   .case-section-heading h4 { font-size: 34px; }
   .persona-grid, .module-grid { grid-template-columns: 1fr; }
