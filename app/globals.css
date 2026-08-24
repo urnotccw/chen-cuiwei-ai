@@ -853,6 +853,7 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .case-study-environment .environment-pipeline-section .pipeline-list li { grid-template-columns: 28px 1fr; gap: 12px; min-height: 116px; padding: 16px clamp(14px, 1.35vw, 24px); }
 .case-study-environment .environment-pipeline-section .pipeline-list strong { margin-bottom: 6px; font-size: clamp(16px, 1.18vw, 22px); }
 .case-study-environment .environment-pipeline-section .pipeline-list p { line-height: 1.55; }
+.case-study-environment .environment-reference-section { padding: clamp(28px, 3vw, 52px) 0 clamp(34px, 3.4vw, 62px); }
 .pipeline-list li > span, .asset-process li > span { font: 700 clamp(7px, .56vw, 10px)/1 var(--font-label); letter-spacing: .12em; opacity: .55; }
 .pipeline-list strong, .asset-process strong { display: block; margin-bottom: 9px; font-family: var(--font-editorial); font-size: clamp(17px, 1.35vw, 25px); font-weight: 600; }
 .pipeline-list p, .asset-process p { margin: 0; font-family: var(--font-editorial); font-size: clamp(9px, .72vw, 13px); line-height: 1.65; }

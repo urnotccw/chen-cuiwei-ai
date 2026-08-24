@@ -712,6 +712,17 @@ export default function Home() {
                   </dl>
                 </div>
 
+                <section className="case-section environment-reference-section" aria-label="参考驱动的世界观">
+                  <div className="research-grid">
+                    <div><p>建筑参考云川藏地区的形制与配色，提取黄、红、白墙体和局部金色屋顶；环境以高海拔针叶林、苔藓、草甸、雪山与云海建立气候识别。</p><p>AI 用于快速比较构图与气氛，模块化资产则让概念方向能继续进入真实场景搭建。</p></div>
+                    <figure><img src="/portfolio-p04-research.jpg" alt="藏地建筑与高海拔自然环境的参考研究" /><figcaption>REFERENCE / ARCHITECTURE &amp; ECOLOGY</figcaption></figure>
+                  </div>
+                  <div className="case-evidence-grid two-up concept-final-grid">
+                    <figure><img src="/portfolio-p04-concept.jpg" alt="藏地雪山建筑场景的黑白概念草图" /><figcaption>AI CONCEPT / DIRECTION TEST</figcaption></figure>
+                    <figure><img src="/portfolio-p04-final.jpg" alt="藏地雪山建筑游戏场景最终效果" /><figcaption>UE5 RESULT / IMPLEMENTATION</figcaption></figure>
+                  </div>
+                </section>
+
                 <figure className="case-lead-media dark-media">
                   <img src="/portfolio-p04-final.jpg" alt="藏地建筑、雪山、云海与森林构成的最终游戏场景" />
                   <figcaption><span>FINAL ENVIRONMENT</span> 参考研究、概念验证与 UE5 场景资产的整合结果</figcaption>
@@ -735,18 +746,6 @@ export default function Home() {
                     <figure><img src="/portfolio-p04-interior-a.jpg" alt="室内废弃别墅从白盒到初步灯光的过程" /><figcaption>GREYBOX / STRUCTURE</figcaption></figure>
                     <figure><img src="/portfolio-p04-interior-b.jpg" alt="室内场景资产、灯光和人物持续迭代" /><figcaption>DETAIL / LIGHTING</figcaption></figure>
                     <figure><img src="/portfolio-p04-interior-final.jpg" alt="室内废弃别墅场景最终氛围" /><figcaption>FINAL / ATMOSPHERE</figcaption></figure>
-                  </div>
-                </section>
-
-                <section className="case-section" aria-labelledby="environment-research-title">
-                  <div className="case-section-heading"><p>03 / 参考驱动的世界观</p><h4 id="environment-research-title">把地域特征转成可复用的设计规则</h4></div>
-                  <div className="research-grid">
-                    <div><p>建筑参考云川藏地区的形制与配色，提取黄、红、白墙体和局部金色屋顶；环境以高海拔针叶林、苔藓、草甸、雪山与云海建立气候识别。</p><p>AI 用于快速比较构图与气氛，模块化资产则让概念方向能继续进入真实场景搭建。</p></div>
-                    <figure><img src="/portfolio-p04-research.jpg" alt="藏地建筑与高海拔自然环境的参考研究" /><figcaption>REFERENCE / ARCHITECTURE &amp; ECOLOGY</figcaption></figure>
-                  </div>
-                  <div className="case-evidence-grid two-up concept-final-grid">
-                    <figure><img src="/portfolio-p04-concept.jpg" alt="藏地雪山建筑场景的黑白概念草图" /><figcaption>AI CONCEPT / DIRECTION TEST</figcaption></figure>
-                    <figure><img src="/portfolio-p04-final.jpg" alt="藏地雪山建筑游戏场景最终效果" /><figcaption>UE5 RESULT / IMPLEMENTATION</figcaption></figure>
                   </div>
                 </section>
 
