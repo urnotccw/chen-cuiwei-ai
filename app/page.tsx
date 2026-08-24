@@ -612,6 +612,13 @@ export default function Home() {
                     <figure><img src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /></figure>
                     <figure><img src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /></figure>
                   </div>
+                  <div className="wuxing-card-row" aria-label="金木水火土五行卡牌">
+                    <figure><img src="/wuxing-card-metal.png" alt="金元素卡牌" /></figure>
+                    <figure><img src="/wuxing-card-wood.png" alt="木元素卡牌" /></figure>
+                    <figure><img src="/wuxing-card-water.png" alt="水元素卡牌" /></figure>
+                    <figure><img src="/wuxing-card-fire.png" alt="火元素卡牌" /></figure>
+                    <figure><img src="/wuxing-card-earth.png" alt="土元素卡牌" /></figure>
+                  </div>
                 </section>
 
                 <div className="wuxing-play-cta">
