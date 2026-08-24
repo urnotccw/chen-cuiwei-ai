@@ -61,7 +61,24 @@ export default function Home() {
 
   return (
     <main>
-      <section className="cover-page">
+      <details className="site-side-nav">
+        <summary aria-label="打开或收起页面导航"><span>NAV</span><i aria-hidden="true">↔</i></summary>
+        <div className="site-side-nav-inner">
+          <p>CCW / DESIGN ARCHIVE</p>
+          <nav aria-label="全站快速导航">
+            <a href="#home"><span>00</span>首页</a>
+            <a href="#about"><span>INFO</span>自我介绍</a>
+            {projects.map((project) => (
+              <a href={`#project-${project.number}`} key={`side-nav-${project.number}`}>
+                <span>{project.number}</span>{project.title}
+              </a>
+            ))}
+          </nav>
+          <small>CHEN CUIWEI · 2026</small>
+        </div>
+      </details>
+
+      <section id="home" className="cover-page">
         <div className="cover-grain" aria-hidden="true" />
 
         <nav className="rail-menu" aria-label="作品集导航">
@@ -173,11 +190,11 @@ export default function Home() {
                 <p className="detail-type">{project.type}</p>
                 {project.number === "03" && (
                   <div className="phone-project-intro">
-                    <p>一只喵管家是一款面向养猫用户的轻量健康管理小程序，把散落在备忘录、相册与购物软件中的照护信息，收拢到一个持续可用的管理入口。</p>
+                    <p>一只喵管家是一款面向养猫用户的 <mark className="intro-highlight is-lime">轻量健康管理小程序</mark>，把散落在备忘录、相册与购物软件中的 <mark className="intro-highlight is-coral">照护信息</mark>，收拢到一个持续可用的管理入口。</p>
                     <dl>
-                      <div><dt>CORE PROBLEM</dt><dd>记录分散、提醒易忘、库存难管理</dd></div>
-                      <div><dt>SOLUTION</dt><dd>档案 / 库存 / 药箱 / 相册四个任务模块</dd></div>
-                      <div><dt>PROTOTYPE</dt><dd>可演示微信小程序交互版本</dd></div>
+                      <div><dt><span className="fact-label is-coral">CORE PROBLEM</span></dt><dd>记录分散、提醒易忘、库存难管理</dd></div>
+                      <div><dt><span className="fact-label is-lime">SOLUTION</span></dt><dd>档案 / 库存 / 药箱 / 相册四个任务模块</dd></div>
+                      <div><dt><span className="fact-label is-blue">PROTOTYPE</span></dt><dd>可演示微信小程序交互版本</dd></div>
                     </dl>
                   </div>
                 )}
