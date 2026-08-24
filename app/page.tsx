@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CatManagerDemo from "./components/CatManagerDemo";
 
 export const metadata: Metadata = {
   title: "陈萃薇 · AI 产品经理作品集",
@@ -214,9 +215,10 @@ export default function Home() {
                     <span className="iphone-power-button" aria-hidden="true" />
                     <div id="mini-program-demo-root" className="iphone-15-screen" aria-label="小程序交互内容将在此处呈现">
                       <span className="iphone-dynamic-island" aria-hidden="true" />
+                      <CatManagerDemo />
                     </div>
                   </div>
-                  <p>INTERACTIVE MINI PROGRAM / SOURCE PENDING</p>
+                  <p>INTERACTIVE MINI PROGRAM / WEB PROTOTYPE</p>
                 </div>
               ) : project.hero ? (
                 <figure className="detail-visual case-detail-visual">
