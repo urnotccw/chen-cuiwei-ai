@@ -868,6 +868,9 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .wuxing-lead-media { background: #050507; }
 .wuxing-lead-media img { aspect-ratio: 16 / 9; object-fit: contain; }
 .case-study-game .game-rule-grid article { background: linear-gradient(145deg, rgba(164,135,212,.1), rgba(255,255,255,.025)); }
+.case-study-game .game-loop-list li { grid-template-columns: 28px 1fr; gap: 12px; min-height: 122px; padding: 16px 18px; }
+.case-study-game .game-loop-list strong { margin-bottom: 5px; font-size: clamp(16px, 1.18vw, 22px); }
+.case-study-game .game-loop-list p { line-height: 1.52; }
 .ai-tool-summary { display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.3fr); gap: clamp(34px, 6vw, 108px); align-items: start; padding: clamp(38px, 4.6vw, 84px) 0; border-bottom: 1px solid var(--case-line); }
 .ai-tool-summary h4 { margin: 0; font-family: var(--font-editorial); font-size: clamp(28px, 2.6vw, 48px); font-weight: 500; letter-spacing: .02em; line-height: 1.05; }
 .ai-tool-summary > div { display: grid; gap: 1px; border-top: 1px solid var(--case-line); }
