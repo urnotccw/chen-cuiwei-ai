@@ -27,6 +27,9 @@ export default function Home() {
         <div className="title-stack">
           <p className="kicker">陈萃薇的</p>
           <h1 id="page-title">设计<br />档案</h1>
+          <div className="barcode" aria-hidden="true">
+            <span>CCW · 2026 · 0824</span>
+          </div>
         </div>
         <p className="stitch-note">PRODUCT / STRATEGY<br />EXPERIENCE</p>
       </section>
