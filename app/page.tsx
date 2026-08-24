@@ -151,7 +151,7 @@ export default function Home() {
               <span className={`project-backdrop${project.number === "01" ? " blue-index-cover" : project.number === "02" ? " wuxing-index-cover" : ""}`} aria-hidden="true" />
               <p className="project-number">{project.number}</p>
               <div className="project-name">
-                <h3>{project.title}</h3>
+                <h3 className={project.number === "02" ? "wuxing-title" : undefined}>{project.title}</h3>
                 <p>{project.english}</p>
               </div>
               <p className="project-type">{project.type}</p>
@@ -190,7 +190,7 @@ export default function Home() {
                 <p className="detail-number">{project.number}</p>
                 <div>
                   <p className="detail-kicker">{project.english}</p>
-                  <h2 id={`project-title-${project.number}`}>{project.title}</h2>
+                  <h2 className={project.number === "02" ? "wuxing-title" : undefined} id={`project-title-${project.number}`}>{project.title}</h2>
                 </div>
                 <p className="detail-type">{project.type}</p>
                 {project.number === "03" && (
