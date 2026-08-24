@@ -69,8 +69,7 @@ export default function Home() {
           <p>CCW / DESIGN ARCHIVE</p>
           <nav aria-label="全站快速导航">
             <a href="#home"><span>00</span>首页</a>
-            <a href="#about"><span>INFO</span>自我介绍</a>
-            <a href="#resume"><span>CV</span>个人简历</a>
+            <a href="#resume"><span>CV</span>自我介绍 / 简历</a>
             {projects.map((project) => (
               <a href={`#project-${project.number}`} key={`side-nav-${project.number}`}>
                 <span>{project.number}</span>{project.title}
@@ -86,12 +85,12 @@ export default function Home() {
 
         <nav className="rail-menu" aria-label="作品集导航">
           <a className="is-active" href="#works">WORK</a>
-          <a href="#about">ABOUT</a>
+          <a href="#resume">ABOUT</a>
           <a href="#top" lang="en">EN</a>
           <a href="#top" lang="zh-CN">CN</a>
         </nav>
 
-        <aside id="about" className="profile-card" aria-label="个人、教育与联系方式">
+        <aside className="profile-card" aria-label="个人、教育与联系方式">
           <p className="card-index">PROFILE / CONTACT · 01</p>
           <div className="profile-grid">
             <div className="identity-block">

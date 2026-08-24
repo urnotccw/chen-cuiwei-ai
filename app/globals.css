@@ -166,6 +166,68 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .resume-footer a { margin-left: auto; }
 }
 
+/* One-page profile + resume */
+.resume-page { min-height: max(100svh, 780px); display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; padding: clamp(24px,2.1vw,40px) clamp(30px,4.2vw,80px) clamp(20px,1.8vw,34px); }
+.resume-profile-header { grid-template-columns: minmax(270px,.7fr) minmax(330px,1.05fr) minmax(250px,.62fr) auto; gap: clamp(22px,2.8vw,52px); align-items: end; padding-bottom: clamp(16px,1.6vw,28px); }
+.resume-profile-header h2 { margin: 7px 0 3px; font-size: clamp(54px,5.3vw,98px); line-height: .8; }
+.resume-positioning { max-width: 590px; margin: 0; font-family: var(--font-editorial); font-size: clamp(11px,.83vw,15px); line-height: 1.65; letter-spacing: .035em; }
+.resume-profile-header dl { gap: 5px; }
+.resume-profile-header dl div { grid-template-columns: 54px 1fr; gap: 10px; padding-bottom: 4px; }
+.resume-profile-header dd { font-size: clamp(9px,.72vw,13px); }
+.resume-download { align-self: start; white-space: nowrap; }
+.resume-metric-strip div { gap: 4px; padding: clamp(10px,1vw,17px) clamp(10px,1.15vw,21px); }
+.resume-metric-strip strong { font-size: clamp(23px,2.15vw,39px); }
+.resume-metric-strip span { font-size: clamp(6px,.48vw,8px); }
+.resume-onepage-grid { display: grid; grid-template-columns: minmax(230px,.66fr) minmax(440px,1.32fr) minmax(300px,.88fr); gap: clamp(28px,3.8vw,72px); min-height: 0; padding: clamp(20px,2vw,34px) 0 clamp(14px,1.4vw,24px); }
+.resume-onepage-grid h3 { margin: 6px 0 12px; font-family: var(--font-editorial); font-size: clamp(22px,1.8vw,34px); line-height: 1; font-weight: 600; }
+.resume-compact-sidebar { display: grid; align-content: start; gap: clamp(22px,2.2vw,38px); }
+.resume-compact-sidebar section > article { padding: 9px 0; border-top: 1px solid rgba(40,35,31,.22); }
+.resume-compact-sidebar section > article:last-child { border-bottom: 1px solid rgba(40,35,31,.22); }
+.resume-compact-sidebar article header { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.resume-compact-sidebar article strong { font-family: var(--font-editorial); font-size: clamp(12px,.95vw,17px); }
+.resume-compact-sidebar article time { flex: 0 0 auto; font: 700 clamp(6px,.44vw,8px)/1 var(--font-label); letter-spacing: .07em; opacity: .62; }
+.resume-compact-sidebar article p { margin: 4px 0 0; font-family: var(--font-editorial); font-size: clamp(8px,.62vw,11px); line-height: 1.45; }
+.resume-compact-skills { display: grid; margin: 0; border-top: 1px solid rgba(40,35,31,.22); }
+.resume-compact-skills div { display: grid; grid-template-columns: 44px 1fr; gap: 9px; padding: 7px 0; border-bottom: 1px solid rgba(40,35,31,.18); }
+.resume-compact-skills dt { font: 700 clamp(7px,.54vw,10px)/1.45 var(--font-label); }
+.resume-compact-skills dd { margin: 0; font-family: var(--font-editorial); font-size: clamp(8px,.6vw,11px); line-height: 1.45; }
+.resume-compact-experience > article { padding: clamp(11px,1.05vw,18px) 0; border-top: 1px solid rgba(40,35,31,.25); }
+.resume-compact-experience > article:last-child { border-bottom: 1px solid rgba(40,35,31,.25); }
+.resume-compact-experience article > header { display: flex; justify-content: space-between; gap: 18px; align-items: baseline; }
+.resume-compact-experience h4 { margin: 0; font-family: var(--font-editorial); font-size: clamp(15px,1.18vw,21px); line-height: 1.15; }
+.resume-compact-experience header p { margin: 3px 0 0; font: 700 clamp(7px,.52vw,9px)/1.3 var(--font-label); letter-spacing: .05em; }
+.resume-compact-experience time { flex: 0 0 auto; font: 700 clamp(6px,.45vw,8px)/1 var(--font-label); letter-spacing: .07em; }
+.resume-compact-experience article > strong { display: block; margin-top: 7px; font-family: var(--font-editorial); font-size: clamp(8px,.65vw,12px); line-height: 1.4; }
+.resume-compact-experience ul { display: grid; gap: 5px; margin: 8px 0 0; padding: 0; list-style: none; }
+.resume-compact-experience li { position: relative; padding-left: 12px; font-family: var(--font-editorial); font-size: clamp(8px,.61vw,11px); line-height: 1.48; letter-spacing: .02em; }
+.resume-compact-experience li::before { content: ""; position: absolute; top: .68em; left: 0; width: 5px; height: 2px; background: #28231f; }
+.resume-compact-projects > article { display: grid; grid-template-columns: 24px 1fr; gap: 10px; padding: clamp(9px,.82vw,14px) 0; border-top: 1px solid rgba(40,35,31,.22); }
+.resume-compact-projects > article:nth-last-of-type(1) { border-bottom: 1px solid rgba(40,35,31,.22); }
+.resume-compact-projects article > span { font: 700 clamp(7px,.52vw,9px)/1.4 var(--font-label); opacity: .55; }
+.resume-compact-projects h4 { margin: 0; font-family: var(--font-editorial); font-size: clamp(13px,1vw,18px); line-height: 1.15; }
+.resume-compact-projects article strong { display: block; margin-top: 4px; font: 700 clamp(6px,.47vw,8px)/1.3 var(--font-label); letter-spacing: .04em; }
+.resume-compact-projects article p { margin: 5px 0 0; font-family: var(--font-editorial); font-size: clamp(8px,.59vw,10.5px); line-height: 1.48; }
+.resume-compact-projects > a { display: inline-block; margin-top: 13px; padding: 7px 9px 6px; color: #f8f5ed; background: #28231f; font: 700 clamp(6px,.47vw,8px)/1 var(--font-label); letter-spacing: .1em; }
+.resume-footer { padding-top: 10px; }
+
+@media (max-width: 760px) {
+  .resume-page { min-height: auto; display: block; padding: 24px 20px 30px; }
+  .resume-profile-header { grid-template-columns: 1fr auto; gap: 18px 14px; }
+  .resume-profile-header > div { grid-column: 1 / 3; }
+  .resume-profile-header h2 { font-size: clamp(66px,21vw,94px); }
+  .resume-positioning { grid-column: 1 / 3; font-size: 11px; }
+  .resume-profile-header dl { min-width: 210px; }
+  .resume-metric-strip { margin-top: 22px; }
+  .resume-onepage-grid { grid-template-columns: 1fr; gap: 48px; padding: 48px 0 42px; }
+  .resume-onepage-grid h3 { font-size: 34px; margin-bottom: 18px; }
+  .resume-compact-sidebar { gap: 44px; }
+  .resume-compact-sidebar article strong, .resume-compact-experience h4, .resume-compact-projects h4 { font-size: 18px; }
+  .resume-compact-sidebar article p, .resume-compact-skills dd, .resume-compact-experience li, .resume-compact-projects article p { font-size: 11px; }
+  .resume-compact-experience article > strong { font-size: 11px; }
+  .resume-compact-experience > article { padding: 20px 0; }
+  .resume-compact-projects > article { padding: 16px 0; }
+}
+
 .works-page {
   --work-ink: #28231f;
   position: relative;
