@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CatManagerDemo from "./components/CatManagerDemo";
+import ResumeSection from "./components/ResumeSection";
 
 export const metadata: Metadata = {
   title: "陈萃薇 · AI 产品经理作品集",
@@ -69,6 +70,7 @@ export default function Home() {
           <nav aria-label="全站快速导航">
             <a href="#home"><span>00</span>首页</a>
             <a href="#about"><span>INFO</span>自我介绍</a>
+            <a href="#resume"><span>CV</span>个人简历</a>
             {projects.map((project) => (
               <a href={`#project-${project.number}`} key={`side-nav-${project.number}`}>
                 <span>{project.number}</span>{project.title}
@@ -117,6 +119,8 @@ export default function Home() {
           <p className="stitch-note">PRODUCT / STRATEGY<br />EXPERIENCE</p>
         </section>
       </section>
+
+      <ResumeSection />
 
       <section id="works" className="works-page" aria-labelledby="works-title">
         <header className="works-header">
