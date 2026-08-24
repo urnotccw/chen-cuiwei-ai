@@ -555,7 +555,8 @@ export default function Home() {
                   <dl className="case-facts">
                     <div><dt>MY ROLE</dt><dd>玩法策划 / 系统设计 / 视觉设定 / AI 辅助开发</dd></div>
                     <div><dt>DELIVERABLE</dt><dd>可在线体验的网页策略卡牌游戏</dd></div>
-                    <div><dt>WORKFLOW</dt><dd>GPT / GPT-image / HTML / CSS / JavaScript</dd></div>
+                    <div><dt>AI COLLAB</dt><dd>GPT-image ／ 即梦：视觉探索；Codex ／ WorkBuddy：网页原型、交互逻辑与调试迭代</dd></div>
+                    <div><dt>WORKFLOW</dt><dd>HTML / CSS / JavaScript</dd></div>
                   </dl>
                 </div>
 
@@ -563,14 +564,6 @@ export default function Home() {
                   <img src="/wuxing-battle.png" alt="五行星轨首个星宿关卡的策略卡牌战斗界面" />
                   <figcaption><span>PLAYABLE PROTOTYPE</span> 五行关系、阵法卡槽、角色状态与敌人机制在同一屏内完成决策反馈</figcaption>
                 </figure>
-
-                <section className="ai-tool-summary" aria-label="AI 协作工具">
-                  <h4>AI 协作工具</h4>
-                  <div>
-                    <p><strong>GPT-image ／ 即梦</strong><span>用于敌人立绘、五行卡牌与整体视觉方向的探索。</span></p>
-                    <p><strong>Codex ／ WorkBuddy</strong><span>用于网页原型、交互逻辑实现与调试迭代。</span></p>
-                  </div>
-                </section>
 
                 <section className="case-section" aria-labelledby="game-loop-title">
                   <div className="case-section-heading"><p>02 / 核心循环</p><h4 id="game-loop-title">从选择星宿到完成阵法结算</h4></div>

@@ -871,12 +871,6 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .case-study-game .game-loop-list li { grid-template-columns: 28px 1fr; gap: 12px; min-height: 122px; padding: 16px 18px; }
 .case-study-game .game-loop-list strong { margin-bottom: 5px; font-size: clamp(16px, 1.18vw, 22px); }
 .case-study-game .game-loop-list p { line-height: 1.52; }
-.ai-tool-summary { display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.3fr); gap: clamp(34px, 6vw, 108px); align-items: start; padding: clamp(38px, 4.6vw, 84px) 0; border-bottom: 1px solid var(--case-line); }
-.ai-tool-summary h4 { margin: 0; font-family: var(--font-editorial); font-size: clamp(28px, 2.6vw, 48px); font-weight: 500; letter-spacing: .02em; line-height: 1.05; }
-.ai-tool-summary > div { display: grid; gap: 1px; border-top: 1px solid var(--case-line); }
-.ai-tool-summary p { display: grid; grid-template-columns: minmax(160px, .72fr) minmax(0, 1.28fr); gap: 22px; margin: 0; padding: 14px 0; border-bottom: 1px solid var(--case-line); }
-.ai-tool-summary strong { font: 700 clamp(8px, .66vw, 12px)/1.35 var(--font-label); letter-spacing: .1em; }
-.ai-tool-summary span { font-family: var(--font-editorial); font-size: clamp(10px, .82vw, 15px); line-height: 1.65; letter-spacing: .035em; }
 .enemy-roster { padding: clamp(38px, 5vw, 90px) 0; border-bottom: 1px solid var(--case-line); }
 .enemy-roster-group > p, .wuxing-card-group > p { margin: 0 0 12px; font: 700 clamp(8px, .66vw, 12px)/1.2 var(--font-label); letter-spacing: .12em; }
 .enemy-roster-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--case-line); background: var(--case-line); }
@@ -1085,8 +1079,6 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .case-study-footer { gap: 20px; }
   .wuxing-play-cta { grid-template-columns: 1fr; gap: 22px; }
   .wuxing-play-cta a { justify-self: start; }
-  .ai-tool-summary { grid-template-columns: 1fr; gap: 22px; padding: 36px 0; }
-  .ai-tool-summary p { grid-template-columns: 1fr; gap: 8px; }
   .enemy-roster { padding: 34px 0; }
   .enemy-roster-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .enemy-roster figure::before { inset: 8% 7%; }
