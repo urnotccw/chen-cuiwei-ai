@@ -156,7 +156,7 @@ export default function Home() {
         const next = index === projects.length - 1 ? "works" : `project-${projects[index + 1].number}`;
 
         return (
-          <section id={`project-${project.number}`} className="project-detail" key={`detail-${project.number}`} aria-labelledby={`project-title-${project.number}`}>
+          <section id={`project-${project.number}`} className={`project-detail${project.hero ? " case-project-detail" : ""}`} key={`detail-${project.number}`} aria-labelledby={`project-title-${project.number}`}>
             <header className="detail-header">
               <a href="#works">CCW / WORK INDEX</a>
               <p>PROJECT {project.number} / 05</p>
