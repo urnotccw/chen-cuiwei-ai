@@ -13,6 +13,9 @@ export default function Home() {
       type: "AIGC 动画短片",
       english: "AIGC ANIMATION SHORT FILM",
       tools: ["GPT", "GPT-IMAGE 2", "LIBTV", "SEEDANCE 2.5", "剪映"],
+      hero: null,
+      heroAlt: "",
+      summary: "从故事灵感到角色与镜头设计的 AIGC 动画创作。",
     },
     {
       number: "02",
@@ -20,6 +23,9 @@ export default function Home() {
       type: "AI 辅助网页小游戏开发",
       english: "AI-ASSISTED WEB GAME",
       tools: ["GPT", "GPT-IMAGE"],
+      hero: null,
+      heroAlt: "",
+      summary: "项目图片与详细内容将在下一步补充。",
     },
     {
       number: "03",
@@ -27,6 +33,9 @@ export default function Home() {
       type: "AI 辅助微信小程序开发",
       english: "AI WECHAT MINI PROGRAM",
       tools: ["FIGMA", "CODEX", "GPT-IMAGE"],
+      hero: "/portfolio-p03-ui.jpg",
+      heroAlt: "一只喵管家微信小程序的四个核心界面",
+      summary: "从养猫记录分散的真实痛点出发，完成需求拆解、功能架构与可演示交互版本。",
     },
     {
       number: "04",
@@ -34,6 +43,9 @@ export default function Home() {
       type: "AI 辅助游戏场景设计",
       english: "AI-ASSISTED GAME ENVIRONMENT",
       tools: ["UE5", "GPT", "NANO BANANA"],
+      hero: "/portfolio-p04-final.jpg",
+      heroAlt: "藏地建筑与雪山云海构成的游戏场景最终效果",
+      summary: "用 AI 加速视觉方向验证，再通过 UE5 白盒、模块化资产与灯光迭代完成场景落地。",
     },
     {
       number: "05",
@@ -41,6 +53,9 @@ export default function Home() {
       type: "三维建模与材质设计",
       english: "3D MODELING & TEXTURING",
       tools: ["MAYA", "SUBSTANCE PAINTER", "TOOLBAG"],
+      hero: "/portfolio-p05-hero.jpg",
+      heroAlt: "海上小屋风格化三维场景",
+      summary: "围绕风格一致性、资产复用与交付规范，完成多类型游戏 3D 资产设计与制作。",
     },
   ];
 
@@ -163,6 +178,11 @@ export default function Home() {
                   <video className="blue-video-player" controls preload="metadata" playsInline aria-label="AIGC 动画短片《蓝》视频播放器" />
                   <span className="video-ratio-note">VIDEO / 16:9</span>
                 </div>
+              ) : project.hero ? (
+                <figure className="detail-visual case-detail-visual">
+                  <img src={project.hero} alt={project.heroAlt} />
+                  <figcaption>PROJECT {project.number} / CASE OVERVIEW</figcaption>
+                </figure>
               ) : (
                 <div className="detail-visual" aria-label={`${project.title} 项目内容待添加`}>
                   <span>PROJECT VISUAL / CONTENT PENDING</span>
@@ -177,7 +197,7 @@ export default function Home() {
                     {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
                   </ul>
                 </div>
-                <p>{project.number === "01" ? "从故事灵感到角色与镜头设计的 AIGC 动画创作。" : "项目图片与详细内容将在下一步补充。"}</p>
+                <p>{project.summary}</p>
                 <nav aria-label={`${project.title} 项目切换`}>
                   <a href={`#${previous}`}>← PREV</a>
                   <a href={`#${next}`}>NEXT →</a>
@@ -456,6 +476,188 @@ export default function Home() {
                   </footer>
                 </section>
               </>
+            )}
+
+            {project.number === "03" && (
+              <section className="case-study case-study-pet" aria-labelledby="pet-case-title">
+                <header className="case-study-header"><span>PROJECT 03 / PRODUCT CASE</span><span>WECHAT MINI PROGRAM</span></header>
+
+                <div className="case-opening">
+                  <div>
+                    <p>01 / 项目概览</p>
+                    <h3 id="pet-case-title">把分散的养猫记录，<br />变成可持续的照护系统</h3>
+                  </div>
+                  <dl className="case-facts">
+                    <div><dt>MY ROLE</dt><dd>需求分析 / 信息架构 / 交互设计 / 原型搭建</dd></div>
+                    <div><dt>DELIVERABLE</dt><dd>微信小程序可演示交互版本</dd></div>
+                    <div><dt>WORKFLOW</dt><dd>Figma / Codex / GPT-image</dd></div>
+                  </dl>
+                </div>
+
+                <figure className="case-lead-media">
+                  <img src="/portfolio-p03-ui.jpg" alt="一只喵管家的档案、库存、药箱和相册界面" />
+                  <figcaption><span>FINAL INTERFACE</span> 四个核心任务形成统一的猫咪健康管理入口</figcaption>
+                </figure>
+
+                <div className="case-problem-grid">
+                  <section>
+                    <p className="case-label">PROBLEM / 问题</p>
+                    <h4>记录存在，但无法形成连续判断</h4>
+                    <p>体重、饮食、饮水、用药和物资库存通常散落在备忘录、聊天记录、相册与购物软件中。信息不连续会带来漏记、遗忘补货，以及健康异常难追踪的问题。</p>
+                  </section>
+                  <section>
+                    <p className="case-label">PRODUCT GOAL / 产品目标</p>
+                    <h4>降低记录成本，让提醒真正可执行</h4>
+                    <p>把高频照护任务集中到一个轻量入口，通过模块化结构承载健康、库存、用药与成长记录，让用户能快速看到“现在需要做什么”。</p>
+                  </section>
+                </div>
+
+                <section className="case-section" aria-labelledby="pet-users-title">
+                  <div className="case-section-heading"><p>02 / 用户与需求</p><h4 id="pet-users-title">从三类高频场景建立优先级</h4></div>
+                  <div className="persona-grid">
+                    <article><span>01</span><h5>新手养猫者</h5><p>对疫苗、驱虫和用药周期不熟悉，需要清晰提醒，也需要判断当前状态是否异常。</p><strong>核心机会：周期提醒</strong></article>
+                    <article><span>02</span><h5>持续记录者</h5><p>长期记录体重、饮食、饮水与用药，希望集中查看趋势，而不是在多处寻找历史信息。</p><strong>核心机会：连续档案</strong></article>
+                    <article><span>03</span><h5>多物资管理者</h5><p>猫粮、罐头、冻干和药品种类多，容易忘记补货，也难快速判断剩余使用天数。</p><strong>核心机会：库存可视化</strong></article>
+                  </div>
+                </section>
+
+                <section className="case-section architecture-section" aria-labelledby="pet-architecture-title">
+                  <div className="case-section-heading"><p>03 / 信息架构</p><h4 id="pet-architecture-title">围绕任务，而不是数据类型组织功能</h4></div>
+                  <div className="module-grid">
+                    <article><span>01</span><h5>喵档案</h5><p>猫咪资料、健康提醒、体重趋势与日常照护记录。</p></article>
+                    <article><span>02</span><h5>喵囤囤</h5><p>库存数量、剩余天数、喜爱程度和补货提醒。</p></article>
+                    <article><span>03</span><h5>喵药箱</h5><p>疫苗、驱虫与用药历史，减少周期遗漏。</p></article>
+                    <article><span>04</span><h5>喵相册</h5><p>按时间组织成长照片，建立可回看的连续时间线。</p></article>
+                  </div>
+                  <div className="case-evidence-grid two-up">
+                    <figure><img src="/portfolio-p03-insight.jpg" alt="一只喵管家的产品背景与三类用户画像" /><figcaption>USER INSIGHT / 用户问题与场景拆解</figcaption></figure>
+                    <figure><img src="/portfolio-p03-architecture.jpg" alt="一只喵管家的产品目标与四模块功能架构" /><figcaption>INFORMATION ARCHITECTURE / 功能架构</figcaption></figure>
+                  </div>
+                </section>
+
+                <section className="case-conclusion">
+                  <div><p className="case-label">AI VALUE / AI 在项目中的作用</p><h4>把需求快速转成可讨论的产品</h4><p>AI 用于辅助需求拆分、文案整理、界面素材与代码搭建，缩短从想法到交互版本的距离；用户问题、功能取舍与信息架构仍由人工定义。</p></div>
+                  <div><p className="case-label">CURRENT STATUS / 当前阶段</p><h4>已完成可演示版本，下一步验证真实使用</h4><p>当前成果覆盖核心流程和主要界面。下一步应重点测试提醒是否可靠、记录成本是否足够低，以及多猫与跨设备数据场景。</p></div>
+                </section>
+
+                <footer className="case-study-footer"><span>PROBLEM / PRIORITY / PROTOTYPE</span><a href="#works">BACK TO WORK INDEX ↑</a></footer>
+              </section>
+            )}
+
+            {project.number === "04" && (
+              <section className="case-study case-study-environment" aria-labelledby="environment-case-title">
+                <header className="case-study-header"><span>PROJECT 04 / DESIGN PIPELINE</span><span>AI + UE5</span></header>
+
+                <div className="case-opening">
+                  <div><p>01 / 项目命题</p><h3 id="environment-case-title">让 AI 负责快速探索，<br />让引擎负责空间落地</h3></div>
+                  <dl className="case-facts">
+                    <div><dt>MY ROLE</dt><dd>视觉目标定义 / 流程设计 / 场景搭建 / 迭代决策</dd></div>
+                    <div><dt>DELIVERABLE</dt><dd>室内场景与藏地题材场景验证</dd></div>
+                    <div><dt>WORKFLOW</dt><dd>UE5 / GPT / Nano Banana / Photoshop</dd></div>
+                  </dl>
+                </div>
+
+                <figure className="case-lead-media dark-media">
+                  <img src="/portfolio-p04-final.jpg" alt="藏地建筑、雪山、云海与森林构成的最终游戏场景" />
+                  <figcaption><span>FINAL ENVIRONMENT</span> 参考研究、概念验证与 UE5 场景资产的整合结果</figcaption>
+                </figure>
+
+                <div className="case-problem-grid">
+                  <section><p className="case-label">HYPOTHESIS / 假设</p><h4>概念图能否转化为可执行的制作约束？</h4><p>AI 可以快速给出气氛方向，但如果没有明确空间结构、镜头目标和资产边界，最终画面很难在引擎中稳定复现。</p></section>
+                  <section><p className="case-label">STRATEGY / 策略</p><h4>先验证空间，再补充视觉复杂度</h4><p>先用白盒确认构图与动线，再分层处理资产、灯光、人物和氛围；把每轮 AI 结果转译为可执行的场景修改项。</p></section>
+                </div>
+
+                <section className="case-section" aria-labelledby="environment-pipeline-title">
+                  <div className="case-section-heading"><p>02 / 室内场景迭代</p><h4 id="environment-pipeline-title">从白盒到最终氛围的七步收敛</h4></div>
+                  <ol className="pipeline-list">
+                    <li><span>01</span><div><strong>搭建白盒</strong><p>先确定破旧废弃别墅的房间结构和核心机位。</p></div></li>
+                    <li><span>02</span><div><strong>补充资产</strong><p>根据叙事设定增加家具、杂物与空间层次。</p></div></li>
+                    <li><span>03</span><div><strong>建立光线规则</strong><p>下午暖光斜入主空间，侧房间用偏冷绿光形成对比。</p></div></li>
+                    <li><span>04</span><div><strong>丰富使用痕迹</strong><p>通过墙面污渍、跨区域物件和细节密度强化废弃感。</p></div></li>
+                    <li><span>05</span><div><strong>人物与镜头校正</strong><p>替换角色并重新调整景别，使构图更符合游戏大厅展示。</p></div></li>
+                    <li><span>06</span><div><strong>整体氛围统一</strong><p>回到可读性、冷暖关系与视线焦点，对全局进行收敛。</p></div></li>
+                  </ol>
+                  <div className="case-evidence-grid three-up">
+                    <figure><img src="/portfolio-p04-interior-a.jpg" alt="室内废弃别墅从白盒到初步灯光的过程" /><figcaption>GREYBOX / STRUCTURE</figcaption></figure>
+                    <figure><img src="/portfolio-p04-interior-b.jpg" alt="室内场景资产、灯光和人物持续迭代" /><figcaption>DETAIL / LIGHTING</figcaption></figure>
+                    <figure><img src="/portfolio-p04-interior-final.jpg" alt="室内废弃别墅场景最终氛围" /><figcaption>FINAL / ATMOSPHERE</figcaption></figure>
+                  </div>
+                </section>
+
+                <section className="case-section" aria-labelledby="environment-research-title">
+                  <div className="case-section-heading"><p>03 / 参考驱动的世界观</p><h4 id="environment-research-title">把地域特征转成可复用的设计规则</h4></div>
+                  <div className="research-grid">
+                    <div><p>建筑参考云川藏地区的形制与配色，提取黄、红、白墙体和局部金色屋顶；环境以高海拔针叶林、苔藓、草甸、雪山与云海建立气候识别。</p><p>AI 用于快速比较构图与气氛，模块化资产则让概念方向能继续进入真实场景搭建。</p></div>
+                    <figure><img src="/portfolio-p04-research.jpg" alt="藏地建筑与高海拔自然环境的参考研究" /><figcaption>REFERENCE / ARCHITECTURE &amp; ECOLOGY</figcaption></figure>
+                  </div>
+                  <div className="case-evidence-grid two-up concept-final-grid">
+                    <figure><img src="/portfolio-p04-concept.jpg" alt="藏地雪山建筑场景的黑白概念草图" /><figcaption>AI CONCEPT / DIRECTION TEST</figcaption></figure>
+                    <figure><img src="/portfolio-p04-final.jpg" alt="藏地雪山建筑游戏场景最终效果" /><figcaption>UE5 RESULT / IMPLEMENTATION</figcaption></figure>
+                  </div>
+                </section>
+
+                <section className="case-conclusion">
+                  <div><p className="case-label">AI VALUE / AI 的价值</p><h4>缩短概念比较时间，帮助团队更早对齐方向</h4><p>AI 最适合前期气氛、配色与构图探索。它把抽象描述变成可比较的视觉选项，但必须继续被拆解为资产、灯光、空间和镜头任务。</p></div>
+                  <div><p className="case-label">PRODUCT THINKING / 产品化思考</p><h4>把一次作品沉淀成可复用的生产流程</h4><p>下一步将资产命名、模块组合、验收维度与性能约束整理为场景制作清单，使流程能够被团队复用，而不只依赖个人经验。</p></div>
+                </section>
+
+                <footer className="case-study-footer"><span>HYPOTHESIS / PIPELINE / IMPLEMENTATION</span><a href="#works">BACK TO WORK INDEX ↑</a></footer>
+              </section>
+            )}
+
+            {project.number === "05" && (
+              <section className="case-study case-study-assets" aria-labelledby="assets-case-title">
+                <header className="case-study-header"><span>PROJECT 05 / 3D ASSET SYSTEM</span><span>MODELING &amp; TEXTURING</span></header>
+
+                <div className="case-opening">
+                  <div><p>01 / 项目概览</p><h3 id="assets-case-title">不只完成单个模型，<br />也建立可交付的资产意识</h3></div>
+                  <dl className="case-facts">
+                    <div><dt>MY ROLE</dt><dd>视觉拆解 / 建模 / UV / 材质 / 渲染呈现</dd></div>
+                    <div><dt>ASSET RANGE</dt><dd>场景 / 工业道具 / 风格化角色道具 / 写实道具</dd></div>
+                    <div><dt>WORKFLOW</dt><dd>Maya / Substance Painter / Toolbag</dd></div>
+                  </dl>
+                </div>
+
+                <figure className="case-lead-media asset-lead-media">
+                  <img src="/portfolio-p05-hero.jpg" alt="海上小屋风格化三维场景的最终效果" />
+                  <figcaption><span>ENVIRONMENT ASSET</span> 海上小屋：从整体构图到局部细节的一体化场景</figcaption>
+                </figure>
+
+                <div className="case-problem-grid">
+                  <section><p className="case-label">GOAL / 目标</p><h4>验证不同风格下的完整资产生产能力</h4><p>覆盖风格化场景、工业道具、角色化道具与写实材质，关注的不只是视觉完成度，也包括多视图一致、结构合理和后续复用。</p></section>
+                  <section><p className="case-label">DELIVERY LOGIC / 交付逻辑</p><h4>让每个资产都能被理解、检查和复用</h4><p>通过主视图、背面、侧面和细节图说明结构；材质区分、比例与风格语言保持统一，降低进入后续动画或游戏场景时的沟通成本。</p></section>
+                </div>
+
+                <section className="case-section" aria-labelledby="asset-process-title">
+                  <div className="case-section-heading"><p>02 / 制作流程</p><h4 id="asset-process-title">把视觉目标拆成五个可检查阶段</h4></div>
+                  <ol className="asset-process">
+                    <li><span>01</span><strong>参考与风格定义</strong><p>确定使用场景、轮廓语言、材质倾向和关键识别点。</p></li>
+                    <li><span>02</span><strong>结构与比例</strong><p>先保证大形和功能结构成立，再进入细节建模。</p></li>
+                    <li><span>03</span><strong>拓扑与 UV</strong><p>为材质绘制、变体扩展和后续使用预留清晰结构。</p></li>
+                    <li><span>04</span><strong>材质与磨损</strong><p>用材质层级解释使用方式，而不是只增加表面噪点。</p></li>
+                    <li><span>05</span><strong>渲染与检查</strong><p>用多角度、细节图和统一灯光确认比例、材质和可读性。</p></li>
+                  </ol>
+                </section>
+
+                <section className="case-section" aria-labelledby="asset-library-title">
+                  <div className="case-section-heading"><p>03 / 资产库</p><h4 id="asset-library-title">用不同资产类型验证风格与生产边界</h4></div>
+                  <div className="asset-gallery">
+                    <figure className="asset-wide"><img src="/portfolio-p05-details.jpg" alt="海上小屋场景的多个局部细节与整体效果" /><figcaption><span>ENVIRONMENT</span><strong>海上小屋</strong><p>整体构图、建筑、船只与水面共同维持轻量化的风格语言。</p></figcaption></figure>
+                    <figure><img src="/portfolio-p05-vending.jpg" alt="黄色奖品机的正面、背面、侧面和细节" /><figcaption><span>INDUSTRIAL PROP</span><strong>奖品机</strong><p>多视图验证功能结构与可交互部件。</p></figcaption></figure>
+                    <figure><img src="/portfolio-p05-book.jpg" alt="带有牙齿和舌头的奇幻书本角色道具" /><figcaption><span>STYLIZED PROP</span><strong>奇幻书</strong><p>通过夸张轮廓与材质对比建立角色感。</p></figcaption></figure>
+                    <figure><img src="/portfolio-p05-aircraft.jpg" alt="球形风格化飞行器的三个角度" /><figcaption><span>VEHICLE</span><strong>飞行器</strong><p>在统一主体结构上组织推进器与功能细节。</p></figcaption></figure>
+                    <figure><img src="/portfolio-p05-robot.jpg" alt="球形机器人多个角度的三维模型" /><figcaption><span>CHARACTER PROP</span><strong>机器人</strong><p>用可拆分结构和橙灰配色保持识别一致。</p></figcaption></figure>
+                    <figure className="asset-wide"><img src="/portfolio-p05-door.jpg" alt="木门的正面和不同开启角度" /><figcaption><span>REALISTIC PROP</span><strong>木门</strong><p>以木纹、金属磨损和开启角度检验写实材质表达。</p></figcaption></figure>
+                  </div>
+                </section>
+
+                <section className="case-conclusion">
+                  <div><p className="case-label">PRODUCT VALUE / 对产品的价值</p><h4>理解资产如何影响体验与协作成本</h4><p>3D 资产是体验的一部分，也是团队协作的接口。风格、比例、材质和变体规则越清楚，设计、开发与内容生产之间的返工越少。</p></div>
+                  <div><p className="case-label">NEXT STEP / 下一步</p><h4>补齐游戏资产的标准化交付清单</h4><p>进一步加入命名规则、尺寸单位、碰撞体、LOD、贴图通道与性能预算，让展示作品转化为可以直接进入项目管线的资产包。</p></div>
+                </section>
+
+                <footer className="case-study-footer"><span>SPECIFICATION / REUSE / HANDOFF</span><a href="#works">BACK TO WORK INDEX ↑</a></footer>
+              </section>
             )}
           </section>
         );
