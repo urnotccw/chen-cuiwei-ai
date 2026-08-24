@@ -871,6 +871,15 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .case-study-game .game-loop-list li { grid-template-columns: 28px 1fr; gap: 12px; min-height: 122px; padding: 16px 18px; }
 .case-study-game .game-loop-list strong { margin-bottom: 5px; font-size: clamp(16px, 1.18vw, 22px); }
 .case-study-game .game-loop-list p { line-height: 1.52; }
+.case-study-game .game-system-section { padding: clamp(30px, 3.5vw, 64px) 0; }
+.case-study-game .game-system-label { display: block; margin-bottom: 14px; }
+.case-study-game .game-system-label > p { margin: 0; }
+.case-study-game .game-rule-grid { gap: clamp(9px, 1vw, 16px); }
+.case-study-game .game-rule-grid article { min-height: 134px; padding: clamp(14px, 1.45vw, 22px); }
+.case-study-game .game-rule-grid article > span { margin-bottom: clamp(13px, 1.35vw, 20px); }
+.case-study-game .game-rule-grid h5 { margin-bottom: 7px; font-size: clamp(18px, 1.42vw, 26px); }
+.case-study-game .game-rule-grid p { line-height: 1.55; }
+.case-study-game .wuxing-evidence-grid { width: min(80%, 1200px); gap: clamp(10px, 1vw, 16px); margin: clamp(20px, 2.4vw, 42px) auto 0; }
 .enemy-roster { padding: clamp(38px, 5vw, 90px) 0; border-bottom: 1px solid var(--case-line); }
 .enemy-roster-group > p, .wuxing-card-group > p { margin: 0 0 12px; font: 700 clamp(8px, .66vw, 12px)/1.2 var(--font-label); letter-spacing: .12em; }
 .enemy-roster-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--case-line); background: var(--case-line); }
@@ -1061,6 +1070,11 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .case-lead-media figcaption { right: 10px; left: 10px; bottom: 10px; }
   .case-problem-grid, .case-conclusion { grid-template-columns: 1fr; gap: 40px; padding: 48px 0; }
   .case-section { padding: 54px 0; }
+  .case-study-game .game-system-section { padding: 32px 0 40px; }
+  .case-study-game .game-system-label { margin-bottom: 12px; }
+  .case-study-game .game-rule-grid article { min-height: 0; padding: 16px; }
+  .case-study-game .game-rule-grid article > span { margin-bottom: 14px; }
+  .case-study-game .wuxing-evidence-grid { width: 100%; margin-top: 22px; }
   .case-section-heading { grid-template-columns: 1fr; gap: 9px; }
   .case-section-heading h4 { font-size: 34px; }
   .persona-grid, .module-grid { grid-template-columns: 1fr; }

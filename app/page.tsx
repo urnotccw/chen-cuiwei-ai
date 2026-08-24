@@ -577,8 +577,8 @@ export default function Home() {
                   </ol>
                 </section>
 
-                <section className="case-section" aria-labelledby="game-system-title">
-                  <div className="case-section-heading"><p>03 / 规则系统</p><h4 id="game-system-title">用小结算与大结算制造短期和长期决策</h4></div>
+                <section className="case-section game-system-section" aria-label="规则系统">
+                  <div className="case-section-heading game-system-label"><p>03 / 规则系统</p></div>
                   <div className="module-grid game-rule-grid">
                     <article><span>01 / POSITION</span><h5>发动区 × 3</h5><p>上方三格触发卡牌自身攻击、防御、回复或功能效果，是即时行动层。</p></article>
                     <article><span>02 / SUPPORT</span><h5>辅助区 × 3</h5><p>下方卡牌不会单独发动，而是与同列上方卡牌形成五行关系。</p></article>
