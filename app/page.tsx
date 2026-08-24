@@ -777,7 +777,6 @@ export default function Home() {
 
                 <section className="case-section asset-gallery-section" aria-label="作品资产库">
                   <div className="asset-gallery">
-                    <figure className="asset-wide"><img src="/portfolio-p05-details.jpg" alt="海上小屋场景的多个局部细节与整体效果" /><figcaption><span>ENVIRONMENT</span><strong>海上小屋</strong><p>整体构图、建筑、船只与水面共同维持轻量化的风格语言。</p></figcaption></figure>
                     <figure><img src="/portfolio-p05-vending.jpg" alt="黄色奖品机的正面、背面、侧面和细节" /><figcaption><span>INDUSTRIAL PROP</span><strong>奖品机</strong><p>多视图验证功能结构与可交互部件。</p></figcaption></figure>
                     <figure><img src="/portfolio-p05-book.jpg" alt="带有牙齿和舌头的奇幻书本角色道具" /><figcaption><span>STYLIZED PROP</span><strong>奇幻书</strong><p>通过夸张轮廓与材质对比建立角色感。</p></figcaption></figure>
                     <figure><img src="/portfolio-p05-aircraft.jpg" alt="球形风格化飞行器的三个角度" /><figcaption><span>VEHICLE</span><strong>飞行器</strong><p>在统一主体结构上组织推进器与功能细节。</p></figcaption></figure>
