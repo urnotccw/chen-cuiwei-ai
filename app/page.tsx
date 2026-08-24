@@ -10,15 +10,28 @@ export default function Home() {
     <main className="cover-page">
       <div className="cover-grain" aria-hidden="true" />
 
-      <aside className="left-rail" aria-label="导航与个人信息">
-        <a className="rail-name" href="#top">陈萃薇<br /><span>CHEN CUIWEI</span></a>
-        <a className="rail-contact" href="#contact">WECHAT<br /><b>urnotccw</b></a>
-        <nav className="rail-menu" aria-label="作品集导航">
-          <a className="is-active" href="#works">WORK</a>
-          <a href="#about">ABOUT</a>
-          <a href="#top" lang="en">EN</a>
-          <a href="#top" lang="zh-CN">CN</a>
-        </nav>
+      <nav className="rail-menu" aria-label="作品集导航">
+        <a className="is-active" href="#works">WORK</a>
+        <a href="#about">ABOUT</a>
+        <a href="#top" lang="en">EN</a>
+        <a href="#top" lang="zh-CN">CN</a>
+      </nav>
+
+      <aside id="about" className="archive-card education-card" aria-label="个人与教育信息">
+        <p className="card-index">PROFILE / 01</p>
+        <div>
+          <h2>陈萃薇</h2>
+          <p className="education-copy">深圳大学硕士<br /><strong>数字媒体与动画设计专业</strong></p>
+        </div>
+      </aside>
+
+      <aside id="contact" className="archive-card contact-card" aria-label="联系方式">
+        <p className="card-index">CONTACT / 02</p>
+        <dl>
+          <div><dt>WECHAT</dt><dd>urnotccw</dd></div>
+          <div><dt>EMAIL</dt><dd><a href="mailto:2711348245@qq.com">2711348245@qq.com</a></dd></div>
+          <div><dt>TEL</dt><dd><a href="tel:+8615750910735">15750910735</a></dd></div>
+        </dl>
       </aside>
 
       <section id="top" className="cover-content" aria-labelledby="page-title">
@@ -35,8 +48,6 @@ export default function Home() {
       </section>
 
       <section id="works" className="sr-only">作品</section>
-      <section id="about" className="sr-only">关于陈萃薇</section>
-      <section id="contact" className="sr-only">微信号 urnotccw</section>
     </main>
   );
 }
