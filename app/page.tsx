@@ -212,7 +212,17 @@ export default function Home() {
 
               {project.number === "01" ? (
                 <div className="blue-video-frame">
-                  <video className="blue-video-player" controls preload="metadata" playsInline aria-label="AIGC 动画短片《蓝》视频播放器" />
+                  <video
+                    className="blue-video-player"
+                    controls
+                    preload="metadata"
+                    playsInline
+                    poster="/blue-cover.jpeg"
+                    aria-label="AIGC 动画短片《蓝》视频播放器"
+                  >
+                    <source src="/blue.mp4" type="video/mp4" />
+                    你的浏览器暂不支持视频播放。
+                  </video>
                   <span className="video-ratio-note">VIDEO / 16:9</span>
                 </div>
               ) : project.number === "03" ? (
