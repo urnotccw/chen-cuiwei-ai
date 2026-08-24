@@ -759,11 +759,10 @@ export default function Home() {
             )}
 
             {project.number === "05" && (
-              <section className="case-study case-study-assets" aria-labelledby="assets-case-title">
+              <section className="case-study case-study-assets" aria-label="3D 建模设计项目案例">
                 <header className="case-study-header"><span>PROJECT 05 / 3D ASSET SYSTEM</span><span>MODELING &amp; TEXTURING</span></header>
 
-                <div className="case-opening">
-                  <div><p>01 / 项目概览</p><h3 id="assets-case-title">不只完成单个模型，<br />也建立可交付的资产意识</h3></div>
+                <div className="case-opening case-opening-facts-only">
                   <dl className="case-facts">
                     <div><dt>MY ROLE</dt><dd>视觉拆解 / 建模 / UV / 材质 / 渲染呈现</dd></div>
                     <div><dt>ASSET RANGE</dt><dd>场景 / 工业道具 / 风格化角色道具 / 写实道具</dd></div>
