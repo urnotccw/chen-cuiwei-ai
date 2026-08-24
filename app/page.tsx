@@ -26,8 +26,7 @@ export default function Home() {
         <p className="year">2026</p>
         <div className="title-stack">
           <p className="kicker">陈萃薇的</p>
-          <h1 id="page-title">AI<br />产品<br />作品集</h1>
-          <p className="subtitle">让模型能力<br />成为真实体验</p>
+          <h1 id="page-title">设计<br />档案</h1>
         </div>
         <p className="stitch-note">PRODUCT / STRATEGY<br />EXPERIENCE</p>
       </section>
