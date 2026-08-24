@@ -564,18 +564,13 @@ export default function Home() {
                   <figcaption><span>PLAYABLE PROTOTYPE</span> 五行关系、阵法卡槽、角色状态与敌人机制在同一屏内完成决策反馈</figcaption>
                 </figure>
 
-                <div className="case-problem-grid">
-                  <section>
-                    <p className="case-label">PRODUCT CHALLENGE / 产品挑战</p>
-                    <h4>文化规则如何转化为玩家能理解的决策？</h4>
-                    <p>五行生克具有清晰关系，但直接搬进游戏容易变成知识说明。项目需要把抽象规则变成每回合都可观察、可选择、可验证的策略反馈。</p>
-                  </section>
-                  <section>
-                    <p className="case-label">DESIGN STRATEGY / 设计策略</p>
-                    <h4>用双层卡槽，让“关系”成为核心操作</h4>
-                    <p>阵法分为发动区与辅助区；同列卡牌形成相生或相克关系，使玩家通过位置与组合主动创造效果，而不是被动记忆规则。</p>
-                  </section>
-                </div>
+                <section className="ai-tool-summary" aria-label="AI 协作工具">
+                  <h4>AI 协作工具</h4>
+                  <div>
+                    <p><strong>GPT-image ／ 即梦</strong><span>用于敌人立绘、五行卡牌与整体视觉方向的探索。</span></p>
+                    <p><strong>Codex ／ WorkBuddy</strong><span>用于网页原型、交互逻辑实现与调试迭代。</span></p>
+                  </div>
+                </section>
 
                 <section className="case-section" aria-labelledby="game-loop-title">
                   <div className="case-section-heading"><p>02 / 核心循环</p><h4 id="game-loop-title">从选择星宿到完成阵法结算</h4></div>
@@ -604,20 +599,26 @@ export default function Home() {
                 </section>
 
                 <section className="enemy-roster" aria-label="五行星轨敌人立绘">
-                  <div className="enemy-roster-grid">
-                    <figure><img src="/wuxing-enemy-jiaomu.png" alt="角木蛟敌人立绘" /></figure>
-                    <figure><img src="/wuxing-enemy-kangjin.png" alt="亢金龙敌人立绘" /></figure>
-                    <figure><img src="/wuxing-enemy-weihuo.png" alt="尾火虎敌人立绘" /></figure>
-                    <figure><img src="/wuxing-enemy-jishui.png" alt="箕水豹敌人立绘" /></figure>
-                    <figure><img src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /></figure>
-                    <figure><img src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /></figure>
+                  <div className="enemy-roster-group">
+                    <p>部分敌人立绘</p>
+                    <div className="enemy-roster-grid">
+                      <figure><img src="/wuxing-enemy-jiaomu.png" alt="角木蛟敌人立绘" /></figure>
+                      <figure><img src="/wuxing-enemy-kangjin.png" alt="亢金龙敌人立绘" /></figure>
+                      <figure><img src="/wuxing-enemy-weihuo.png" alt="尾火虎敌人立绘" /></figure>
+                      <figure><img src="/wuxing-enemy-jishui.png" alt="箕水豹敌人立绘" /></figure>
+                      <figure><img src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /></figure>
+                      <figure><img src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /></figure>
+                    </div>
                   </div>
-                  <div className="wuxing-card-row" aria-label="金木水火土五行卡牌">
-                    <figure><img src="/wuxing-card-metal.png" alt="金元素卡牌" /></figure>
-                    <figure><img src="/wuxing-card-wood.png" alt="木元素卡牌" /></figure>
-                    <figure><img src="/wuxing-card-water.png" alt="水元素卡牌" /></figure>
-                    <figure><img src="/wuxing-card-fire.png" alt="火元素卡牌" /></figure>
-                    <figure><img src="/wuxing-card-earth.png" alt="土元素卡牌" /></figure>
+                  <div className="wuxing-card-group" aria-label="金木水火土五行卡牌">
+                    <p>卡牌设计</p>
+                    <div className="wuxing-card-row">
+                      <figure><img src="/wuxing-card-metal.png" alt="金元素卡牌" /></figure>
+                      <figure><img src="/wuxing-card-wood.png" alt="木元素卡牌" /></figure>
+                      <figure><img src="/wuxing-card-water.png" alt="水元素卡牌" /></figure>
+                      <figure><img src="/wuxing-card-fire.png" alt="火元素卡牌" /></figure>
+                      <figure><img src="/wuxing-card-earth.png" alt="土元素卡牌" /></figure>
+                    </div>
                   </div>
                 </section>
 

@@ -865,13 +865,21 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .wuxing-lead-media { background: #050507; }
 .wuxing-lead-media img { aspect-ratio: 16 / 9; object-fit: contain; }
 .case-study-game .game-rule-grid article { background: linear-gradient(145deg, rgba(164,135,212,.1), rgba(255,255,255,.025)); }
+.ai-tool-summary { display: grid; grid-template-columns: minmax(180px, .7fr) minmax(0, 1.3fr); gap: clamp(34px, 6vw, 108px); align-items: start; padding: clamp(38px, 4.6vw, 84px) 0; border-bottom: 1px solid var(--case-line); }
+.ai-tool-summary h4 { margin: 0; font-family: var(--font-editorial); font-size: clamp(28px, 2.6vw, 48px); font-weight: 500; letter-spacing: .02em; line-height: 1.05; }
+.ai-tool-summary > div { display: grid; gap: 1px; border-top: 1px solid var(--case-line); }
+.ai-tool-summary p { display: grid; grid-template-columns: minmax(160px, .72fr) minmax(0, 1.28fr); gap: 22px; margin: 0; padding: 14px 0; border-bottom: 1px solid var(--case-line); }
+.ai-tool-summary strong { font: 700 clamp(8px, .66vw, 12px)/1.35 var(--font-label); letter-spacing: .1em; }
+.ai-tool-summary span { font-family: var(--font-editorial); font-size: clamp(10px, .82vw, 15px); line-height: 1.65; letter-spacing: .035em; }
 .enemy-roster { padding: clamp(38px, 5vw, 90px) 0; border-bottom: 1px solid var(--case-line); }
+.enemy-roster-group > p, .wuxing-card-group > p { margin: 0 0 12px; font: 700 clamp(8px, .66vw, 12px)/1.2 var(--font-label); letter-spacing: .12em; }
 .enemy-roster-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--case-line); background: var(--case-line); }
 .enemy-roster figure { position: relative; isolation: isolate; min-width: 0; margin: 0; overflow: hidden; background: radial-gradient(ellipse at 50% 88%, rgba(164,135,212,.17), transparent 58%), radial-gradient(ellipse at 50% 0%, rgba(49,72,119,.2), transparent 44%), #0a0910; }
 .enemy-roster figure::before { content: ""; position: absolute; z-index: -1; inset: 11% 9%; border: 1px solid rgba(226,215,245,.12); }
 .enemy-roster img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: contain; filter: drop-shadow(0 20px 22px rgba(0,0,0,.42)); transition: transform .45s cubic-bezier(.16,1,.3,1); }
 .enemy-roster figure:hover img { transform: scale(1.035); }
-.wuxing-card-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(8px, 1.2vw, 20px); width: min(72%, 940px); margin: clamp(24px, 3vw, 54px) auto 0; }
+.wuxing-card-group { margin-top: clamp(24px, 3vw, 54px); }
+.wuxing-card-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(8px, 1.2vw, 20px); width: min(72%, 940px); margin: 0 auto; }
 .wuxing-card-row figure { min-width: 0; margin: 0; }
 .wuxing-card-row img { display: block; width: 100%; height: auto; box-shadow: 0 18px 26px rgba(0,0,0,.32); transition: transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s cubic-bezier(.16,1,.3,1); }
 .wuxing-card-row figure:hover img { transform: translateY(-7px); box-shadow: 0 26px 34px rgba(0,0,0,.46); }
@@ -1062,8 +1070,11 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .case-study-footer { gap: 20px; }
   .wuxing-play-cta { grid-template-columns: 1fr; gap: 22px; }
   .wuxing-play-cta a { justify-self: start; }
+  .ai-tool-summary { grid-template-columns: 1fr; gap: 22px; padding: 36px 0; }
+  .ai-tool-summary p { grid-template-columns: 1fr; gap: 8px; }
   .enemy-roster { padding: 34px 0; }
   .enemy-roster-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .enemy-roster figure::before { inset: 8% 7%; }
-  .wuxing-card-row { width: 100%; gap: 6px; margin-top: 24px; }
+  .wuxing-card-group { margin-top: 24px; }
+  .wuxing-card-row { width: 100%; gap: 6px; }
 }
