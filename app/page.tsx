@@ -328,7 +328,7 @@ export default function Home() {
                   <div className="tone-intro">
                     <div>
                       <p>04 / 影片色调尝试</p>
-                      <h3 id="tone-title">从冷蓝到暗金，<br />寻找故事的温度</h3>
+                      <h3 id="tone-title">使用AI快速探索视觉方向</h3>
                     </div>
                     <p>在同一构图下测试不同的主色、光线方向与明暗比例，观察色彩如何改变宇宙空间的距离感，以及人物与故乡之间的情绪联系。最终选择第三种方案作为影片的统一视觉基调。</p>
                   </div>
@@ -359,7 +359,7 @@ export default function Home() {
                       </div>
                       <figcaption>
                         <p><span>TEST 03</span> DARK GOLD</p>
-                        <h4>暗金冷灰 · 最终方案</h4>
+                        <h4>冷色调 · 最终方案</h4>
                         <span>暗部保留宇宙的未知感，星体的浅金色成为情感焦点；冷灰与暖金之间的对照同时承载远行、记忆与希望。</span>
                       </figcaption>
                     </figure>
