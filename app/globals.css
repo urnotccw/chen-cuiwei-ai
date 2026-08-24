@@ -50,20 +50,18 @@ a { color: inherit; text-decoration: none; }
 .rail-menu a:nth-child(4) { margin-left: 15px; min-width: 38px; }
 .rail-menu a:hover, .rail-menu .is-active { color: var(--white); background: var(--ink); transform: translateX(5px); }
 
-.archive-card { position: absolute; z-index: 2; left: 32.8%; width: 49.2%; padding: clamp(18px, 2.2vw, 36px); color: var(--ink); background: rgba(250, 247, 239, .82); display: flex; justify-content: space-between; }
-.education-card { top: 11.5%; height: 30.5%; align-items: flex-start; }
-.contact-card { top: 47.4%; height: 33.5%; align-items: flex-start; }
+.profile-card { position: absolute; z-index: 2; left: 18%; bottom: 6.6%; width: 25.8%; height: 29.4%; padding: clamp(15px, 1.35vw, 25px); color: var(--ink); background: rgba(250, 247, 239, .76); display: grid; grid-template-rows: auto 1fr; }
 .card-index { margin: 0; font: 700 clamp(7px, .6vw, 10px)/1 var(--font-label); letter-spacing: .13em; }
-.education-card > div { align-self: flex-end; text-align: right; }
-.education-card h2 { margin: 0 0 clamp(10px, 1.3vw, 19px); font-family: var(--font-editorial); font-size: clamp(26px, 3.25vw, 56px); line-height: .92; font-weight: 600; letter-spacing: .08em; }
-.education-copy { margin: 0; font-family: var(--font-editorial); font-size: clamp(10px, 1vw, 17px); line-height: 1.55; letter-spacing: .08em; }
+.profile-grid { align-self: end; display: grid; grid-template-columns: .9fr 1.25fr; gap: clamp(12px, 1.35vw, 24px); align-items: end; }
+.identity-block h2 { margin: 0 0 clamp(8px, .8vw, 13px); font-family: var(--font-editorial); font-size: clamp(19px, 1.8vw, 31px); line-height: .95; font-weight: 600; letter-spacing: .06em; }
+.education-copy { margin: 0; font-family: var(--font-editorial); font-size: clamp(7px, .58vw, 10px); line-height: 1.55; letter-spacing: .055em; }
 .education-copy strong { font-weight: 600; }
-.contact-card dl { width: min(72%, 520px); margin: 0; display: grid; gap: clamp(9px, 1.35vw, 20px); }
-.contact-card dl div { display: grid; grid-template-columns: clamp(58px, 6vw, 96px) 1fr; align-items: baseline; padding-bottom: 7px; border-bottom: 1px solid rgba(43, 33, 24, .2); }
-.contact-card dt { font: 700 clamp(7px, .62vw, 10px)/1 var(--font-label); letter-spacing: .12em; }
-.contact-card dd { margin: 0; font-family: var(--font-editorial); font-size: clamp(14px, 1.55vw, 25px); line-height: 1; letter-spacing: -.025em; }
-.contact-card a { transition: opacity .18s ease; }
-.contact-card a:hover { opacity: .55; }
+.compact-contact { min-width: 0; margin: 0; display: grid; gap: clamp(7px, .7vw, 12px); }
+.compact-contact div { min-width: 0; display: grid; grid-template-columns: clamp(37px, 3.4vw, 54px) 1fr; align-items: baseline; padding-bottom: 5px; border-bottom: 1px solid rgba(43, 33, 24, .2); }
+.compact-contact dt { font: 700 clamp(6px, .46vw, 8px)/1 var(--font-label); letter-spacing: .1em; }
+.compact-contact dd { min-width: 0; margin: 0; font-family: var(--font-editorial); font-size: clamp(8px, .78vw, 13px); line-height: 1; letter-spacing: -.02em; white-space: nowrap; }
+.compact-contact a { transition: opacity .18s ease; }
+.compact-contact a:hover { opacity: .55; }
 
 .cover-content { position: absolute; z-index: 1; inset: 0; }
 .discipline { position: absolute; top: 7.2%; right: 19.1%; margin: 0; text-align: center; font: 600 clamp(8px, .73vw, 13px)/1.16 var(--font-label); letter-spacing: .085em; }
@@ -82,15 +80,13 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 
 @media (max-width: 760px) {
   .cover-page { background-position: 60% center; min-height: 100svh; }
-  .rail-menu { left: 7%; bottom: 5%; flex-direction: row; gap: 5px; }
+  .rail-menu { left: 8%; bottom: 37%; flex-direction: row; gap: 5px; }
   .rail-menu a, .rail-menu a:nth-child(2), .rail-menu a:nth-child(3), .rail-menu a:nth-child(4) { margin-left: 0; min-width: unset; padding: 5px 7px; }
-  .archive-card { left: 8%; width: 84%; padding: 16px; }
-  .education-card { top: 10%; height: 25%; }
-  .contact-card { top: 39%; height: 31%; }
-  .education-card h2 { font-size: 30px; }
-  .education-copy { font-size: 10px; }
-  .contact-card dl { width: 82%; }
-  .contact-card dd { font-size: clamp(12px, 3.5vw, 18px); }
+  .profile-card { left: 8%; bottom: 4%; width: 84%; height: 30%; padding: 16px; }
+  .profile-grid { grid-template-columns: .9fr 1.2fr; gap: 15px; }
+  .identity-block h2 { font-size: 24px; }
+  .education-copy { font-size: 8px; }
+  .compact-contact dd { font-size: clamp(9px, 2.6vw, 13px); }
   .title-stack { left: 46%; top: 26%; }
   h1 { font-size: clamp(52px, 14vw, 76px); }
   .discipline { right: 18%; top: 7%; }

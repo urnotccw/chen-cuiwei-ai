@@ -17,21 +17,19 @@ export default function Home() {
         <a href="#top" lang="zh-CN">CN</a>
       </nav>
 
-      <aside id="about" className="archive-card education-card" aria-label="个人与教育信息">
-        <p className="card-index">PROFILE / 01</p>
-        <div>
+      <aside id="about" className="profile-card" aria-label="个人、教育与联系方式">
+        <p className="card-index">PROFILE / CONTACT · 01</p>
+        <div className="profile-grid">
+          <div className="identity-block">
           <h2>陈萃薇</h2>
           <p className="education-copy">深圳大学硕士<br /><strong>数字媒体与动画设计专业</strong></p>
+          </div>
+          <dl id="contact" className="compact-contact">
+            <div><dt>WECHAT</dt><dd>urnotccw</dd></div>
+            <div><dt>EMAIL</dt><dd><a href="mailto:2711348245@qq.com">2711348245@qq.com</a></dd></div>
+            <div><dt>TEL</dt><dd><a href="tel:+8615750910735">15750910735</a></dd></div>
+          </dl>
         </div>
-      </aside>
-
-      <aside id="contact" className="archive-card contact-card" aria-label="联系方式">
-        <p className="card-index">CONTACT / 02</p>
-        <dl>
-          <div><dt>WECHAT</dt><dd>urnotccw</dd></div>
-          <div><dt>EMAIL</dt><dd><a href="mailto:2711348245@qq.com">2711348245@qq.com</a></dd></div>
-          <div><dt>TEL</dt><dd><a href="tel:+8615750910735">15750910735</a></dd></div>
-        </dl>
       </aside>
 
       <section id="top" className="cover-content" aria-labelledby="page-title">
