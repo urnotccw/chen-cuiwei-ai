@@ -178,6 +178,19 @@ export default function Home() {
                   <video className="blue-video-player" controls preload="metadata" playsInline aria-label="AIGC 动画短片《蓝》视频播放器" />
                   <span className="video-ratio-note">VIDEO / 16:9</span>
                 </div>
+              ) : project.number === "03" ? (
+                <div className="iphone-demo-stage" aria-label="一只喵管家小程序交互演示预留区域">
+                  <div className="iphone-15-device">
+                    <span className="iphone-action-button" aria-hidden="true" />
+                    <span className="iphone-volume-up" aria-hidden="true" />
+                    <span className="iphone-volume-down" aria-hidden="true" />
+                    <span className="iphone-power-button" aria-hidden="true" />
+                    <div id="mini-program-demo-root" className="iphone-15-screen" aria-label="小程序交互内容将在此处呈现">
+                      <span className="iphone-dynamic-island" aria-hidden="true" />
+                    </div>
+                  </div>
+                  <p>INTERACTIVE MINI PROGRAM / SOURCE PENDING</p>
+                </div>
               ) : project.hero ? (
                 <figure className="detail-visual case-detail-visual">
                   <img src={project.hero} alt={project.heroAlt} />
