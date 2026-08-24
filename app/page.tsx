@@ -148,39 +148,41 @@ export default function Home() {
               <a href="#works">BACK TO INDEX ↑</a>
             </header>
 
-            <div className="detail-heading">
-              <p className="detail-number">{project.number}</p>
-              <div>
-                <p className="detail-kicker">{project.english}</p>
-                <h2 id={`project-title-${project.number}`}>{project.title}</h2>
+            <div className={`project-hero-layout${project.number === "01" ? " is-video-layout" : ""}`}>
+              <div className="detail-heading">
+                <p className="detail-number">{project.number}</p>
+                <div>
+                  <p className="detail-kicker">{project.english}</p>
+                  <h2 id={`project-title-${project.number}`}>{project.title}</h2>
+                </div>
+                <p className="detail-type">{project.type}</p>
               </div>
-              <p className="detail-type">{project.type}</p>
-            </div>
 
-            {project.number === "01" ? (
-              <figure className="detail-visual blue-detail-cover">
-                <img src="/blue-cover.jpeg" alt="AIGC 动画短片《蓝》封面：木星及其卫星悬浮在黑色宇宙中" />
-                <figcaption>BLUE / AIGC ANIMATION / 2026</figcaption>
-              </figure>
-            ) : (
-              <div className="detail-visual" aria-label={`${project.title} 项目内容待添加`}>
-                <span>PROJECT VISUAL / CONTENT PENDING</span>
-                <i aria-hidden="true" />
-              </div>
-            )}
+              {project.number === "01" ? (
+                <div className="blue-video-frame">
+                  <video className="blue-video-player" controls preload="metadata" playsInline aria-label="AIGC 动画短片《蓝》视频播放器" />
+                  <span className="video-ratio-note">VIDEO / 16:9</span>
+                </div>
+              ) : (
+                <div className="detail-visual" aria-label={`${project.title} 项目内容待添加`}>
+                  <span>PROJECT VISUAL / CONTENT PENDING</span>
+                  <i aria-hidden="true" />
+                </div>
+              )}
 
-            <div className="detail-meta">
-              <div>
-                <p>TOOLS / WORKFLOW</p>
-                <ul>
-                  {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
-                </ul>
+              <div className="detail-meta">
+                <div>
+                  <p>TOOLS / WORKFLOW</p>
+                  <ul>
+                    {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
+                  </ul>
+                </div>
+                <p>{project.number === "01" ? "从故事灵感到角色与镜头设计的 AIGC 动画创作。" : "项目图片与详细内容将在下一步补充。"}</p>
+                <nav aria-label={`${project.title} 项目切换`}>
+                  <a href={`#${previous}`}>← PREV</a>
+                  <a href={`#${next}`}>NEXT →</a>
+                </nav>
               </div>
-              <p>{project.number === "01" ? "从故事灵感到角色与镜头设计的 AIGC 动画创作。" : "项目图片与详细内容将在下一步补充。"}</p>
-              <nav aria-label={`${project.title} 项目切换`}>
-                <a href={`#${previous}`}>← PREV</a>
-                <a href={`#${next}`}>NEXT →</a>
-              </nav>
             </div>
 
             {project.number === "01" && (
