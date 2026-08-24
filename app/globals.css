@@ -582,6 +582,32 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .is-phone-layout .detail-meta { grid-column: 1; grid-row: 2; align-self: end; grid-template-columns: 1fr; gap: clamp(20px, 2vw, 36px); padding-top: clamp(40px, 4vw, 72px); }
 .is-phone-layout .detail-meta nav { justify-content: space-between; }
 
+/* Keep the later projects concise so the work, context, and navigation read as one unit. */
+#project-02, #project-03, #project-04, #project-05 { min-height: 0; padding-top: clamp(20px, 1.8vw, 34px); padding-bottom: clamp(18px, 1.7vw, 30px); }
+
+#project-02 .is-game-layout { row-gap: clamp(16px, 1.7vw, 30px); padding: clamp(22px, 2.5vw, 44px) 0 clamp(18px, 2vw, 34px); }
+#project-02 .is-game-layout .detail-heading { gap: clamp(16px, 2vw, 34px); }
+#project-02 .is-game-layout .detail-heading h2 { font-size: clamp(48px, 4.8vw, 88px); }
+#project-02 .game-project-intro { gap: 14px 24px; margin-top: clamp(12px, 1.3vw, 22px); padding-top: 13px; }
+#project-02 .game-project-intro p { line-height: 1.6; }
+#project-02 .wuxing-game-stage { width: min(86%, 1120px); justify-self: center; }
+#project-02 .is-game-layout .detail-meta { width: min(100%, 1120px); justify-self: center; gap: 18px; }
+
+#project-03 .is-phone-layout { column-gap: clamp(30px, 4vw, 68px); padding: clamp(24px, 2.8vw, 48px) 0 clamp(20px, 2.2vw, 38px); }
+#project-03 .is-phone-layout .detail-number { margin-bottom: clamp(24px, 2.8vw, 46px); }
+#project-03 .is-phone-layout .detail-heading h2 { font-size: clamp(58px, 5.6vw, 100px); }
+#project-03 .phone-project-intro { margin-top: clamp(20px, 2.2vw, 38px); padding-top: 14px; }
+#project-03 .phone-project-intro > p { line-height: 1.62; }
+#project-03 .phone-project-intro dl { margin-top: clamp(16px, 1.7vw, 28px); }
+#project-03 .phone-project-intro dl div { padding: 9px 0; }
+#project-03 .iphone-demo-stage { width: min(100%, 860px); min-height: clamp(500px, 56vh, 660px); padding: clamp(30px, 3.4vw, 56px); }
+#project-03 .iphone-15-device { width: clamp(238px, 16vw, 300px); }
+#project-03 .is-phone-layout .detail-meta { gap: clamp(14px, 1.4vw, 24px); padding-top: clamp(24px, 2.4vw, 42px); }
+
+#project-04 .detail-heading, #project-05 .detail-heading { padding: clamp(22px, 2.3vw, 40px) 0 clamp(14px, 1.6vw, 28px); }
+#project-04 .case-detail-visual, #project-05 .case-detail-visual { width: min(84%, 1060px); }
+#project-04 .detail-meta, #project-05 .detail-meta { width: min(84%, 1060px); margin: 0 auto; gap: 18px; padding-top: 12px; }
+
 .blue-background {
   position: relative;
   min-height: 100svh;
@@ -923,6 +949,19 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .phone-project-intro dl div { grid-template-columns: 96px 1fr; gap: 14px; }
   .is-phone-layout .iphone-demo-stage { order: 2; min-height: 560px; }
   .is-phone-layout .detail-meta { order: 3; width: 100%; padding-top: 0; }
+
+  #project-02, #project-03, #project-04, #project-05 { min-height: 0; padding-top: 20px; padding-bottom: 22px; }
+  #project-02 .is-game-layout, #project-03 .is-phone-layout { gap: 18px; padding: 22px 0 26px; }
+  #project-02 .is-game-layout .detail-number, #project-03 .is-phone-layout .detail-number { margin-bottom: 20px; }
+  #project-02 .is-game-layout .detail-heading h2, #project-03 .is-phone-layout .detail-heading h2 { font-size: clamp(50px, 15vw, 72px); }
+  #project-02 .game-project-intro { margin-top: 20px; padding-top: 12px; }
+  #project-02 .wuxing-game-stage { width: 94%; }
+  #project-03 .phone-project-intro { margin-top: 22px; padding-top: 12px; }
+  #project-03 .phone-project-intro dl { margin-top: 16px; }
+  #project-03 .iphone-demo-stage { min-height: 470px; padding: 28px 14px 36px; }
+  #project-03 .iphone-15-device { width: min(64vw, 252px); }
+  #project-04 .detail-heading, #project-05 .detail-heading { padding: 22px 0 16px; }
+  #project-04 .case-detail-visual, #project-05 .case-detail-visual, #project-04 .detail-meta, #project-05 .detail-meta { width: 94%; }
 
   .blue-background { min-height: 100svh; margin: 44px -20px 0; padding: 22px 20px 28px; }
   .blue-background-image { background-position: 61% center; opacity: .74; }
