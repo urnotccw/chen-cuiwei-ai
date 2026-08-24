@@ -99,7 +99,7 @@ export default function Home() {
         <div className="works-intro">
           <div>
             <p className="works-kicker">SELECTED WORKS · 01—05</p>
-            <h2 id="works-title">作品<br />目录</h2>
+            <h2 id="works-title">目录</h2>
           </div>
           <p className="works-summary">
             从生成式影像、互动产品到三维场景，<br />
@@ -110,7 +110,8 @@ export default function Home() {
 
         <div className="project-index" aria-label="项目目录">
           {projects.map((project) => (
-            <article className="project-row" key={project.number}>
+            <a className="project-row" href={`#project-${project.number}`} key={project.number}>
+              <span className="project-backdrop" aria-hidden="true" />
               <p className="project-number">{project.number}</p>
               <div className="project-name">
                 <h3>{project.title}</h3>
@@ -124,7 +125,7 @@ export default function Home() {
                 <span>IMAGE<br />PENDING</span>
                 <i aria-hidden="true" />
               </div>
-            </article>
+            </a>
           ))}
         </div>
 
@@ -134,6 +135,49 @@ export default function Home() {
           <span>PAGE 01</span>
         </footer>
       </section>
+
+      {projects.map((project, index) => {
+        const previous = index === 0 ? "works" : `project-${projects[index - 1].number}`;
+        const next = index === projects.length - 1 ? "works" : `project-${projects[index + 1].number}`;
+
+        return (
+          <section id={`project-${project.number}`} className="project-detail" key={`detail-${project.number}`} aria-labelledby={`project-title-${project.number}`}>
+            <header className="detail-header">
+              <a href="#works">CCW / WORK INDEX</a>
+              <p>PROJECT {project.number} / 05</p>
+              <a href="#works">BACK TO INDEX ↑</a>
+            </header>
+
+            <div className="detail-heading">
+              <p className="detail-number">{project.number}</p>
+              <div>
+                <p className="detail-kicker">{project.english}</p>
+                <h2 id={`project-title-${project.number}`}>{project.title}</h2>
+              </div>
+              <p className="detail-type">{project.type}</p>
+            </div>
+
+            <div className="detail-visual" aria-label={`${project.title} 项目内容待添加`}>
+              <span>PROJECT VISUAL / CONTENT PENDING</span>
+              <i aria-hidden="true" />
+            </div>
+
+            <div className="detail-meta">
+              <div>
+                <p>TOOLS / WORKFLOW</p>
+                <ul>
+                  {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
+                </ul>
+              </div>
+              <p>项目图片与详细内容将在下一步补充。</p>
+              <nav aria-label={`${project.title} 项目切换`}>
+                <a href={`#${previous}`}>← PREV</a>
+                <a href={`#${next}`}>NEXT →</a>
+              </nav>
+            </div>
+          </section>
+        );
+      })}
     </main>
   );
 }
