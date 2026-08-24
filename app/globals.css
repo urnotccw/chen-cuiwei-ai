@@ -800,6 +800,12 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .case-study::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .16; background-image: radial-gradient(currentColor .42px, transparent .5px); background-size: 5px 5px; }
 .case-study > * { position: relative; z-index: 1; }
 .case-study-environment { --case-ink: #f3f0e9; --case-line: rgba(255,255,255,.36); --case-panel: rgba(255,255,255,.065); --case-accent: #9db5bc; background: #111315; }
+.case-study-environment .case-opening-facts-only { display: block; padding: clamp(22px, 2.4vw, 42px) 0 clamp(24px, 2.6vw, 46px); }
+.case-study-environment .case-opening-facts-only .case-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: min(100%, 1180px); margin-left: auto; }
+.case-study-environment .case-opening-facts-only .case-facts div { display: block; min-height: 88px; padding: 14px clamp(14px, 1.45vw, 26px) 16px; border-right: 1px solid var(--case-line); }
+.case-study-environment .case-opening-facts-only .case-facts div:last-child { border-right: 0; }
+.case-study-environment .case-opening-facts-only .case-facts dt { margin-bottom: 10px; }
+.case-study-environment .case-opening-facts-only .case-facts dd { max-width: 26ch; }
 .case-study-game { --case-ink: #f2eef8; --case-line: rgba(226,215,245,.34); --case-panel: rgba(255,255,255,.055); --case-accent: #a487d4; background: radial-gradient(circle at 76% 8%, rgba(105,75,145,.34), transparent 28%), radial-gradient(circle at 12% 45%, rgba(53,73,115,.2), transparent 32%), #0d0b12; }
 .case-study-game .case-opening { grid-template-columns: minmax(160px, .22fr) minmax(0, 1fr); gap: clamp(26px, 3.8vw, 72px); align-items: start; padding: clamp(28px, 3vw, 54px) 0 clamp(24px, 2.5vw, 44px); }
 .case-study-game .case-opening > div { padding-top: 12px; }
@@ -1087,6 +1093,9 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .case-opening { grid-template-columns: 1fr; gap: 34px; padding: 48px 0 34px; }
   .case-study-game .case-opening { grid-template-columns: 1fr; gap: 18px; padding: 26px 0 24px; }
   .case-study-game .case-opening > div { padding-top: 0; }
+  .case-study-environment .case-opening-facts-only { padding: 20px 0 26px; }
+  .case-study-environment .case-opening-facts-only .case-facts { grid-template-columns: 1fr; width: 100%; }
+  .case-study-environment .case-opening-facts-only .case-facts div { min-height: 0; padding: 12px 0; border-right: 0; }
   .case-opening h3 { font-size: clamp(40px, 12vw, 58px); }
   .case-facts div { grid-template-columns: 78px 1fr; }
   .case-lead-media { width: 100%; aspect-ratio: auto; }

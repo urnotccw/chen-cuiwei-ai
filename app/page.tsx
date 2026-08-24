@@ -701,11 +701,10 @@ export default function Home() {
             )}
 
             {project.number === "04" && (
-              <section className="case-study case-study-environment" aria-labelledby="environment-case-title">
+              <section className="case-study case-study-environment" aria-label="AI 游戏场景设计项目案例">
                 <header className="case-study-header"><span>PROJECT 04 / DESIGN PIPELINE</span><span>AI + UE5</span></header>
 
-                <div className="case-opening">
-                  <div><p>01 / 项目命题</p><h3 id="environment-case-title">让 AI 负责快速探索，<br />让引擎负责空间落地</h3></div>
+                <div className="case-opening case-opening-facts-only">
                   <dl className="case-facts">
                     <div><dt>MY ROLE</dt><dd>视觉目标定义 / 流程设计 / 场景搭建 / 迭代决策</dd></div>
                     <div><dt>DELIVERABLE</dt><dd>室内场景与藏地题材场景验证</dd></div>
