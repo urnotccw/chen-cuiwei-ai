@@ -545,13 +545,12 @@ export default function Home() {
             )}
 
             {project.number === "02" && (
-              <section className="case-study case-study-game" aria-labelledby="game-case-title">
+          <section className="case-study case-study-game" aria-label="五行星轨项目概览">
                 <header className="case-study-header"><span>PROJECT 02 / GAME SYSTEM</span><span>AI-ASSISTED WEB GAME</span></header>
 
                 <div className="case-opening">
                   <div>
                     <p>01 / 项目概览</p>
-                    <h3 id="game-case-title">把传统五行规则，<br />转成可学习的策略循环</h3>
                   </div>
                   <dl className="case-facts">
                     <div><dt>MY ROLE</dt><dd>玩法策划 / 系统设计 / 视觉设定 / AI 辅助开发</dd></div>
