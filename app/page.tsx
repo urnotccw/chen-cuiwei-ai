@@ -316,6 +316,58 @@ export default function Home() {
                     <a href="#blue-characters">PREVIOUS · CHARACTER DESIGN ↑</a>
                   </footer>
                 </section>
+
+                <section id="blue-tone" className="tone-section" aria-labelledby="tone-title">
+                  <header className="tone-header">
+                    <span>BLUE / COLOR &amp; TONE TEST</span>
+                    <span>STEP 04</span>
+                  </header>
+
+                  <div className="tone-intro">
+                    <div>
+                      <p>04 / 影片色调尝试</p>
+                      <h3 id="tone-title">从冷蓝到暗金，<br />寻找故事的温度</h3>
+                    </div>
+                    <p>在同一构图下测试不同的主色、光线方向与明暗比例，观察色彩如何改变宇宙空间的距离感，以及人物与故乡之间的情绪联系。最终选择第三种方案作为影片的统一视觉基调。</p>
+                  </div>
+
+                  <div className="tone-options" aria-label="三种影片色调方案">
+                    <figure>
+                      <div className="tone-image"><img src="/blue-tone-cool.png" alt="冷蓝色空间舱与蓝色星球的色调测试" /></div>
+                      <figcaption>
+                        <p><span>TEST 01</span> COLD BLUE</p>
+                        <h4>冷蓝 · 科技与疏离</h4>
+                        <span>大面积深蓝与冷白边缘光强调宇宙的寂静和技术感，但人物情绪更偏冷峻。</span>
+                      </figcaption>
+                    </figure>
+
+                    <figure>
+                      <div className="tone-image"><img src="/blue-tone-warm.png" alt="自然暖光照入空间舱的色调测试" /></div>
+                      <figcaption>
+                        <p><span>TEST 02</span> NATURAL LIGHT</p>
+                        <h4>自然暖光 · 真实与亲近</h4>
+                        <span>暖色太阳光让人物更具生活感，也减弱了环境的陌生感，情绪更接近现实记忆。</span>
+                      </figcaption>
+                    </figure>
+
+                    <figure className="is-selected">
+                      <div className="tone-image">
+                        <img src="/blue-tone-final.png" alt="暗金色星体与冷灰空间舱的最终影片色调方案" />
+                        <strong>FINAL / SELECTED</strong>
+                      </div>
+                      <figcaption>
+                        <p><span>TEST 03</span> DARK GOLD</p>
+                        <h4>暗金冷灰 · 最终方案</h4>
+                        <span>暗部保留宇宙的未知感，星体的浅金色成为情感焦点；冷灰与暖金之间的对照同时承载远行、记忆与希望。</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <footer className="tone-footer">
+                    <span>LIGHT / ATMOSPHERE / EMOTION</span>
+                    <a href="#blue-spaces">PREVIOUS · SPACE &amp; PROP ↑</a>
+                  </footer>
+                </section>
               </>
             )}
           </section>
