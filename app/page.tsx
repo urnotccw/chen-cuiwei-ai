@@ -603,26 +603,10 @@ export default function Home() {
                   </div>
                 </section>
 
-                <section className="case-section" aria-labelledby="game-information-title">
-                  <div className="case-section-heading"><p>04 / 信息与体验</p><h4 id="game-information-title">让复杂规则始终有可追踪的反馈</h4></div>
-                  <div className="persona-grid game-feedback-grid">
-                    <article><span>01</span><h5>关系可视化</h5><p>五行关系图、卡槽位置和效果预览共同承担教学，降低玩家来回查阅规则的成本。</p><strong>目标：降低理解门槛</strong></article>
-                    <article><span>02</span><h5>敌人差异化</h5><p>护盾、回流、破除状态等机制要求玩家切换相生爆发、相克干预和防御节奏。</p><strong>目标：避免单一最优解</strong></article>
-                    <article><span>03</span><h5>渐进式成长</h5><p>四象篇章、星宿节点与事件奖励构成长期进度，使短局战斗服务于完整探索目标。</p><strong>目标：建立持续动机</strong></article>
-                  </div>
-                </section>
-
-                <section className="case-conclusion">
-                  <div>
-                    <p className="case-label">AI VALUE / AI 在项目中的作用</p>
-                    <h4>缩短从规则文档到可玩版本的距离</h4>
-                    <p>GPT 用于协助拆解规则、补充异常状态、整理页面逻辑与调试代码；GPT-image 用于快速建立星宿、卡牌和宇宙题材的视觉方向。核心玩法、数值关系与体验取舍仍由人工定义和验证。</p>
-                  </div>
-                  <div>
-                    <p className="case-label">NEXT STEP / 下一步</p>
-                    <h4>用真实玩家数据校正教学与数值</h4>
-                    <p>当前版本已完成在线可玩闭环。下一步重点验证首局理解时间、不同阵法使用率、关卡失败原因与移动端适配，并继续补充事件类型和卡牌构筑深度。</p>
-                  </div>
+                <section className="enemy-roster" aria-label="五行星轨敌人立绘">
+                  <figure>
+                    <img src="/wuxing-enemy-roster.png" alt="五位五行主题敌人立绘：木灵治疗者、金甲守卫、火羽战士、水蛇术师与岩甲巨兽" />
+                  </figure>
                 </section>
 
                 <div className="wuxing-play-cta">
