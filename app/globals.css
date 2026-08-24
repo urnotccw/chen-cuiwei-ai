@@ -560,7 +560,11 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .is-phone-layout .detail-heading h2 { font-size: clamp(64px, 6.8vw, 122px); line-height: .88; }
 .is-phone-layout .detail-type { justify-self: auto; margin: clamp(22px, 2.4vw, 42px) 0 0; font-size: clamp(12px, 1vw, 18px); }
 .phone-project-intro { width: min(92%, 680px); margin-top: clamp(32px, 3.6vw, 64px); padding-top: 20px; border-top: 1px solid rgba(40,35,31,.42); }
-.phone-project-intro > p { margin: 0; font-family: var(--font-editorial); font-size: clamp(13px, 1vw, 17px); line-height: 1.76; letter-spacing: .035em; }
+.phone-project-summary { margin: 0; font-family: var(--font-editorial); font-size: clamp(13px, 1vw, 17px); line-height: 1.76; letter-spacing: .035em; }
+.mini-program-availability { display: grid; gap: 3px; width: fit-content; margin: clamp(16px, 1.7vw, 26px) 0 0; padding: 9px 0 8px; border-top: 1px solid rgba(40,35,31,.28); border-bottom: 1px solid rgba(40,35,31,.28); }
+.mini-program-availability span { font: 700 clamp(6px, .48vw, 9px)/1 var(--font-label); letter-spacing: .13em; opacity: .62; }
+.mini-program-availability strong { font-family: var(--font-editorial); font-size: clamp(14px, 1.05vw, 18px); font-weight: 600; line-height: 1.25; }
+.mini-program-availability em { font-family: var(--font-editorial); font-size: clamp(10px, .76vw, 13px); font-style: normal; line-height: 1.45; letter-spacing: .035em; }
 .intro-highlight { display: inline; margin: 0 2px; padding: .08em .28em .12em; color: inherit; background: transparent; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .intro-highlight.is-lime { background: #c9df63; }
 .intro-highlight.is-coral { background: #f0a077; }
@@ -573,6 +577,10 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .fact-label.is-lime { background: #c9df63; }
 .fact-label.is-blue { background: #9fc7d8; }
 .is-phone-layout .iphone-demo-stage { grid-column: 2; grid-row: 1 / 3; width: 100%; min-height: clamp(690px, 76vh, 900px); border: 0; background: transparent; }
+.phone-demo-callout { position: absolute; top: 50%; right: auto; bottom: auto; left: 0; display: grid; gap: 3px; margin: 0; padding: 10px 0; border-top: 1px solid rgba(40,35,31,.36); border-bottom: 1px solid rgba(40,35,31,.36); opacity: 1; transform: translateY(-50%); }
+.phone-demo-callout span { font: 700 clamp(6px, .48vw, 9px)/1 var(--font-label); letter-spacing: .13em; opacity: .62; }
+.phone-demo-callout strong { font-family: var(--font-editorial); font-size: clamp(13px, .95vw, 17px); font-weight: 600; line-height: 1.2; }
+.phone-demo-callout em { font-family: var(--font-editorial); font-size: clamp(9px, .68vw, 12px); font-style: normal; line-height: 1.4; letter-spacing: .03em; }
 .is-phone-layout .detail-meta { grid-column: 1; grid-row: 2; align-self: end; grid-template-columns: 1fr; gap: clamp(20px, 2vw, 36px); padding-top: clamp(40px, 4vw, 72px); }
 .is-phone-layout .detail-meta nav { justify-content: space-between; }
 
@@ -591,7 +599,7 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 #project-03 .is-phone-layout .detail-number { margin-bottom: clamp(24px, 2.8vw, 46px); }
 #project-03 .is-phone-layout .detail-heading h2 { font-size: clamp(58px, 5.6vw, 100px); }
 #project-03 .phone-project-intro { margin-top: clamp(20px, 2.2vw, 38px); padding-top: 14px; }
-#project-03 .phone-project-intro > p { line-height: 1.62; }
+#project-03 .phone-project-summary { line-height: 1.62; }
 #project-03 .phone-project-intro dl { margin-top: clamp(16px, 1.7vw, 28px); }
 #project-03 .phone-project-intro dl div { padding: 9px 0; }
 #project-03 .iphone-demo-stage { width: min(100%, 860px); min-height: clamp(500px, 56vh, 660px); padding: clamp(30px, 3.4vw, 56px); }
@@ -1003,9 +1011,11 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   #project-02 .game-project-intro { margin-top: 20px; padding-top: 12px; }
   #project-02 .wuxing-game-stage { width: 94%; }
   #project-03 .phone-project-intro { margin-top: 22px; padding-top: 12px; }
+  #project-03 .mini-program-availability { margin-top: 14px; }
   #project-03 .phone-project-intro dl { margin-top: 16px; }
   #project-03 .iphone-demo-stage { min-height: 470px; padding: 28px 14px 36px; }
   #project-03 .iphone-15-device { width: min(64vw, 252px); }
+  .phone-demo-callout { top: auto; right: auto; bottom: 8px; left: 50%; width: max-content; max-width: calc(100% - 28px); text-align: center; transform: translateX(-50%); }
   #project-04 .detail-heading, #project-05 .detail-heading { padding: 22px 0 16px; }
   #project-04 .case-detail-visual, #project-05 .case-detail-visual, #project-04 .detail-meta, #project-05 .detail-meta { width: 94%; }
 

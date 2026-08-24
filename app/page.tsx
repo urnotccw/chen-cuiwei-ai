@@ -203,7 +203,8 @@ export default function Home() {
                 <p className="detail-type">{project.type}</p>
                 {project.number === "03" && (
                   <div className="phone-project-intro">
-                    <p>一只喵管家是一款面向养猫用户的 <mark className="intro-highlight is-lime">轻量健康管理小程序</mark>，把散落在备忘录、相册与购物软件中的 <mark className="intro-highlight is-coral">照护信息</mark>，收拢到一个持续可用的管理入口。</p>
+                    <p className="phone-project-summary">一只喵管家是一款面向养猫用户的 <mark className="intro-highlight is-lime">轻量健康管理小程序</mark>，把散落在备忘录、相册与购物软件中的 <mark className="intro-highlight is-coral">照护信息</mark>，收拢到一个持续可用的管理入口。</p>
+                    <p className="mini-program-availability"><span>WECHAT MINI PROGRAM · LIVE</span><strong>已上线微信小程序</strong><em>微信搜索「一只喵管家」即可体验</em></p>
                     <dl>
                       <div><dt><span className="fact-label is-coral">CORE PROBLEM</span></dt><dd>记录分散、提醒易忘、库存难管理</dd></div>
                       <div><dt><span className="fact-label is-lime">SOLUTION</span></dt><dd>档案 / 库存 / 药箱 / 相册四个任务模块</dd></div>
@@ -246,7 +247,7 @@ export default function Home() {
                       <CatManagerDemo />
                     </div>
                   </div>
-                  <p>INTERACTIVE MINI PROGRAM / WEB PROTOTYPE</p>
+                  <p className="phone-demo-callout"><span>TRY IT NOW</span><strong>手机界面可直接体验</strong><em>点击屏幕开始交互</em></p>
                 </div>
               ) : project.number === "02" ? (
                 <div className="wuxing-game-stage">
