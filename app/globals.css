@@ -121,6 +121,9 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .project-row:focus-visible { outline: 2px solid var(--work-ink); outline-offset: 4px; }
 .project-backdrop { position: absolute; z-index: 0; left: 0; top: 8px; bottom: 8px; width: 29.5%; pointer-events: none; background-position: center; background-size: cover; opacity: .72; filter: saturate(.82) contrast(.92); }
 .project-backdrop::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244,240,233,.1), rgba(244,240,233,.26)); }
+.blue-index-cover { background-image: url("/blue-cover.jpeg"); background-position: center 47%; opacity: .95; filter: saturate(.82) contrast(1.06); }
+.blue-index-cover::after { background: linear-gradient(90deg, rgba(0,0,0,.08), rgba(0,0,0,.1) 70%, rgba(244,240,233,.42)); }
+.project-row:first-child .project-number, .project-row:first-child .project-name { color: #fffdf6; text-shadow: 0 1px 7px rgba(0,0,0,.34); }
 .project-number { position: relative; z-index: 1; margin: 0; align-self: start; padding-top: 5px; font-family: var(--font-editorial); font-size: clamp(18px, 1.85vw, 34px); line-height: 1; }
 .project-name { position: relative; z-index: 1; }
 .project-name h3 { margin: 0; font-family: var(--font-editorial); font-size: clamp(18px, 1.8vw, 34px); line-height: 1; font-weight: 600; letter-spacing: .025em; }
@@ -161,6 +164,10 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .detail-visual::after { transform: translate(-50%,-50%) rotate(-18deg); }
 .detail-visual span { position: absolute; z-index: 1; top: 18px; left: 20px; font: 700 clamp(7px, .55vw, 10px)/1 var(--font-label); letter-spacing: .14em; }
 .detail-visual i { position: absolute; z-index: 1; inset: 12px; border: 1px solid rgba(40,35,31,.15); }
+.blue-detail-cover { margin: 0; background: #050505; }
+.blue-detail-cover::before, .blue-detail-cover::after { display: none; }
+.blue-detail-cover img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.blue-detail-cover figcaption { position: absolute; right: 18px; bottom: 16px; padding: 6px 8px 5px; color: #fff; background: rgba(0,0,0,.66); font: 700 clamp(6px, .5vw, 9px)/1 var(--font-label); letter-spacing: .13em; }
 .detail-meta { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 25px; align-items: end; padding-top: 16px; }
 .detail-meta p { margin: 0; font-family: var(--font-editorial); font-size: clamp(9px, .7vw, 13px); letter-spacing: .04em; }
 .detail-meta > div > p { margin-bottom: 8px; font: 700 clamp(6px, .48vw, 9px)/1 var(--font-label); letter-spacing: .13em; }
@@ -169,6 +176,29 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .detail-meta nav { display: flex; gap: 18px; font: 700 clamp(6px, .48vw, 9px)/1 var(--font-label); letter-spacing: .12em; }
 .detail-header a, .detail-meta a { transition: opacity .18s ease; }
 .detail-header a:hover, .detail-meta a:hover { opacity: .48; }
+
+.blue-background {
+  position: relative;
+  min-height: 100svh;
+  margin: clamp(42px, 5vw, 90px) calc(clamp(26px, 4.1vw, 78px) * -1) calc(clamp(22px, 2vw, 38px) * -1);
+  padding: clamp(25px, 2.5vw, 46px) clamp(26px, 4.1vw, 78px) clamp(30px, 3vw, 56px);
+  overflow: hidden;
+  isolation: isolate;
+  color: #f8f5ed;
+  background: #020303;
+}
+.blue-background-image { position: absolute; z-index: -2; inset: 0; background: #020303 url("/blue-jupiter.png") center / cover no-repeat; }
+.blue-background::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.73) 36%, rgba(0,0,0,.12) 68%, rgba(0,0,0,.18) 100%); }
+.blue-background-header { display: flex; justify-content: space-between; padding-bottom: 13px; border-bottom: 1px solid rgba(255,255,255,.48); font: 700 clamp(7px, .54vw, 10px)/1 var(--font-label); letter-spacing: .14em; }
+.blue-story-copy { width: min(43vw, 690px); padding-top: clamp(52px, 8vh, 100px); }
+.blue-story-label { margin: 0 0 15px; font: 700 clamp(7px, .55vw, 10px)/1 var(--font-label); letter-spacing: .15em; }
+.blue-story-copy h3 { margin: 0; font-family: var(--font-editorial); font-size: clamp(44px, 5vw, 92px); line-height: 1.03; font-weight: 500; letter-spacing: .025em; }
+.blue-story-body { width: min(35vw, 570px); margin: clamp(30px, 4vh, 48px) 0 0 clamp(20px, 5vw, 92px); }
+.blue-story-body p { margin: 0 0 12px; font-family: var(--font-editorial); font-size: clamp(11px, .86vw, 16px); line-height: 1.75; letter-spacing: .055em; }
+.blue-flight-frame { position: absolute; right: clamp(32px, 5vw, 92px); bottom: clamp(38px, 5.5vh, 66px); width: clamp(235px, 28vw, 520px); margin: 0; border: 1px solid rgba(255,255,255,.68); background: #111a20; box-shadow: 0 18px 70px rgba(0,0,0,.48); }
+.blue-flight-frame img { display: block; width: 100%; height: auto; opacity: .86; }
+.blue-flight-frame figcaption { position: absolute; left: 0; bottom: calc(100% + 9px); font: 700 clamp(6px, .5vw, 9px)/1 var(--font-label); letter-spacing: .13em; }
+.pale-dot-note { position: absolute; right: clamp(26px, 4.1vw, 78px); top: 17%; margin: 0; text-align: right; font: 700 clamp(7px, .57vw, 11px)/1.35 var(--font-label); letter-spacing: .15em; }
 
 @media (max-width: 760px) {
   .cover-page { background-position: 60% center; min-height: 100svh; }
@@ -218,4 +248,14 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .detail-meta { grid-template-columns: 1fr auto; gap: 24px 12px; }
   .detail-meta > p { grid-column: 1 / 3; grid-row: 1; }
   .detail-meta nav { align-self: end; }
+
+  .blue-background { min-height: 100svh; margin: 44px -20px -26px; padding: 22px 20px 28px; }
+  .blue-background-image { background-position: 61% center; opacity: .74; }
+  .blue-background::after { background: linear-gradient(180deg, rgba(0,0,0,.72), rgba(0,0,0,.87) 62%, #030405 100%); }
+  .blue-story-copy { width: 100%; padding-top: 50px; }
+  .blue-story-copy h3 { font-size: clamp(42px, 12.8vw, 62px); }
+  .blue-story-body { width: 88%; margin: 28px 0 0 12%; }
+  .blue-story-body p { font-size: 11px; line-height: 1.72; }
+  .blue-flight-frame { position: absolute; right: 20px; bottom: 38px; width: 55vw; }
+  .pale-dot-note { display: none; }
 }

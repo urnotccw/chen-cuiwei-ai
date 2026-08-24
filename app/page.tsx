@@ -111,7 +111,7 @@ export default function Home() {
         <div className="project-index" aria-label="项目目录">
           {projects.map((project) => (
             <a className="project-row" href={`#project-${project.number}`} key={project.number}>
-              <span className="project-backdrop" aria-hidden="true" />
+              <span className={`project-backdrop${project.number === "01" ? " blue-index-cover" : ""}`} aria-hidden="true" />
               <p className="project-number">{project.number}</p>
               <div className="project-name">
                 <h3>{project.title}</h3>
@@ -157,10 +157,17 @@ export default function Home() {
               <p className="detail-type">{project.type}</p>
             </div>
 
-            <div className="detail-visual" aria-label={`${project.title} 项目内容待添加`}>
-              <span>PROJECT VISUAL / CONTENT PENDING</span>
-              <i aria-hidden="true" />
-            </div>
+            {project.number === "01" ? (
+              <figure className="detail-visual blue-detail-cover">
+                <img src="/blue-cover.jpeg" alt="AIGC 动画短片《蓝》封面：木星及其卫星悬浮在黑色宇宙中" />
+                <figcaption>BLUE / AIGC ANIMATION / 2026</figcaption>
+              </figure>
+            ) : (
+              <div className="detail-visual" aria-label={`${project.title} 项目内容待添加`}>
+                <span>PROJECT VISUAL / CONTENT PENDING</span>
+                <i aria-hidden="true" />
+              </div>
+            )}
 
             <div className="detail-meta">
               <div>
@@ -175,6 +182,34 @@ export default function Home() {
                 <a href={`#${next}`}>NEXT →</a>
               </nav>
             </div>
+
+            {project.number === "01" && (
+              <section className="blue-background" aria-labelledby="blue-background-title">
+                <div className="blue-background-image" aria-hidden="true" />
+                <header className="blue-background-header">
+                  <span>BLUE / PROJECT BACKGROUND</span>
+                  <span>STEP 01</span>
+                </header>
+
+                <div className="blue-story-copy">
+                  <p className="blue-story-label">01 / 故事灵感</p>
+                  <h3 id="blue-background-title">驶向深空，<br />仍记得从哪里出发</h3>
+                  <div className="blue-story-body">
+                    <p>故事灵感来源于旅行者号和歌曲《蓝》。</p>
+                    <p>旅行者号在不断远离地球、驶向宇宙深处的过程中，曾将镜头再次转向地球，留下那颗漂浮在浩瀚宇宙中的“暗淡蓝点”。</p>
+                    <p>这一瞬间成为短片最重要的情感来源——远行并不意味着遗忘，正因为知道自己从哪里出发，才更有勇气驶向未知。</p>
+                    <p>《蓝》也因此不只是一个关于宇宙探索的科幻故事，而更像是一次关于离别、故乡与理想的表达。</p>
+                  </div>
+                </div>
+
+                <figure className="blue-flight-frame">
+                  <img src="/blue-flight.png" alt="飞行器掠过蓝灰色星球表面的画面" />
+                  <figcaption>DEPARTURE / UNKNOWN / HOME</figcaption>
+                </figure>
+
+                <p className="pale-dot-note">PALE BLUE DOT<br />VOYAGER / 1977—∞</p>
+              </section>
+            )}
           </section>
         );
       })}
