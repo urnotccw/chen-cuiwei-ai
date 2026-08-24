@@ -602,22 +602,27 @@ export default function Home() {
                   <div className="enemy-roster-group">
                     <p>部分敌人立绘</p>
                     <div className="enemy-roster-grid">
-                      <figure><img src="/wuxing-enemy-jiaomu.png" alt="角木蛟敌人立绘" /></figure>
-                      <figure><img src="/wuxing-enemy-kangjin.png" alt="亢金龙敌人立绘" /></figure>
-                      <figure><img src="/wuxing-enemy-weihuo.png" alt="尾火虎敌人立绘" /></figure>
-                      <figure><img src="/wuxing-enemy-jishui.png" alt="箕水豹敌人立绘" /></figure>
-                      <figure><img src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /></figure>
-                      <figure><img src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /></figure>
+                      <figure tabIndex={0}><img src="/wuxing-enemy-jiaomu.png" alt="角木蛟敌人立绘" /><figcaption className="artwork-info"><strong>角木蛟</strong><span>青木缠阵</span><p>每回合标记一列；相生会强化该列效果。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-enemy-kangjin.png" alt="亢金龙敌人立绘" /><figcaption className="artwork-info"><strong>亢金龙</strong><span>金鳞威压</span><p>开场拥有金鳞护盾；有盾时攻击提升。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-enemy-weihuo.png" alt="尾火虎敌人立绘" /><figcaption className="artwork-info"><strong>尾火虎</strong><span>燃尾追击</span><p>每三回合燃尾，下一次攻击提升至 12 点。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-enemy-jishui.png" alt="箕水豹敌人立绘" /><figcaption className="artwork-info"><strong>箕水豹</strong><span>回潮奔流</span><p>周期回复护盾；生命低于一半时下次攻击 +6。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /><figcaption className="artwork-info"><strong>女土蝠</strong><span>蒙尘</span><p>每回合标记一张手牌，发动后效果减半。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /><figcaption className="artwork-info"><strong>斗木獬</strong><span>终局审判</span><p>相生累积清正；每三回合发动一次断罪。</p></figcaption></figure>
                     </div>
                   </div>
                   <div className="wuxing-card-group" aria-label="金木水火土五行卡牌">
                     <p>卡牌设计</p>
                     <div className="wuxing-card-row">
-                      <figure><img src="/wuxing-card-metal.png" alt="金元素卡牌" /></figure>
-                      <figure><img src="/wuxing-card-wood.png" alt="木元素卡牌" /></figure>
-                      <figure><img src="/wuxing-card-water.png" alt="水元素卡牌" /></figure>
-                      <figure><img src="/wuxing-card-fire.png" alt="火元素卡牌" /></figure>
-                      <figure><img src="/wuxing-card-earth.png" alt="土元素卡牌" /></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-metal.png" alt="金元素卡牌" /><figcaption className="artwork-info"><strong>金</strong><span>稳定输出</span><p>造成 5 点伤害。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-wood.png" alt="木元素卡牌" /><figcaption className="artwork-info"><strong>木</strong><span>基础回复</span><p>回复 3 点生命。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-water.png" alt="水元素卡牌" /><figcaption className="artwork-info"><strong>水</strong><span>基础防御</span><p>获得 4 点护盾。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-fire.png" alt="火元素卡牌" /><figcaption className="artwork-info"><strong>火</strong><span>直接输出</span><p>造成 6 点伤害。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-earth.png" alt="土元素卡牌" /><figcaption className="artwork-info"><strong>土</strong><span>高防御</span><p>获得 6 点护盾。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-tigerclaw.png" alt="虎爪金特殊卡牌" /><figcaption className="artwork-info"><strong>虎爪金</strong><span>破盾输出</span><p>造成 6 点伤害；目标有盾时额外破盾 3 点。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-lotus.png" alt="莲花木特殊卡牌" /><figcaption className="artwork-info"><strong>莲花木</strong><span>回复＋防御</span><p>回复 4 点生命；被水生木强化时 +2 护盾。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-moonwater.png" alt="月亮水特殊卡牌" /><figcaption className="artwork-info"><strong>月亮水</strong><span>控制防御</span><p>获得 4 点护盾；敌人下回合攻击 -1。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-featherfire.png" alt="羽毛火特殊卡牌" /><figcaption className="artwork-info"><strong>羽毛火</strong><span>持续输出</span><p>造成 4 点伤害，并施加两回合灼烧。</p></figcaption></figure>
+                      <figure tabIndex={0}><img src="/wuxing-card-amberearth.png" alt="琥珀土特殊卡牌" /><figcaption className="artwork-info"><strong>琥珀土</strong><span>防御＋回复</span><p>获得 6 点护盾，同时回复 1 点生命。</p></figcaption></figure>
                     </div>
                   </div>
                 </section>
