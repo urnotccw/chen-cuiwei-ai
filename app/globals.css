@@ -271,11 +271,9 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .project-row:focus-visible { outline: 2px solid var(--work-ink); outline-offset: 4px; }
 .project-backdrop { position: absolute; z-index: 0; left: 0; top: 8px; bottom: 8px; width: 29.5%; pointer-events: none; background-position: center; background-size: cover; opacity: .72; filter: saturate(.82) contrast(.92); }
 .project-backdrop::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244,240,233,.1), rgba(244,240,233,.26)); }
-.blue-index-cover { background-image: url("/blue-cover.jpeg"); background-position: center 47%; opacity: .95; filter: saturate(.82) contrast(1.06); }
-.blue-index-cover::after { background: linear-gradient(90deg, rgba(0,0,0,.08), rgba(0,0,0,.1) 70%, rgba(244,240,233,.42)); }
-.wuxing-index-cover { background-image: url("/wuxing-map.png"); background-position: 14% center; opacity: .92; filter: saturate(.68) contrast(1.14); }
-.wuxing-index-cover::after { background: linear-gradient(90deg, rgba(4,4,8,.05), rgba(9,8,14,.12) 64%, rgba(244,240,233,.5)); }
-.project-row:first-child .project-number, .project-row:first-child .project-name { color: #fffdf6; text-shadow: 0 1px 7px rgba(0,0,0,.34); }
+.project-backdrop.is-dark-index { opacity: .92; filter: saturate(.75) contrast(1.05); }
+.project-backdrop.is-dark-index::after { background: linear-gradient(90deg, rgba(0,0,0,.2), rgba(0,0,0,.38) 74%, rgba(0,0,0,.1)); }
+.project-row.is-dark-index .project-number, .project-row.is-dark-index .project-name { color: #fffdf6; text-shadow: 0 1px 7px rgba(0,0,0,.48); }
 .project-number { position: relative; z-index: 1; margin: 0; align-self: start; padding-top: 5px; font-family: var(--font-editorial); font-size: clamp(18px, 1.85vw, 34px); line-height: 1; }
 .project-name { position: relative; z-index: 1; }
 .project-name h3 { margin: 0; font-family: var(--font-editorial); font-size: clamp(18px, 1.8vw, 34px); line-height: 1; font-weight: 600; letter-spacing: .025em; }
@@ -284,11 +282,7 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .tool-list { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 5px; margin: 0; padding: 0; list-style: none; }
 .tool-list li { padding: 4px 6px 3px; border: 1px solid rgba(40, 35, 31, .52); font: 700 clamp(5px, .42vw, 8px)/1 var(--font-label); letter-spacing: .08em; white-space: nowrap; }
 .project-image-slot { position: relative; z-index: 1; justify-self: end; width: clamp(76px, 7.4vw, 135px); aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(40, 35, 31, .55); background: rgba(255,255,255,.27); }
-.project-image-slot::before, .project-image-slot::after { content: ""; position: absolute; top: 50%; left: 50%; width: 140%; height: 1px; background: rgba(40,35,31,.22); transform-origin: center; }
-.project-image-slot::before { transform: translate(-50%, -50%) rotate(29deg); }
-.project-image-slot::after { transform: translate(-50%, -50%) rotate(-29deg); }
-.project-image-slot span { position: absolute; z-index: 1; right: 6px; bottom: 5px; text-align: right; font: 700 clamp(5px, .4vw, 7px)/1.1 var(--font-label); letter-spacing: .1em; }
-.project-image-slot i { position: absolute; z-index: 2; inset: 5px; border: 1px solid rgba(40,35,31,.14); }
+.project-image-slot img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .works-footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 14px; font: 700 clamp(6px, .47vw, 9px)/1 var(--font-label); letter-spacing: .12em; }
 
 .project-detail {
@@ -958,6 +952,7 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .project-type { display: none; }
   .tool-list { grid-column: 2 / 4; align-self: start; }
   .tool-list li { font-size: 6px; }
+  .project-row.is-dark-index .tool-list li { color: #fffdf6; border-color: rgba(255,253,246,.68); text-shadow: 0 1px 5px rgba(0,0,0,.55); }
   .project-image-slot { grid-column: 3; grid-row: 1; width: 82px; }
   .works-footer span:nth-child(2) { display: none; }
 

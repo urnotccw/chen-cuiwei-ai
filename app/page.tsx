@@ -17,6 +17,8 @@ export default function Home() {
       tools: ["GPT", "GPT-IMAGE 2", "LIBTV", "SEEDANCE 2.5", "剪映"],
       hero: null,
       heroAlt: "",
+      indexImage: "/blue-cover.jpeg",
+      indexTone: "dark",
       summary: "从故事灵感到角色与镜头设计的 AIGC 动画创作。",
     },
     {
@@ -27,6 +29,8 @@ export default function Home() {
       tools: ["GPT", "GPT-IMAGE", "JAVASCRIPT"],
       hero: null,
       heroAlt: "",
+      indexImage: "/wuxing-map.png",
+      indexTone: "dark",
       summary: "以五行生克与二十八宿为核心规则，完成从玩法策划、系统拆解到可在线体验版本的 AI 辅助开发。",
     },
     {
@@ -37,6 +41,8 @@ export default function Home() {
       tools: ["FIGMA", "CODEX", "GPT-IMAGE"],
       hero: "/portfolio-p03-ui.jpg",
       heroAlt: "一只喵管家微信小程序的四个核心界面",
+      indexImage: "/portfolio-p03-ui.jpg",
+      indexTone: "light",
       summary: "围绕养猫健康记录、物资库存与周期提醒，完成从需求拆解、信息架构到可演示交互版本的 0—1 产品验证。",
     },
     {
@@ -47,6 +53,8 @@ export default function Home() {
       tools: ["UE5", "GPT", "NANO BANANA"],
       hero: "/portfolio-p04-final.jpg",
       heroAlt: "藏地建筑与雪山云海构成的游戏场景最终效果",
+      indexImage: "/portfolio-p04-final.jpg",
+      indexTone: "light",
       summary: "用 AI 加速视觉方向验证，再通过 UE5 白盒、模块化资产与灯光迭代完成场景落地。",
     },
     {
@@ -57,6 +65,8 @@ export default function Home() {
       tools: ["MAYA", "SUBSTANCE PAINTER", "TOOLBAG"],
       hero: "/portfolio-p05-hero.jpg",
       heroAlt: "海上小屋风格化三维场景",
+      indexImage: "/portfolio-p05-hero.jpg",
+      indexTone: "light",
       summary: "围绕风格一致性、资产复用与交付规范，完成多类型游戏 3D 资产设计与制作。",
     },
   ];
@@ -146,8 +156,8 @@ export default function Home() {
 
         <div className="project-index" aria-label="项目目录">
           {projects.map((project) => (
-            <a className="project-row" href={`#project-${project.number}`} key={project.number}>
-              <span className={`project-backdrop${project.number === "01" ? " blue-index-cover" : project.number === "02" ? " wuxing-index-cover" : ""}`} aria-hidden="true" />
+            <a className={`project-row${project.indexTone === "dark" ? " is-dark-index" : ""}`} href={`#project-${project.number}`} key={project.number}>
+              <span className={`project-backdrop is-${project.indexTone}-index`} style={{ backgroundImage: `url("${project.indexImage}")` }} aria-hidden="true" />
               <p className="project-number">{project.number}</p>
               <div className="project-name">
                 <h3 className={project.number === "02" ? "wuxing-title" : undefined}>{project.title}</h3>
@@ -157,9 +167,8 @@ export default function Home() {
               <ul className="tool-list" aria-label={`${project.title} 使用工具`}>
                 {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
               </ul>
-              <div className="project-image-slot" aria-label={`${project.title} 项目图片待添加`}>
-                <span>IMAGE<br />PENDING</span>
-                <i aria-hidden="true" />
+              <div className="project-image-slot" aria-label={`${project.title} 项目预览图`}>
+                <img src={project.indexImage} alt="" />
               </div>
             </a>
           ))}
