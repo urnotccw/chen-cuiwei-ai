@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable react-hooks/set-state-in-effect */
 
-import { ChangeEvent, FormEvent, MouseEvent, useEffect, useRef, useState } from "react";
+import { ChangeEvent, FormEvent, MouseEvent, WheelEvent as ReactWheelEvent, useEffect, useRef, useState } from "react";
 
 type TabKey = "profile" | "inventory" | "medicine" | "album";
 type InventoryItem = { id: number; name: string; category: string; qty: number; unit: string; image: string; tag: "爱吃" | "不爱吃" | "未知"; restockReminder: boolean };
@@ -93,6 +93,7 @@ export default function CatManagerDemo() {
   const [hydrated, setHydrated] = useState(false);
   const [toast, setToast] = useState("");
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const appBodyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     try {
@@ -193,11 +194,20 @@ export default function CatManagerDemo() {
   const pendingTagCount = inventory.filter((item) => item.tag === "未知").length;
   const stopStep = (event: MouseEvent<HTMLButtonElement>, id: number, delta: number) => { event.stopPropagation(); updateQty(id, delta); };
   const modalTitle = modal === "profile" ? "修改猫咪档案" : modal === "calendar" ? "选择记录日期" : modal === "abnormal" ? "其他异常记录" : modal === "weight" ? "记录体重" : modal === "medicine" ? "添加用药计划" : modal === "album" ? "添加相册照片" : editingItem.id && inventory.some((item) => item.id === editingItem.id) ? "编辑囤货物品" : "添加囤货物品";
+  const handleAppWheel = (event: ReactWheelEvent<HTMLDivElement>) => {
+    const scrollArea = appBodyRef.current;
+    if (!scrollArea) return;
+    const maxScrollTop = scrollArea.scrollHeight - scrollArea.clientHeight;
+    const nextScrollTop = Math.min(maxScrollTop, Math.max(0, scrollArea.scrollTop + event.deltaY));
+    if (nextScrollTop === scrollArea.scrollTop) return;
+    event.preventDefault();
+    scrollArea.scrollTop = nextScrollTop;
+  };
 
   return (
     <div className="cat-app-shell">
       <div className="cat-status-bar" aria-hidden="true"><span>1:25</span><span>●●● 5G ▰</span></div>
-      <div className="cat-app-body">
+      <div ref={appBodyRef} className="cat-app-body" onWheel={handleAppWheel} tabIndex={0} aria-label="小程序内容，可使用鼠标滚轮浏览">
         {activeTab === "profile" && (
           <section className="cat-app-page cat-profile-page" aria-label="喵档案">
             <div className="cat-profile-hero">

@@ -330,7 +330,7 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .cat-app-shell { --cat-green: #4f7f31; --cat-green-dark: #365d20; --cat-lime: #c4f067; --cat-soft: #f4ffe6; --cat-yellow: #fff4b8; --cat-coral: #ff8066; position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; overflow: hidden; color: #1d251a; background: #f3f6f1; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
 .cat-app-shell button { color: inherit; font: inherit; border: 0; background: none; cursor: pointer; }
 .cat-status-bar { position: relative; z-index: 4; display: flex; flex: 0 0 37px; align-items: center; justify-content: space-between; padding: 10px 19px 6px; color: #161616; background: var(--cat-soft); font-size: 9px; font-weight: 700; }
-.cat-app-body { min-height: 0; flex: 1; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; }
+.cat-app-body { min-height: 0; flex: 1; overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; touch-action: pan-y; }
 .cat-app-body::-webkit-scrollbar { display: none; }
 .cat-app-page { min-height: 100%; background: #f3f6f1; }
 .cat-profile-hero { padding: 18px 15px 16px; background: var(--cat-soft); }
@@ -577,7 +577,7 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .fact-label.is-lime { background: #c9df63; }
 .fact-label.is-blue { background: #9fc7d8; }
 .is-phone-layout .iphone-demo-stage { grid-column: 2; grid-row: 1 / 3; width: 100%; min-height: clamp(690px, 76vh, 900px); border: 0; background: transparent; }
-.phone-demo-callout { position: absolute; top: 50%; right: auto; bottom: auto; left: 0; display: grid; gap: 3px; margin: 0; padding: 10px 0; border-top: 1px solid rgba(40,35,31,.36); border-bottom: 1px solid rgba(40,35,31,.36); opacity: 1; transform: translateY(-50%); }
+.phone-demo-callout { position: absolute; top: 50%; right: auto; bottom: auto; left: 0; display: grid; gap: 3px; margin: 0; padding: 10px 0; opacity: 1; transform: translateY(-50%); }
 .phone-demo-callout span { font: 700 clamp(6px, .48vw, 9px)/1 var(--font-label); letter-spacing: .13em; opacity: .62; }
 .phone-demo-callout strong { font-family: var(--font-editorial); font-size: clamp(13px, .95vw, 17px); font-weight: 600; line-height: 1.2; }
 .phone-demo-callout em { font-family: var(--font-editorial); font-size: clamp(9px, .68vw, 12px); font-style: normal; line-height: 1.4; letter-spacing: .03em; }
