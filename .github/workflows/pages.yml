@@ -31,6 +31,8 @@ jobs:
         run: npx vinext build --prerender-all
       - name: Prepare Pages files
         run: node scripts/prepare-github-pages.mjs
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
