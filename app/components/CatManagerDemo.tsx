@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable react-hooks/set-state-in-effect */
 
-import { ChangeEvent, FormEvent, MouseEvent, WheelEvent as ReactWheelEvent, useEffect, useRef, useState } from "react";
+import { ChangeEvent, FormEvent, MouseEvent, PointerEvent as ReactPointerEvent, WheelEvent as ReactWheelEvent, useEffect, useRef, useState } from "react";
 
 type TabKey = "profile" | "inventory" | "medicine" | "album";
 type InventoryItem = { id: number; name: string; category: string; qty: number; unit: string; image: string; tag: "爱吃" | "不爱吃" | "未知"; restockReminder: boolean };
@@ -94,6 +94,7 @@ export default function CatManagerDemo() {
   const [toast, setToast] = useState("");
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const appBodyRef = useRef<HTMLDivElement>(null);
+  const dragStateRef = useRef<{ pointerId: number; startY: number; startScrollTop: number; dragging: boolean } | null>(null);
 
   useEffect(() => {
     try {
@@ -203,11 +204,36 @@ export default function CatManagerDemo() {
     event.preventDefault();
     scrollArea.scrollTop = nextScrollTop;
   };
+  const handlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (event.pointerType !== "mouse" || event.button !== 0) return;
+    if ((event.target as HTMLElement).closest("button, input, textarea, select, label, a")) return;
+    const scrollArea = appBodyRef.current;
+    if (!scrollArea || scrollArea.scrollHeight <= scrollArea.clientHeight) return;
+    dragStateRef.current = { pointerId: event.pointerId, startY: event.clientY, startScrollTop: scrollArea.scrollTop, dragging: false };
+    scrollArea.setPointerCapture(event.pointerId);
+  };
+  const handlePointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const scrollArea = appBodyRef.current;
+    const dragState = dragStateRef.current;
+    if (!scrollArea || !dragState || dragState.pointerId !== event.pointerId) return;
+    const distance = event.clientY - dragState.startY;
+    if (Math.abs(distance) < 3 && !dragState.dragging) return;
+    dragState.dragging = true;
+    event.preventDefault();
+    scrollArea.scrollTop = Math.min(scrollArea.scrollHeight - scrollArea.clientHeight, Math.max(0, dragState.startScrollTop - distance));
+  };
+  const handlePointerEnd = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const scrollArea = appBodyRef.current;
+    const dragState = dragStateRef.current;
+    if (!scrollArea || !dragState || dragState.pointerId !== event.pointerId) return;
+    if (scrollArea.hasPointerCapture(event.pointerId)) scrollArea.releasePointerCapture(event.pointerId);
+    dragStateRef.current = null;
+  };
 
   return (
     <div className="cat-app-shell">
       <div className="cat-status-bar" aria-hidden="true"><span>1:25</span><span>●●● 5G ▰</span></div>
-      <div ref={appBodyRef} className="cat-app-body" onWheel={handleAppWheel} tabIndex={0} aria-label="小程序内容，可使用鼠标滚轮浏览">
+      <div ref={appBodyRef} className="cat-app-body" onWheel={handleAppWheel} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerEnd} onPointerCancel={handlePointerEnd} tabIndex={0} aria-label="小程序内容，可使用鼠标滚轮或按住拖动浏览">
         {activeTab === "profile" && (
           <section className="cat-app-page cat-profile-page" aria-label="喵档案">
             <div className="cat-profile-hero">
