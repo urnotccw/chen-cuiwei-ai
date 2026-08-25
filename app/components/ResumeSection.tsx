@@ -47,11 +47,11 @@ export default function ResumeSection() {
         <a className="resume-download" href="/chen-cuiwei-ai-pm-resume.pdf" target="_blank" rel="noreferrer">下载 PDF ↘</a>
       </header>
 
-      <div className="resume-metric-strip" aria-label="关键经历数据">
-        <div><strong>1000+</strong><span>大版本评测题库</span></div>
-        <div><strong>6 / 3000+</strong><span>模型 / 单组样本</span></div>
-        <div><strong>+6%</strong><span>GSB 评测胜率</span></div>
-        <div><strong>8+</strong><span>AIGC 竞品跟踪</span></div>
+      <div className="resume-metric-strip" aria-label="个人优势">
+        <div><strong>洞察与拆解</strong><span>从用户问题到可执行方案</span></div>
+        <div><strong>系统化设计</strong><span>流程、规则与信息架构</span></div>
+        <div><strong>AI 产品实践</strong><span>评测、原型与能力落地</span></div>
+        <div><strong>协作与交付</strong><span>推动 PRD、Demo 与迭代闭环</span></div>
       </div>
 
       <div className="resume-onepage-grid">
