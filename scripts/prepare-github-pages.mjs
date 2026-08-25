@@ -23,7 +23,7 @@ async function rewrite(directory) {
     let text = await readFile(file, "utf8");
     // Vite/Vinext emits root-absolute asset URLs. GitHub project Pages is served
     // from /chen-cuiwei-ai/, so prefix those URLs in generated files.
-    text = text.replace(/(["'`])\/(?!\/)/g, `$1${base}`);
+    text = text.replace(/((?:href|src|poster|action)=["'])\/(?!\/)/g, `$1${base}`);
     text = text.replace(/url\(\/(?!\/)/g, `url(${base}`);
     await writeFile(file, text, "utf8");
   }
