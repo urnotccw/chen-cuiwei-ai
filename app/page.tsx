@@ -225,7 +225,8 @@ export default function Home() {
                   <video
                     className="blue-video-player"
                     controls
-                    preload="metadata"
+                    preload="none"
+                    poster="/blue-cover.jpeg"
                     playsInline
                     poster="/blue-cover.jpeg"
                     aria-label="AIGC 动画短片《蓝》视频播放器"
@@ -256,7 +257,7 @@ export default function Home() {
                 </div>
               ) : project.hero ? (
                 <figure className="detail-visual case-detail-visual">
-                  <img src={project.hero} alt={project.heroAlt} />
+                  <img src={project.hero} alt={project.heroAlt} loading="lazy" decoding="async" />
                   <figcaption>PROJECT {project.number} / CASE OVERVIEW</figcaption>
                 </figure>
               ) : (
@@ -302,7 +303,7 @@ export default function Home() {
                 </div>
 
                 <figure className="blue-flight-frame">
-                  <img src="/blue-flight.png" alt="飞行器掠过蓝灰色星球表面的画面" />
+                  <img src="/blue-flight.png" alt="飞行器掠过蓝灰色星球表面的画面" loading="lazy" decoding="async" />
                   <figcaption>DEPARTURE / UNKNOWN / HOME</figcaption>
                 </figure>
 
@@ -331,15 +332,15 @@ export default function Home() {
                     </div>
                     <div className="heroine-stages">
                       <figure>
-                        <img src="/blue-character-scientist.png" alt="女主角研究员造型的面部、正面、侧面与背面设定" />
+                        <img src="/blue-character-scientist.png" alt="女主角研究员造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                         <figcaption><span>01A</span> RESEARCHER / 理性与观察</figcaption>
                       </figure>
                       <figure>
-                        <img src="/blue-character-flight.png" alt="女主角航行训练服造型的面部、正面、侧面与背面设定" />
+                        <img src="/blue-character-flight.png" alt="女主角航行训练服造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                         <figcaption><span>01B</span> FLIGHT SUIT / 行动与准备</figcaption>
                       </figure>
                       <figure>
-                        <img src="/blue-character-astronaut.png" alt="女主角宇航服造型的面部、正面、侧面与背面设定" />
+                        <img src="/blue-character-astronaut.png" alt="女主角宇航服造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                         <figcaption><span>01C</span> ASTRONAUT / 远行与未知</figcaption>
                       </figure>
                     </div>
@@ -347,7 +348,7 @@ export default function Home() {
 
                   <div className="supporting-characters">
                     <figure className="character-card">
-                      <img src="/blue-character-child.png" alt="小女孩粉色连衣裙造型的面部、正面、侧面与背面设定" />
+                      <img src="/blue-character-child.png" alt="小女孩粉色连衣裙造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                       <figcaption>
                         <p>CHARACTER 02 / MEMORY</p>
                         <h4>童年形象 · 启蒙</h4>
@@ -356,7 +357,7 @@ export default function Home() {
                     </figure>
 
                     <figure className="character-card">
-                      <img src="/blue-character-casual.png" alt="女孩父亲年轻时期的深灰 T 恤与牛仔裤造型设定" />
+                      <img src="/blue-character-casual.png" alt="女孩父亲年轻时期的深灰 T 恤与牛仔裤造型设定" loading="lazy" decoding="async" />
                       <figcaption>
                         <p>CHARACTER 03 / FATHER · YOUNG</p>
                         <h4>女主角父亲 · 年轻</h4>
@@ -365,7 +366,7 @@ export default function Home() {
                     </figure>
 
                     <figure className="character-card">
-                      <img src="/blue-character-senior.png" alt="女孩父亲变老后的深色西装造型设定" />
+                      <img src="/blue-character-senior.png" alt="女孩父亲变老后的深色西装造型设定" loading="lazy" decoding="async" />
                       <figcaption>
                         <p>CHARACTER 04 / FATHER · AGED</p>
                         <h4>女主角父亲 · 年长</h4>
@@ -396,15 +397,15 @@ export default function Home() {
 
                   <div className="space-prop-grid">
                     <figure className="space-command">
-                      <img src="/blue-space-command.png" alt="空间站控制舱的驾驶席、工作台、顶部结构与整体空间设定" />
+                      <img src="/blue-space-command.png" alt="空间站控制舱的驾驶席、工作台、顶部结构与整体空间设定" loading="lazy" decoding="async" />
                       <figcaption><span>SPACE 01</span> CONTROL DECK / 控制与观察</figcaption>
                     </figure>
                     <figure className="space-equipment">
-                      <img src="/blue-space-equipment.png" alt="空间站设备舱、舷窗、仪器墙与维护区域设定" />
+                      <img src="/blue-space-equipment.png" alt="空间站设备舱、舷窗、仪器墙与维护区域设定" loading="lazy" decoding="async" />
                       <figcaption><span>SPACE 02</span> EQUIPMENT BAY / 设备与维护</figcaption>
                     </figure>
                     <figure className="space-shuttle">
-                      <img src="/blue-prop-shuttle.png" alt="黑金配色航行器的前后、侧面、顶部与底部多视图设定" />
+                      <img src="/blue-prop-shuttle.png" alt="黑金配色航行器的前后、侧面、顶部与底部多视图设定" loading="lazy" decoding="async" />
                       <figcaption><span>PROP 01</span> SHUTTLE / 航行器多视图</figcaption>
                     </figure>
                   </div>
@@ -482,7 +483,7 @@ export default function Home() {
                   </div>
 
                   <figure className="workflow-canvas">
-                    <img src="/blue-workflow-canvas.png" alt="《蓝》项目的完整 AI 节点画布，包含角色、场景和镜头之间的大量连接" />
+                    <img src="/blue-workflow-canvas.png" alt="《蓝》项目的完整 AI 节点画布，包含角色、场景和镜头之间的大量连接" loading="lazy" decoding="async" />
                     <figcaption><span>CANVAS / 01</span> 从角色资产到连续镜头的完整工作流</figcaption>
                   </figure>
 

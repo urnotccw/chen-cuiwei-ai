@@ -289,6 +289,8 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   --work-ink: #28231f;
   position: relative;
   min-height: 100svh;
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px 1400px;
   padding: clamp(24px, 2.2vw, 42px) clamp(26px, 4.1vw, 78px) clamp(22px, 2vw, 38px);
   color: var(--work-ink);
   background: #f4f0e9 url("/work-paper.png") center / cover no-repeat;
