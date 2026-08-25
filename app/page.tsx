@@ -723,11 +723,6 @@ export default function Home() {
                   </div>
                 </section>
 
-                <figure className="case-lead-media dark-media">
-                  <img src="/portfolio-p04-final.jpg" alt="藏地建筑、雪山、云海与森林构成的最终游戏场景" />
-                  <figcaption><span>FINAL ENVIRONMENT</span> 参考研究、概念验证与 UE5 场景资产的整合结果</figcaption>
-                </figure>
-
                 <div className="case-problem-grid">
                   <section><p className="case-label">HYPOTHESIS / 假设</p><h4>概念图能否转化为可执行的制作约束？</h4><p>AI 可以快速给出气氛方向，但如果没有明确空间结构、镜头目标和资产边界，最终画面很难在引擎中稳定复现。</p></section>
                   <section><p className="case-label">STRATEGY / 策略</p><h4>先验证空间，再补充视觉复杂度</h4><p>先用白盒确认构图与动线，再分层处理资产、灯光、人物和氛围；把每轮 AI 结果转译为可执行的场景修改项。</p></section>
