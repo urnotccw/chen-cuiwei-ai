@@ -1271,5 +1271,19 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .artwork-info p { margin-top: 5px; font-size: 9px; line-height: 1.35; }
 }
 
-.case-study.case-study-travel { background: #f1f4f7 url("/work-paper.png") center / cover no-repeat; }
-.case-study.case-study-byte { background: radial-gradient(circle at 88% 4%, rgba(255,207,74,.14), transparent 25%), radial-gradient(circle at 4% 28%, rgba(72,205,193,.11), transparent 27%), #111820; }
+.case-study.case-study-travel {
+  --case-ink: #14213a;
+  --case-line: rgba(20,33,58,.35);
+  --case-panel: rgba(255,255,255,.55);
+  --case-accent: #d73b31;
+  color: var(--case-ink);
+  background: #f1f4f7 url("/work-paper.png") center / cover no-repeat;
+}
+.case-study.case-study-byte {
+  --case-ink: #f3f2ed;
+  --case-line: rgba(243,242,237,.3);
+  --case-panel: rgba(255,255,255,.06);
+  --case-accent: #ffcf4a;
+  color: var(--case-ink);
+  background: radial-gradient(circle at 88% 4%, rgba(255,207,74,.14), transparent 25%), radial-gradient(circle at 4% 28%, rgba(72,205,193,.11), transparent 27%), #111820;
+}
