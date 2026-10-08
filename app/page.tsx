@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import ByteCase from "./components/ByteCase";
 import CatManagerDemo from "./components/CatManagerDemo";
 import ResumeSection from "./components/ResumeSection";
+import TravelCase from "./components/TravelCase";
 
 export const metadata: Metadata = {
   title: "陈萃薇 · AI 产品经理作品集",
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const projects = [
     {
+      slug: "blue",
       number: "01",
       title: "蓝",
       type: "AIGC 动画短片",
@@ -23,6 +26,20 @@ export default function Home() {
     },
     {
       number: "02",
+      slug: "travel",
+      title: "下一站",
+      type: "AI 结伴旅行规划产品",
+      english: "AI-ASSISTED GROUP TRAVEL PLANNER",
+      tools: ["FIGMA", "CODEX", "DEEPSEEK", "DATAV"],
+      hero: "/travel-plan.png",
+      heroAlt: "下一站可编辑行程规划界面",
+      indexImage: "/travel-map.png",
+      indexTone: "light",
+      summary: "从目的地发现、AI 行程生成到群体确认、出发准备与费用结算，完成结伴旅行的完整协作原型。",
+    },
+    {
+      slug: "wuxing",
+      number: "03",
       title: "五行星轨",
       type: "AI 辅助网页策略卡牌游戏",
       english: "AI-ASSISTED STRATEGY CARD GAME",
@@ -34,7 +51,21 @@ export default function Home() {
       summary: "以五行生克与二十八宿为核心规则，完成从玩法策划、系统拆解到可在线体验版本的 AI 辅助开发。",
     },
     {
-      number: "03",
+      slug: "byte",
+      number: "04",
+      title: "字节笔试题",
+      type: "AI 产品系统设计与互动原型",
+      english: "AI PRODUCT SYSTEM & INTERACTION",
+      tools: ["GPT", "CODEX", "MEDIAPIPE", "JAVASCRIPT"],
+      hero: "/byte-smile-case.png",
+      heroAlt: "字节笔试题中的微笑花园互动产品与系统说明",
+      indexImage: "/byte-smile-case.png",
+      indexTone: "light",
+      summary: "围绕数字内容生产、审美评测与浏览器实时互动，完成从问题拆解、流程设计到在线体验的三部分系统方案。",
+    },
+    {
+      slug: "cat",
+      number: "05",
       title: "一只喵管家",
       type: "AI 辅助微信小程序开发",
       english: "AI WECHAT MINI PROGRAM",
@@ -46,7 +77,8 @@ export default function Home() {
       summary: "围绕养猫健康记录、物资库存与周期提醒，完成从需求拆解、信息架构到可演示交互版本的 0—1 产品验证。",
     },
     {
-      number: "04",
+      slug: "environment",
+      number: "06",
       title: "AI 游戏场景设计",
       type: "AI 辅助游戏场景设计",
       english: "AI-ASSISTED GAME ENVIRONMENT",
@@ -58,7 +90,8 @@ export default function Home() {
       summary: "用 AI 加速视觉方向验证，再通过 UE5 白盒、模块化资产与灯光迭代完成场景落地。",
     },
     {
-      number: "05",
+      slug: "modeling",
+      number: "07",
       title: "3D 建模设计",
       type: "三维建模与材质设计",
       english: "3D MODELING & TEXTURING",
@@ -138,13 +171,13 @@ export default function Home() {
             <small>DESIGN ARCHIVE / 2026</small>
           </a>
           <p>WORK INDEX</p>
-          <p>05 PROJECTS</p>
+          <p>07 PROJECTS</p>
           <a href="#top">BACK TO COVER ↑</a>
         </header>
 
         <div className="works-intro">
           <div>
-            <p className="works-kicker">SELECTED WORKS · 01—05</p>
+            <p className="works-kicker">SELECTED WORKS · 01—07</p>
             <h2 id="works-title">目录</h2>
           </div>
           <p className="works-summary">
@@ -160,7 +193,7 @@ export default function Home() {
               <span className={`project-backdrop is-${project.indexTone}-index`} style={{ backgroundImage: `url("${project.indexImage}")` }} aria-hidden="true" />
               <p className="project-number">{project.number}</p>
               <div className="project-name">
-                <h3 className={project.number === "02" ? "wuxing-title" : undefined}>{project.title}</h3>
+                <h3 className={project.slug === "wuxing" ? "wuxing-title" : undefined}>{project.title}</h3>
                 <p>{project.english}</p>
               </div>
               <p className="project-type">{project.type}</p>
@@ -189,19 +222,19 @@ export default function Home() {
           <section id={`project-${project.number}`} className={`project-detail${project.hero ? " case-project-detail" : ""}`} key={`detail-${project.number}`} aria-labelledby={`project-title-${project.number}`}>
             <header className="detail-header">
               <a href="#works">CCW / WORK INDEX</a>
-              <p>PROJECT {project.number} / 05</p>
+              <p>PROJECT {project.number} / 07</p>
               <a href="#works">BACK TO INDEX ↑</a>
             </header>
 
-            <div className={`project-hero-layout${project.number === "01" ? " is-video-layout" : project.number === "02" ? " is-game-layout" : project.number === "03" ? " is-phone-layout" : ""}`}>
+            <div className={`project-hero-layout${project.slug === "blue" ? " is-video-layout" : project.slug === "wuxing" ? " is-game-layout" : project.slug === "cat" ? " is-phone-layout" : ""}`}>
               <div className="detail-heading">
                 <p className="detail-number">{project.number}</p>
                 <div>
                   <p className="detail-kicker">{project.english}</p>
-                  <h2 className={project.number === "02" ? "wuxing-title" : undefined} id={`project-title-${project.number}`}>{project.title}</h2>
+                  <h2 className={project.slug === "wuxing" ? "wuxing-title" : undefined} id={`project-title-${project.number}`}>{project.title}</h2>
                 </div>
                 <p className="detail-type">{project.type}</p>
-                {project.number === "03" && (
+                {project.slug === "cat" && (
                   <div className="phone-project-intro">
                     <p className="phone-project-summary">一只喵管家是一款面向养猫用户的 <mark className="intro-highlight is-lime">轻量健康管理小程序</mark>，把散落在备忘录、相册与购物软件中的 <mark className="intro-highlight is-coral">照护信息</mark>，收拢到一个持续可用的管理入口。</p>
                     <p className="mini-program-availability"><span>WECHAT MINI PROGRAM · LIVE</span><strong>已上线微信小程序</strong><em>微信搜索「一只喵管家」即可体验</em></p>
@@ -212,7 +245,7 @@ export default function Home() {
                     </dl>
                   </div>
                 )}
-                {project.number === "02" && (
+                {project.slug === "wuxing" && (
                   <div className="game-project-intro">
                     <p>五行星轨是一款以 <mark>五行生克</mark> 和 <mark>二十八宿</mark> 为规则基础的网页策略卡牌游戏。玩家通过上下两层阵法组合卡牌，在四象星阵中逐步点亮星宿。</p>
                     <a href="https://urnotccw.github.io/wuxing-game/" target="_blank" rel="noreferrer">进入游戏体验 ↗</a>
@@ -220,13 +253,12 @@ export default function Home() {
                 )}
               </div>
 
-              {project.number === "01" ? (
+              {project.slug === "blue" ? (
                 <div className="blue-video-frame">
                   <video
                     className="blue-video-player"
                     controls
                     preload="none"
-                    poster="/blue-cover.jpeg"
                     playsInline
                     poster="/blue-cover.jpeg"
                     aria-label="AIGC 动画短片《蓝》视频播放器"
@@ -236,7 +268,7 @@ export default function Home() {
                   </video>
                   <span className="video-ratio-note">VIDEO / 16:9</span>
                 </div>
-              ) : project.number === "03" ? (
+              ) : project.slug === "cat" ? (
                 <div className="iphone-demo-stage" aria-label="一只喵管家小程序交互演示预留区域">
                   <div className="iphone-15-device">
                     <span className="iphone-action-button" aria-hidden="true" />
@@ -250,7 +282,7 @@ export default function Home() {
                   </div>
                   <p className="phone-demo-callout"><span>TRY IT NOW</span><strong>手机界面可直接体验</strong><em>点击屏幕开始交互</em></p>
                 </div>
-              ) : project.number === "02" ? (
+              ) : project.slug === "wuxing" ? (
                 <div className="wuxing-game-stage">
                   <div className="wuxing-browser-bar"><span>LIVE WEB GAME</span><span>urnotccw.github.io/wuxing-game</span><a href="https://urnotccw.github.io/wuxing-game/" target="_blank" rel="noreferrer">OPEN ↗</a></div>
                   <iframe title="五行星轨网页游戏" src="https://urnotccw.github.io/wuxing-game/" loading="lazy" allow="autoplay" />
@@ -282,7 +314,7 @@ export default function Home() {
               </div>
             </div>
 
-            {project.number === "01" && (
+            {project.slug === "blue" && (
               <>
                 <section className="blue-background" aria-labelledby="blue-background-title">
                 <div className="blue-background-image" aria-hidden="true" />
@@ -555,9 +587,11 @@ export default function Home() {
               </>
             )}
 
-            {project.number === "02" && (
+            {project.slug === "travel" && <TravelCase />}
+
+            {project.slug === "wuxing" && (
           <section className="case-study case-study-game" aria-label="五行星轨项目概览">
-                <header className="case-study-header"><span>PROJECT 02 / GAME SYSTEM</span><span>AI-ASSISTED WEB GAME</span></header>
+                <header className="case-study-header"><span>PROJECT 03 / GAME SYSTEM</span><span>AI-ASSISTED WEB GAME</span></header>
 
                 <div className="case-opening">
                   <div>
@@ -640,9 +674,11 @@ export default function Home() {
               </section>
             )}
 
-            {project.number === "03" && (
+            {project.slug === "byte" && <ByteCase />}
+
+            {project.slug === "cat" && (
               <section className="case-study case-study-pet" aria-labelledby="pet-case-title">
-                <header className="case-study-header"><span>PROJECT 03 / PRODUCT CASE</span><span>WECHAT MINI PROGRAM</span></header>
+                <header className="case-study-header"><span>PROJECT 05 / PRODUCT CASE</span><span>WECHAT MINI PROGRAM</span></header>
 
                 <div className="case-opening">
                   <div>
@@ -701,9 +737,9 @@ export default function Home() {
               </section>
             )}
 
-            {project.number === "04" && (
+            {project.slug === "environment" && (
               <section className="case-study case-study-environment" aria-label="AI 游戏场景设计项目案例">
-                <header className="case-study-header"><span>PROJECT 04 / DESIGN PIPELINE</span><span>AI + UE5</span></header>
+                <header className="case-study-header"><span>PROJECT 06 / DESIGN PIPELINE</span><span>AI + UE5</span></header>
 
                 <div className="case-opening case-opening-facts-only">
                   <dl className="case-facts">
@@ -754,9 +790,9 @@ export default function Home() {
               </section>
             )}
 
-            {project.number === "05" && (
+            {project.slug === "modeling" && (
               <section className="case-study case-study-assets" aria-label="3D 建模设计项目案例">
-                <header className="case-study-header"><span>PROJECT 05 / 3D ASSET SYSTEM</span><span>MODELING &amp; TEXTURING</span></header>
+                <header className="case-study-header"><span>PROJECT 07 / 3D ASSET SYSTEM</span><span>MODELING &amp; TEXTURING</span></header>
 
                 <div className="case-opening case-opening-facts-only">
                   <dl className="case-facts">
