@@ -568,46 +568,6 @@ export default function Home() {
                   </footer>
                 </section>
 
-                <section id="blue-reflection" className="reflection-section" aria-labelledby="reflection-title">
-                  <header className="reflection-header">
-                    <span>BLUE / AI VALUE &amp; LIMITS</span>
-                    <span>CONCLUSION</span>
-                  </header>
-
-                  <div className="reflection-intro">
-                    <p>06 / 创作复盘</p>
-                    <h3 id="reflection-title">AI 缩短验证想法的路径，<br />但不替代创作者的判断</h3>
-                  </div>
-
-                  <div className="reflection-columns">
-                    <section aria-labelledby="value-title">
-                      <p className="reflection-label">VALUE / AI 的价值</p>
-                      <h4 id="value-title">更快地看见、比较与迭代</h4>
-                      <ol>
-                        <li><span>01</span><div><strong>快速验证想法</strong><p>把文字概念迅速转化为角色、空间和镜头草案，让创作者在投入完整制作前判断方向是否成立。</p></div></li>
-                        <li><span>02</span><div><strong>降低视觉试错成本</strong><p>同一构图可以测试不同服装、光线、色调与机位，从更多方案中选择真正服务故事的一种。</p></div></li>
-                        <li><span>03</span><div><strong>扩展个人创作能力</strong><p>将角色设定、概念设计和动态预演连接起来，让个人也能推进过去需要多人协作的前期验证。</p></div></li>
-                      </ol>
-                    </section>
-
-                    <section aria-labelledby="limit-title">
-                      <p className="reflection-label">LIMITS / AI 的边界</p>
-                      <h4 id="limit-title">画面可以生成，表达必须被设计</h4>
-                      <ol>
-                        <li><span>01</span><div><strong>AI 不决定画面为何存在</strong><p>镜头想表达什么、人物此刻应有怎样的情绪，仍需要创作者先建立清晰的叙事意图。</p></div></li>
-                        <li><span>02</span><div><strong>连续镜头需要人工设计</strong><p>景别变化、运镜轨迹、节奏和空间关系必须提前规划，AI 更适合执行明确约束，而不是代替导演判断。</p></div></li>
-                        <li><span>03</span><div><strong>一致性仍需持续校正</strong><p>角色身份、服装细节、光线与道具容易漂移，需要参考资产、反复筛选、修正和后期剪辑共同完成。</p></div></li>
-                      </ol>
-                    </section>
-                  </div>
-
-                  <blockquote>“技术让想法更快抵达画面，创作者仍要决定画面抵达谁，以及留下什么。”</blockquote>
-
-                  <footer className="reflection-footer">
-                    <span>CHEN CUIWEI / BLUE / 2026</span>
-                    <a href="#works">BACK TO WORK INDEX ↑</a>
-                  </footer>
-                </section>
               </>
             )}
 

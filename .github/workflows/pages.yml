@@ -20,15 +20,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Build static site
-        run: npx vinext build --prerender-all
+        run: pnpm exec vinext build --prerender-all
       - name: Prepare Pages files
         run: node scripts/prepare-github-pages.mjs
       - name: Configure Pages
