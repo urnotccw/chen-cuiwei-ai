@@ -36,7 +36,7 @@ export default function Home() {
       tools: ["FIGMA", "CODEX", "DEEPSEEK", "DATAV"],
       hero: "/travel-plan.png",
       heroAlt: "下一站可编辑行程规划界面",
-      indexImage: "/travel-map.png",
+      indexImage: "/travel-current.png",
       indexTone: "light",
       summary: "一款面向朋友结伴出游的旅行规划工具，支持发现目的地、AI 生成行程、共同确认计划与费用结算。",
     },

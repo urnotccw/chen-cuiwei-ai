@@ -1343,18 +1343,6 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
 .gift-expression-flow { display: flex; flex-wrap: wrap; gap: 12px 30px; padding-top: 18px; font-size: 17px; }
 .gift-expression-flow b { color: #466557; padding: 0 6px; font-weight: 400; }
 .gift-interaction-note { color: #625b52; font-size: 13px; line-height: 1.6; }
-.live-demo-ready { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: clamp(28px, 4vw, 56px); min-height: 230px; background: #f0efe7; color: #28231f; }
-.live-demo-ready p { margin: 0 0 10px; font: 12px/1.5 var(--font-label); }
-.live-demo-ready h3 { margin: 0 0 12px; font: 500 clamp(22px, 2.5vw, 34px)/1.3 var(--font-editorial); }
-.live-demo-ready div > span { font: 14px/1.7 var(--font-label); }
-.live-demo-ready > button { flex-shrink: 0; border: 1px solid #28231f; background: #28231f; color: #fffdf6; padding: 15px 22px; font-size: 15px; cursor: pointer; }
-.live-demo-ready > button:hover { background: #4c453b; }
-.live-demo-ready > button span { margin-left: 24px; }
-.live-demo-session-bar { display: flex; gap: 12px 20px; align-items: center; flex-wrap: wrap; padding: 9px 16px; background: #f0efe7; color: #28231f; font: 12px/1.5 var(--font-label); }
-.live-demo-session-bar > span { margin-right: auto; }
-.live-demo-session-bar button { min-height: 40px; border: 1px solid #8f887d; background: transparent; color: #28231f; padding: 7px 14px; cursor: pointer; }
-.live-demo-session-bar a { padding: 10px 0; text-decoration: underline; text-underline-offset: 3px; }
-.live-demo-session button:focus-visible, .live-demo-session a:focus-visible { outline: 2px solid #39735a; outline-offset: 4px; }
 .live-demo-session > iframe { display: block; width: 100%; height: clamp(620px, 80vh, 900px); border: 0; background: #f4f6f7; }
 .wuxing-game-stage .live-demo-session > iframe { height: auto; min-height: 480px; aspect-ratio: 16 / 9; }
 .demo-loading { padding: 36px; }
@@ -1379,7 +1367,6 @@ h1 { margin: 0; font-family: var(--font-editorial); font-size: clamp(53px, 6.55v
   .overview-mini-heading { gap: 12px; }
   .overview-mini-heading h4 { font-size: 20px; }
   .gift-flow > li { flex-wrap: wrap; }
-  .live-demo-ready { align-items: flex-start; flex-direction: column; gap: 24px; }
   .live-demo-session > iframe { height: 680px; }
   .wuxing-game-stage .live-demo-session > iframe { min-height: 520px; }
 }

@@ -12,11 +12,18 @@ test("resume and seven projects remain, with one introduction per new case", () 
   assert.ok(html.includes("需求假设，待用户验证"));
   assert.ok(!html.includes("AI 缩短验证想法的路径"));
 });
-test("external apps don't load before intent, and the video doesn't preload", () => {
-  assert.equal((html.match(/<iframe\b/g) ?? []).length, 0);
-  assert.equal((html.match(/class="live-demo-ready"/g) ?? []).length, 3);
+test("three external apps are directly visible without a click gate", () => {
+  const frames = [...html.matchAll(/<iframe\b[^>]+>/g)].map((m) => m[0]);
+  assert.equal(frames.length, 3);
+  for (const frame of frames) assert.match(frame, /loading="lazy"/);
+  assert.ok(!html.includes("live-demo-ready"));
+  assert.ok(!html.includes("开始体验"));
   assert.match(html, /<video[^>]+preload="none"/);
   assert.ok(html.includes("https://dart-trip-weekend-27113.urnotccw1.chatgpt.site/"));
+});
+test("travel overview and index use the current published screenshot", () => {
+  assert.ok(html.includes("./optimized/travel-current-"));
+  assert.ok(!html.includes("./optimized/travel-map-"));
 });
 test("portfolio raster images use responsive, lazy, dimensioned derivatives", async () => {
   const imgs = [...html.matchAll(/<img\b[^>]+>/g)].map((m) => m[0]).filter((tag) => tag.includes("./optimized/"));

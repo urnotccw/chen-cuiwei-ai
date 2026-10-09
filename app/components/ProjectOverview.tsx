@@ -11,7 +11,7 @@ export default function ProjectOverview({ project }: { project: "travel" | "byte
     <div className="overview-heading"><h3>先心动，再一起决定。</h3><p>前期问题梳理 · 需求假设，待用户验证</p></div>
     <div className="travel-overview-layout">
       <figure className="travel-overview-visual">
-        <PortfolioImage src="/travel-map.png" alt="下一站地图选城界面：用飞镖发现城市，将心动目的地加入候选" sizes="(max-width: 760px) 90vw, 50vw" />
+        <PortfolioImage src="/travel-current.png" alt="下一站当前在线版：黄色登机牌、可缩放地图与飞镖选城界面" sizes="(max-width: 760px) 90vw, 50vw" />
         <figcaption>从“去哪儿”开始，而不是先填一份复杂表单。</figcaption>
       </figure>
       <ol className="travel-journey">

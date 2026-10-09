@@ -335,6 +335,14 @@
     "srcSet": "./optimized/portfolio-p05-vending-720.webp 720w, ./optimized/portfolio-p05-vending-2000.webp 2000w",
     "small": "./optimized/portfolio-p05-vending-720.webp"
   },
+  "/travel-current.png": {
+    "src": "./optimized/travel-current-1200.webp",
+    "width": 1200,
+    "height": 750,
+    "bytes": 47854,
+    "srcSet": "./optimized/travel-current-720.webp 720w, ./optimized/travel-current-1200.webp 1200w",
+    "small": "./optimized/travel-current-720.webp"
+  },
   "/travel-map.png": {
     "src": "./optimized/travel-map-1440.webp",
     "width": 1440,
