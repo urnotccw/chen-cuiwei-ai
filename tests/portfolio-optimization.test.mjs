@@ -25,6 +25,11 @@ test("travel overview and index use the current published screenshot", () => {
   assert.ok(html.includes("./optimized/travel-current-"));
   assert.ok(!html.includes("./optimized/travel-map-"));
 });
+test("travel demo and external link open the boarding-pass map homepage", () => {
+  const home = "https://dart-trip-weekend-27113.urnotccw1.chatgpt.site/?entry=map";
+  assert.ok(html.includes(`href="${home}"`));
+  assert.ok(html.includes(`src="${home}"`));
+});
 test("portfolio raster images use responsive, lazy, dimensioned derivatives", async () => {
   const imgs = [...html.matchAll(/<img\b[^>]+>/g)].map((m) => m[0]).filter((tag) => tag.includes("./optimized/"));
   assert.ok(imgs.length > 50);
