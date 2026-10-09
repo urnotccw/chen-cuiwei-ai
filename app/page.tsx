@@ -35,7 +35,7 @@ export default function Home() {
       heroAlt: "下一站可编辑行程规划界面",
       indexImage: "/travel-map.png",
       indexTone: "light",
-      summary: "从目的地发现、AI 行程生成到群体确认、出发准备与费用结算，完成结伴旅行的完整协作原型。",
+      summary: "一款面向朋友结伴出游的旅行规划工具，支持发现目的地、AI 生成行程、共同确认计划与费用结算。",
     },
     {
       slug: "wuxing",
@@ -53,15 +53,15 @@ export default function Home() {
     {
       slug: "byte",
       number: "04",
-      title: "字节笔试题",
-      type: "AI 产品系统设计与互动原型",
-      english: "AI PRODUCT SYSTEM & INTERACTION",
+      title: "礼序",
+      type: "AI 数字礼物与互动体验",
+      english: "AI GIFT & INTERACTION STUDIO",
       tools: ["GPT", "CODEX", "MEDIAPIPE", "JAVASCRIPT"],
       hero: "/byte-smile-case.png",
-      heroAlt: "字节笔试题中的微笑花园互动产品与系统说明",
+      heroAlt: "礼序中的微笑花园互动体验",
       indexImage: "/byte-smile-case.png",
       indexTone: "light",
-      summary: "围绕数字内容生产、审美评测与浏览器实时互动，完成从问题拆解、流程设计到在线体验的三部分系统方案。",
+      summary: "围绕数字礼物制作与直播互动设计的 AI 创意项目。可体验礼物生产流程，或用表情与手势让「微笑花园」生长。",
     },
     {
       slug: "cat",
@@ -217,6 +217,30 @@ export default function Home() {
       {projects.map((project, index) => {
         const previous = index === 0 ? "works" : `project-${projects[index - 1].number}`;
         const next = index === projects.length - 1 ? "works" : `project-${projects[index + 1].number}`;
+
+        if (project.slug === "travel" || project.slug === "byte") {
+          return (
+            <section id={`project-${project.number}`} className="project-detail compact-project" key={`detail-${project.number}`} aria-labelledby={`project-title-${project.number}`}>
+              <header className="detail-header">
+                <a href="#works">CCW / WORK INDEX</a>
+                <p>PROJECT {project.number} / 07</p>
+                <a href="#works">BACK TO INDEX ↑</a>
+              </header>
+              <div className="compact-project-intro">
+                <div>
+                  <p className="detail-kicker">{project.type}</p>
+                  <h2 id={`project-title-${project.number}`}>{project.title}</h2>
+                </div>
+                <p>{project.summary}</p>
+              </div>
+              {project.slug === "travel" ? <TravelCase /> : <ByteCase />}
+              <nav className="compact-project-navigation" aria-label={`${project.title} 项目切换`}>
+                <a href={`#${previous}`}>← PREV</a>
+                <a href={`#${next}`}>NEXT →</a>
+              </nav>
+            </section>
+          );
+        }
 
         return (
           <section id={`project-${project.number}`} className={`project-detail${project.hero ? " case-project-detail" : ""}`} key={`detail-${project.number}`} aria-labelledby={`project-title-${project.number}`}>
@@ -587,7 +611,6 @@ export default function Home() {
               </>
             )}
 
-            {project.slug === "travel" && <TravelCase />}
 
             {project.slug === "wuxing" && (
           <section className="case-study case-study-game" aria-label="五行星轨项目概览">
@@ -674,7 +697,6 @@ export default function Home() {
               </section>
             )}
 
-            {project.slug === "byte" && <ByteCase />}
 
             {project.slug === "cat" && (
               <section className="case-study case-study-pet" aria-labelledby="pet-case-title">
