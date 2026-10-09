@@ -4,7 +4,8 @@ import path from "node:path";
 const root = process.cwd();
 const source = path.join(root, "dist", "client");
 const prerendered = path.join(root, "dist", "server", "prerendered-routes");
-const output = path.join(root, "pages");
+// Keep generated assets outside the reserved Pages Router source directory.
+const output = path.join(root, "dist", "github-pages");
 const base = "/chen-cuiwei-ai/";
 
 await mkdir(output, { recursive: true });
