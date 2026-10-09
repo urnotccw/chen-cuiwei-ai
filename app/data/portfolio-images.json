@@ -1,0 +1,514 @@
+{
+  "/blue-character-astronaut.png": {
+    "src": "./optimized/blue-character-astronaut-2048.webp",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 121676,
+    "srcSet": "./optimized/blue-character-astronaut-720.webp 720w, ./optimized/blue-character-astronaut-2048.webp 2048w",
+    "small": "./optimized/blue-character-astronaut-720.webp"
+  },
+  "/blue-character-casual.png": {
+    "src": "./optimized/blue-character-casual-2048.webp",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 154828,
+    "srcSet": "./optimized/blue-character-casual-720.webp 720w, ./optimized/blue-character-casual-2048.webp 2048w",
+    "small": "./optimized/blue-character-casual-720.webp"
+  },
+  "/blue-character-child.png": {
+    "src": "./optimized/blue-character-child-2048.webp",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 111730,
+    "srcSet": "./optimized/blue-character-child-720.webp 720w, ./optimized/blue-character-child-2048.webp 2048w",
+    "small": "./optimized/blue-character-child-720.webp"
+  },
+  "/blue-character-flight.png": {
+    "src": "./optimized/blue-character-flight-2048.webp",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 94120,
+    "srcSet": "./optimized/blue-character-flight-720.webp 720w, ./optimized/blue-character-flight-2048.webp 2048w",
+    "small": "./optimized/blue-character-flight-720.webp"
+  },
+  "/blue-character-scientist.png": {
+    "src": "./optimized/blue-character-scientist-2048.webp",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 111994,
+    "srcSet": "./optimized/blue-character-scientist-720.webp 720w, ./optimized/blue-character-scientist-2048.webp 2048w",
+    "small": "./optimized/blue-character-scientist-720.webp"
+  },
+  "/blue-character-senior.png": {
+    "src": "./optimized/blue-character-senior-2048.webp",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 211666,
+    "srcSet": "./optimized/blue-character-senior-720.webp 720w, ./optimized/blue-character-senior-2048.webp 2048w",
+    "small": "./optimized/blue-character-senior-720.webp"
+  },
+  "/blue-cover.jpeg": {
+    "src": "./optimized/blue-cover-1116.webp",
+    "width": 1116,
+    "height": 591,
+    "bytes": 37150,
+    "srcSet": "./optimized/blue-cover-720.webp 720w, ./optimized/blue-cover-1116.webp 1116w",
+    "small": "./optimized/blue-cover-720.webp"
+  },
+  "/blue-flight.png": {
+    "src": "./optimized/blue-flight-854.webp",
+    "width": 854,
+    "height": 480,
+    "bytes": 20720,
+    "srcSet": "./optimized/blue-flight-720.webp 720w, ./optimized/blue-flight-854.webp 854w",
+    "small": "./optimized/blue-flight-720.webp"
+  },
+  "/blue-jupiter.png": {
+    "src": "./optimized/blue-jupiter-1116.webp",
+    "width": 1116,
+    "height": 591,
+    "bytes": 23132,
+    "srcSet": "./optimized/blue-jupiter-720.webp 720w, ./optimized/blue-jupiter-1116.webp 1116w",
+    "small": "./optimized/blue-jupiter-720.webp"
+  },
+  "/blue-prompt-age.png": {
+    "src": "./optimized/blue-prompt-age-1364.webp",
+    "width": 1364,
+    "height": 958,
+    "bytes": 108104,
+    "srcSet": "./optimized/blue-prompt-age-720.webp 720w, ./optimized/blue-prompt-age-1364.webp 1364w",
+    "small": "./optimized/blue-prompt-age-720.webp"
+  },
+  "/blue-prompt-character.png": {
+    "src": "./optimized/blue-prompt-character-1382.webp",
+    "width": 1382,
+    "height": 986,
+    "bytes": 102486,
+    "srcSet": "./optimized/blue-prompt-character-720.webp 720w, ./optimized/blue-prompt-character-1382.webp 1382w",
+    "small": "./optimized/blue-prompt-character-720.webp"
+  },
+  "/blue-prompt-dialogue.png": {
+    "src": "./optimized/blue-prompt-dialogue-1368.webp",
+    "width": 1368,
+    "height": 1176,
+    "bytes": 121100,
+    "srcSet": "./optimized/blue-prompt-dialogue-720.webp 720w, ./optimized/blue-prompt-dialogue-1368.webp 1368w",
+    "small": "./optimized/blue-prompt-dialogue-720.webp"
+  },
+  "/blue-prompt-motion.png": {
+    "src": "./optimized/blue-prompt-motion-1402.webp",
+    "width": 1402,
+    "height": 856,
+    "bytes": 81814,
+    "srcSet": "./optimized/blue-prompt-motion-720.webp 720w, ./optimized/blue-prompt-motion-1402.webp 1402w",
+    "small": "./optimized/blue-prompt-motion-720.webp"
+  },
+  "/blue-prop-shuttle.png": {
+    "src": "./optimized/blue-prop-shuttle-2048.webp",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 155764,
+    "srcSet": "./optimized/blue-prop-shuttle-720.webp 720w, ./optimized/blue-prop-shuttle-2048.webp 2048w",
+    "small": "./optimized/blue-prop-shuttle-720.webp"
+  },
+  "/blue-space-command.png": {
+    "src": "./optimized/blue-space-command-2400.webp",
+    "width": 2400,
+    "height": 1350,
+    "bytes": 601750,
+    "srcSet": "./optimized/blue-space-command-720.webp 720w, ./optimized/blue-space-command-2400.webp 2400w",
+    "small": "./optimized/blue-space-command-720.webp"
+  },
+  "/blue-space-equipment.png": {
+    "src": "./optimized/blue-space-equipment-2048.webp",
+    "width": 2048,
+    "height": 1152,
+    "bytes": 421018,
+    "srcSet": "./optimized/blue-space-equipment-720.webp 720w, ./optimized/blue-space-equipment-2048.webp 2048w",
+    "small": "./optimized/blue-space-equipment-720.webp"
+  },
+  "/blue-tone-cool.png": {
+    "src": "./optimized/blue-tone-cool-2048.webp",
+    "width": 2048,
+    "height": 1152,
+    "bytes": 234212,
+    "srcSet": "./optimized/blue-tone-cool-720.webp 720w, ./optimized/blue-tone-cool-2048.webp 2048w",
+    "small": "./optimized/blue-tone-cool-720.webp"
+  },
+  "/blue-tone-final.png": {
+    "src": "./optimized/blue-tone-final-2048.webp",
+    "width": 2048,
+    "height": 1152,
+    "bytes": 179914,
+    "srcSet": "./optimized/blue-tone-final-720.webp 720w, ./optimized/blue-tone-final-2048.webp 2048w",
+    "small": "./optimized/blue-tone-final-720.webp"
+  },
+  "/blue-tone-warm.png": {
+    "src": "./optimized/blue-tone-warm-2400.webp",
+    "width": 2400,
+    "height": 1350,
+    "bytes": 279336,
+    "srcSet": "./optimized/blue-tone-warm-720.webp 720w, ./optimized/blue-tone-warm-2400.webp 2400w",
+    "small": "./optimized/blue-tone-warm-720.webp"
+  },
+  "/blue-workflow-canvas.png": {
+    "src": "./optimized/blue-workflow-canvas-2400.webp",
+    "width": 2400,
+    "height": 1266,
+    "bytes": 240104,
+    "srcSet": "./optimized/blue-workflow-canvas-720.webp 720w, ./optimized/blue-workflow-canvas-2400.webp 2400w",
+    "small": "./optimized/blue-workflow-canvas-720.webp"
+  },
+  "/byte-aesthetic-review.png": {
+    "src": "./optimized/byte-aesthetic-review-1095.webp",
+    "width": 1095,
+    "height": 774,
+    "bytes": 88800,
+    "srcSet": "./optimized/byte-aesthetic-review-720.webp 720w, ./optimized/byte-aesthetic-review-1095.webp 1095w",
+    "small": "./optimized/byte-aesthetic-review-720.webp"
+  },
+  "/byte-pipeline-research.png": {
+    "src": "./optimized/byte-pipeline-research-774.webp",
+    "width": 774,
+    "height": 1095,
+    "bytes": 57252,
+    "srcSet": "./optimized/byte-pipeline-research-720.webp 720w, ./optimized/byte-pipeline-research-774.webp 774w",
+    "small": "./optimized/byte-pipeline-research-720.webp"
+  },
+  "/byte-smile-case.png": {
+    "src": "./optimized/byte-smile-case-774.webp",
+    "width": 774,
+    "height": 1095,
+    "bytes": 66834,
+    "srcSet": "./optimized/byte-smile-case-720.webp 720w, ./optimized/byte-smile-case-774.webp 774w",
+    "small": "./optimized/byte-smile-case-720.webp"
+  },
+  "/byte-smile-logic.png": {
+    "src": "./optimized/byte-smile-logic-774.webp",
+    "width": 774,
+    "height": 1095,
+    "bytes": 79588,
+    "srcSet": "./optimized/byte-smile-logic-720.webp 720w, ./optimized/byte-smile-logic-774.webp 774w",
+    "small": "./optimized/byte-smile-logic-720.webp"
+  },
+  "/cover-base.png": {
+    "src": "./optimized/cover-base-1916.webp",
+    "width": 1916,
+    "height": 821,
+    "bytes": 158716,
+    "srcSet": "./optimized/cover-base-720.webp 720w, ./optimized/cover-base-1916.webp 1916w",
+    "small": "./optimized/cover-base-720.webp"
+  },
+  "/og.png": {
+    "src": "./optimized/og-1731.webp",
+    "width": 1731,
+    "height": 909,
+    "bytes": 110972,
+    "srcSet": "./optimized/og-720.webp 720w, ./optimized/og-1731.webp 1731w",
+    "small": "./optimized/og-720.webp"
+  },
+  "/portfolio-p03-architecture.jpg": {
+    "src": "./optimized/portfolio-p03-architecture-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 129398,
+    "srcSet": "./optimized/portfolio-p03-architecture-720.webp 720w, ./optimized/portfolio-p03-architecture-2000.webp 2000w",
+    "small": "./optimized/portfolio-p03-architecture-720.webp"
+  },
+  "/portfolio-p03-insight.jpg": {
+    "src": "./optimized/portfolio-p03-insight-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 188322,
+    "srcSet": "./optimized/portfolio-p03-insight-720.webp 720w, ./optimized/portfolio-p03-insight-2000.webp 2000w",
+    "small": "./optimized/portfolio-p03-insight-720.webp"
+  },
+  "/portfolio-p03-ui.jpg": {
+    "src": "./optimized/portfolio-p03-ui-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 134398,
+    "srcSet": "./optimized/portfolio-p03-ui-720.webp 720w, ./optimized/portfolio-p03-ui-2000.webp 2000w",
+    "small": "./optimized/portfolio-p03-ui-720.webp"
+  },
+  "/portfolio-p04-concept.jpg": {
+    "src": "./optimized/portfolio-p04-concept-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 177390,
+    "srcSet": "./optimized/portfolio-p04-concept-720.webp 720w, ./optimized/portfolio-p04-concept-2000.webp 2000w",
+    "small": "./optimized/portfolio-p04-concept-720.webp"
+  },
+  "/portfolio-p04-final.jpg": {
+    "src": "./optimized/portfolio-p04-final-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 325076,
+    "srcSet": "./optimized/portfolio-p04-final-720.webp 720w, ./optimized/portfolio-p04-final-2000.webp 2000w",
+    "small": "./optimized/portfolio-p04-final-720.webp"
+  },
+  "/portfolio-p04-interior-a.jpg": {
+    "src": "./optimized/portfolio-p04-interior-a-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 184524,
+    "srcSet": "./optimized/portfolio-p04-interior-a-720.webp 720w, ./optimized/portfolio-p04-interior-a-2000.webp 2000w",
+    "small": "./optimized/portfolio-p04-interior-a-720.webp"
+  },
+  "/portfolio-p04-interior-b.jpg": {
+    "src": "./optimized/portfolio-p04-interior-b-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 158140,
+    "srcSet": "./optimized/portfolio-p04-interior-b-720.webp 720w, ./optimized/portfolio-p04-interior-b-2000.webp 2000w",
+    "small": "./optimized/portfolio-p04-interior-b-720.webp"
+  },
+  "/portfolio-p04-interior-final.jpg": {
+    "src": "./optimized/portfolio-p04-interior-final-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 122416,
+    "srcSet": "./optimized/portfolio-p04-interior-final-720.webp 720w, ./optimized/portfolio-p04-interior-final-2000.webp 2000w",
+    "small": "./optimized/portfolio-p04-interior-final-720.webp"
+  },
+  "/portfolio-p04-research.jpg": {
+    "src": "./optimized/portfolio-p04-research-2000.webp",
+    "width": 2000,
+    "height": 1162,
+    "bytes": 229012,
+    "srcSet": "./optimized/portfolio-p04-research-720.webp 720w, ./optimized/portfolio-p04-research-2000.webp 2000w",
+    "small": "./optimized/portfolio-p04-research-720.webp"
+  },
+  "/portfolio-p05-aircraft.jpg": {
+    "src": "./optimized/portfolio-p05-aircraft-2000.webp",
+    "width": 2000,
+    "height": 1156,
+    "bytes": 123820,
+    "srcSet": "./optimized/portfolio-p05-aircraft-720.webp 720w, ./optimized/portfolio-p05-aircraft-2000.webp 2000w",
+    "small": "./optimized/portfolio-p05-aircraft-720.webp"
+  },
+  "/portfolio-p05-book.jpg": {
+    "src": "./optimized/portfolio-p05-book-2000.webp",
+    "width": 2000,
+    "height": 1157,
+    "bytes": 175370,
+    "srcSet": "./optimized/portfolio-p05-book-720.webp 720w, ./optimized/portfolio-p05-book-2000.webp 2000w",
+    "small": "./optimized/portfolio-p05-book-720.webp"
+  },
+  "/portfolio-p05-details.jpg": {
+    "src": "./optimized/portfolio-p05-details-2000.webp",
+    "width": 2000,
+    "height": 1160,
+    "bytes": 220838,
+    "srcSet": "./optimized/portfolio-p05-details-720.webp 720w, ./optimized/portfolio-p05-details-2000.webp 2000w",
+    "small": "./optimized/portfolio-p05-details-720.webp"
+  },
+  "/portfolio-p05-door.jpg": {
+    "src": "./optimized/portfolio-p05-door-2000.webp",
+    "width": 2000,
+    "height": 1156,
+    "bytes": 156244,
+    "srcSet": "./optimized/portfolio-p05-door-720.webp 720w, ./optimized/portfolio-p05-door-2000.webp 2000w",
+    "small": "./optimized/portfolio-p05-door-720.webp"
+  },
+  "/portfolio-p05-hero.jpg": {
+    "src": "./optimized/portfolio-p05-hero-2000.webp",
+    "width": 2000,
+    "height": 1160,
+    "bytes": 139504,
+    "srcSet": "./optimized/portfolio-p05-hero-720.webp 720w, ./optimized/portfolio-p05-hero-2000.webp 2000w",
+    "small": "./optimized/portfolio-p05-hero-720.webp"
+  },
+  "/portfolio-p05-robot.jpg": {
+    "src": "./optimized/portfolio-p05-robot-2000.webp",
+    "width": 2000,
+    "height": 1156,
+    "bytes": 108750,
+    "srcSet": "./optimized/portfolio-p05-robot-720.webp 720w, ./optimized/portfolio-p05-robot-2000.webp 2000w",
+    "small": "./optimized/portfolio-p05-robot-720.webp"
+  },
+  "/portfolio-p05-vending.jpg": {
+    "src": "./optimized/portfolio-p05-vending-2000.webp",
+    "width": 2000,
+    "height": 1001,
+    "bytes": 134082,
+    "srcSet": "./optimized/portfolio-p05-vending-720.webp 720w, ./optimized/portfolio-p05-vending-2000.webp 2000w",
+    "small": "./optimized/portfolio-p05-vending-720.webp"
+  },
+  "/travel-map.png": {
+    "src": "./optimized/travel-map-1440.webp",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 57092,
+    "srcSet": "./optimized/travel-map-720.webp 720w, ./optimized/travel-map-1440.webp 1440w",
+    "small": "./optimized/travel-map-720.webp"
+  },
+  "/travel-plan.png": {
+    "src": "./optimized/travel-plan-1440.webp",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 68496,
+    "srcSet": "./optimized/travel-plan-720.webp 720w, ./optimized/travel-plan-1440.webp 1440w",
+    "small": "./optimized/travel-plan-720.webp"
+  },
+  "/travel-room.png": {
+    "src": "./optimized/travel-room-1440.webp",
+    "width": 1440,
+    "height": 1000,
+    "bytes": 106744,
+    "srcSet": "./optimized/travel-room-720.webp 720w, ./optimized/travel-room-1440.webp 1440w",
+    "small": "./optimized/travel-room-720.webp"
+  },
+  "/work-paper.png": {
+    "src": "./optimized/work-paper-1448.webp",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 28006,
+    "srcSet": "./optimized/work-paper-720.webp 720w, ./optimized/work-paper-1448.webp 1448w",
+    "small": "./optimized/work-paper-720.webp"
+  },
+  "/wuxing-battle.png": {
+    "src": "./optimized/wuxing-battle-1280.webp",
+    "width": 1280,
+    "height": 720,
+    "bytes": 87350,
+    "srcSet": "./optimized/wuxing-battle-720.webp 720w, ./optimized/wuxing-battle-1280.webp 1280w",
+    "small": "./optimized/wuxing-battle-720.webp"
+  },
+  "/wuxing-card-amberearth.png": {
+    "src": "./optimized/wuxing-card-amberearth-800.webp",
+    "width": 800,
+    "height": 1202,
+    "bytes": 228760,
+    "srcSet": "./optimized/wuxing-card-amberearth-720.webp 720w, ./optimized/wuxing-card-amberearth-800.webp 800w",
+    "small": "./optimized/wuxing-card-amberearth-720.webp"
+  },
+  "/wuxing-card-earth.png": {
+    "src": "./optimized/wuxing-card-earth-800.webp",
+    "width": 800,
+    "height": 1202,
+    "bytes": 224506,
+    "srcSet": "./optimized/wuxing-card-earth-720.webp 720w, ./optimized/wuxing-card-earth-800.webp 800w",
+    "small": "./optimized/wuxing-card-earth-720.webp"
+  },
+  "/wuxing-card-featherfire.png": {
+    "src": "./optimized/wuxing-card-featherfire-800.webp",
+    "width": 800,
+    "height": 1199,
+    "bytes": 257406,
+    "srcSet": "./optimized/wuxing-card-featherfire-720.webp 720w, ./optimized/wuxing-card-featherfire-800.webp 800w",
+    "small": "./optimized/wuxing-card-featherfire-720.webp"
+  },
+  "/wuxing-card-fire.png": {
+    "src": "./optimized/wuxing-card-fire-800.webp",
+    "width": 800,
+    "height": 1199,
+    "bytes": 276738,
+    "srcSet": "./optimized/wuxing-card-fire-720.webp 720w, ./optimized/wuxing-card-fire-800.webp 800w",
+    "small": "./optimized/wuxing-card-fire-720.webp"
+  },
+  "/wuxing-card-lotus.png": {
+    "src": "./optimized/wuxing-card-lotus-800.webp",
+    "width": 800,
+    "height": 1200,
+    "bytes": 242172,
+    "srcSet": "./optimized/wuxing-card-lotus-720.webp 720w, ./optimized/wuxing-card-lotus-800.webp 800w",
+    "small": "./optimized/wuxing-card-lotus-720.webp"
+  },
+  "/wuxing-card-metal.png": {
+    "src": "./optimized/wuxing-card-metal-800.webp",
+    "width": 800,
+    "height": 1202,
+    "bytes": 230038,
+    "srcSet": "./optimized/wuxing-card-metal-720.webp 720w, ./optimized/wuxing-card-metal-800.webp 800w",
+    "small": "./optimized/wuxing-card-metal-720.webp"
+  },
+  "/wuxing-card-moonwater.png": {
+    "src": "./optimized/wuxing-card-moonwater-800.webp",
+    "width": 800,
+    "height": 1202,
+    "bytes": 239382,
+    "srcSet": "./optimized/wuxing-card-moonwater-720.webp 720w, ./optimized/wuxing-card-moonwater-800.webp 800w",
+    "small": "./optimized/wuxing-card-moonwater-720.webp"
+  },
+  "/wuxing-card-tigerclaw.png": {
+    "src": "./optimized/wuxing-card-tigerclaw-800.webp",
+    "width": 800,
+    "height": 1202,
+    "bytes": 204372,
+    "srcSet": "./optimized/wuxing-card-tigerclaw-720.webp 720w, ./optimized/wuxing-card-tigerclaw-800.webp 800w",
+    "small": "./optimized/wuxing-card-tigerclaw-720.webp"
+  },
+  "/wuxing-card-water.png": {
+    "src": "./optimized/wuxing-card-water-800.webp",
+    "width": 800,
+    "height": 1202,
+    "bytes": 260282,
+    "srcSet": "./optimized/wuxing-card-water-720.webp 720w, ./optimized/wuxing-card-water-800.webp 800w",
+    "small": "./optimized/wuxing-card-water-720.webp"
+  },
+  "/wuxing-card-wood.png": {
+    "src": "./optimized/wuxing-card-wood-800.webp",
+    "width": 800,
+    "height": 1202,
+    "bytes": 261116,
+    "srcSet": "./optimized/wuxing-card-wood-720.webp 720w, ./optimized/wuxing-card-wood-800.webp 800w",
+    "small": "./optimized/wuxing-card-wood-720.webp"
+  },
+  "/wuxing-enemy-doumu.png": {
+    "src": "./optimized/wuxing-enemy-doumu-800.webp",
+    "width": 800,
+    "height": 1000,
+    "bytes": 66242,
+    "srcSet": "./optimized/wuxing-enemy-doumu-720.webp 720w, ./optimized/wuxing-enemy-doumu-800.webp 800w",
+    "small": "./optimized/wuxing-enemy-doumu-720.webp"
+  },
+  "/wuxing-enemy-jiaomu.png": {
+    "src": "./optimized/wuxing-enemy-jiaomu-800.webp",
+    "width": 800,
+    "height": 1000,
+    "bytes": 53096,
+    "srcSet": "./optimized/wuxing-enemy-jiaomu-720.webp 720w, ./optimized/wuxing-enemy-jiaomu-800.webp 800w",
+    "small": "./optimized/wuxing-enemy-jiaomu-720.webp"
+  },
+  "/wuxing-enemy-jishui.png": {
+    "src": "./optimized/wuxing-enemy-jishui-800.webp",
+    "width": 800,
+    "height": 1000,
+    "bytes": 69552,
+    "srcSet": "./optimized/wuxing-enemy-jishui-720.webp 720w, ./optimized/wuxing-enemy-jishui-800.webp 800w",
+    "small": "./optimized/wuxing-enemy-jishui-720.webp"
+  },
+  "/wuxing-enemy-kangjin.png": {
+    "src": "./optimized/wuxing-enemy-kangjin-800.webp",
+    "width": 800,
+    "height": 1000,
+    "bytes": 81260,
+    "srcSet": "./optimized/wuxing-enemy-kangjin-720.webp 720w, ./optimized/wuxing-enemy-kangjin-800.webp 800w",
+    "small": "./optimized/wuxing-enemy-kangjin-720.webp"
+  },
+  "/wuxing-enemy-nvtu.png": {
+    "src": "./optimized/wuxing-enemy-nvtu-800.webp",
+    "width": 800,
+    "height": 1000,
+    "bytes": 51460,
+    "srcSet": "./optimized/wuxing-enemy-nvtu-720.webp 720w, ./optimized/wuxing-enemy-nvtu-800.webp 800w",
+    "small": "./optimized/wuxing-enemy-nvtu-720.webp"
+  },
+  "/wuxing-enemy-weihuo.png": {
+    "src": "./optimized/wuxing-enemy-weihuo-800.webp",
+    "width": 800,
+    "height": 1000,
+    "bytes": 84612,
+    "srcSet": "./optimized/wuxing-enemy-weihuo-720.webp 720w, ./optimized/wuxing-enemy-weihuo-800.webp 800w",
+    "small": "./optimized/wuxing-enemy-weihuo-720.webp"
+  },
+  "/wuxing-map.png": {
+    "src": "./optimized/wuxing-map-1280.webp",
+    "width": 1280,
+    "height": 720,
+    "bytes": 67032,
+    "srcSet": "./optimized/wuxing-map-720.webp 720w, ./optimized/wuxing-map-1280.webp 1280w",
+    "small": "./optimized/wuxing-map-720.webp"
+  }
+}

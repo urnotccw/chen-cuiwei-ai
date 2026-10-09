@@ -3,6 +3,9 @@ import ByteCase from "./components/ByteCase";
 import CatManagerDemo from "./components/CatManagerDemo";
 import ResumeSection from "./components/ResumeSection";
 import TravelCase from "./components/TravelCase";
+import PortfolioImage, { portfolioImageUrl } from "./components/PortfolioImage";
+import LiveDemo from "./components/LiveDemo";
+import ProjectOverview from "./components/ProjectOverview";
 
 export const metadata: Metadata = {
   title: "陈萃薇 · AI 产品经理作品集",
@@ -190,7 +193,7 @@ export default function Home() {
         <div className="project-index" aria-label="项目目录">
           {projects.map((project) => (
             <a className={`project-row${project.indexTone === "dark" ? " is-dark-index" : ""}`} href={`#project-${project.number}`} key={project.number}>
-              <span className={`project-backdrop is-${project.indexTone}-index`} style={{ backgroundImage: `url("${project.indexImage}")` }} aria-hidden="true" />
+              <span className={`project-backdrop is-${project.indexTone}-index`} style={{ backgroundImage: `url("${portfolioImageUrl(project.indexImage, true)}")` }} aria-hidden="true" />
               <p className="project-number">{project.number}</p>
               <div className="project-name">
                 <h3 className={project.slug === "wuxing" ? "wuxing-title" : undefined}>{project.title}</h3>
@@ -201,7 +204,7 @@ export default function Home() {
                 {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
               </ul>
               <div className="project-image-slot" aria-label={`${project.title} 项目预览图`}>
-                <img src={project.indexImage} alt="" />
+                <PortfolioImage src={project.indexImage} sizes="(max-width: 760px) 24vw, 160px" alt="" />
               </div>
             </a>
           ))}
@@ -233,6 +236,7 @@ export default function Home() {
                 </div>
                 <p>{project.summary}</p>
               </div>
+              <ProjectOverview project={project.slug} />
               {project.slug === "travel" ? <TravelCase /> : <ByteCase />}
               <nav className="compact-project-navigation" aria-label={`${project.title} 项目切换`}>
                 <a href={`#${previous}`}>← PREV</a>
@@ -284,7 +288,7 @@ export default function Home() {
                     controls
                     preload="none"
                     playsInline
-                    poster="/blue-cover.jpeg"
+                    poster={portfolioImageUrl("/blue-cover.jpeg")}
                     aria-label="AIGC 动画短片《蓝》视频播放器"
                   >
                     <source src="/blue.mp4" type="video/mp4" />
@@ -309,11 +313,11 @@ export default function Home() {
               ) : project.slug === "wuxing" ? (
                 <div className="wuxing-game-stage">
                   <div className="wuxing-browser-bar"><span>LIVE WEB GAME</span><span>urnotccw.github.io/wuxing-game</span><a href="https://urnotccw.github.io/wuxing-game/" target="_blank" rel="noreferrer">OPEN ↗</a></div>
-                  <iframe title="五行星轨网页游戏" src="https://urnotccw.github.io/wuxing-game/" loading="lazy" allow="autoplay" />
+                  <LiveDemo title="五行星轨网页游戏" src="https://urnotccw.github.io/wuxing-game/" allow="autoplay" />
                 </div>
               ) : project.hero ? (
                 <figure className="detail-visual case-detail-visual">
-                  <img src={project.hero} alt={project.heroAlt} loading="lazy" decoding="async" />
+                  <PortfolioImage src={project.hero} alt={project.heroAlt} loading="lazy" decoding="async" />
                   <figcaption>PROJECT {project.number} / CASE OVERVIEW</figcaption>
                 </figure>
               ) : (
@@ -359,7 +363,7 @@ export default function Home() {
                 </div>
 
                 <figure className="blue-flight-frame">
-                  <img src="/blue-flight.png" alt="飞行器掠过蓝灰色星球表面的画面" loading="lazy" decoding="async" />
+                  <PortfolioImage src="/blue-flight.png" alt="飞行器掠过蓝灰色星球表面的画面" loading="lazy" decoding="async" />
                   <figcaption>DEPARTURE / UNKNOWN / HOME</figcaption>
                 </figure>
 
@@ -388,15 +392,15 @@ export default function Home() {
                     </div>
                     <div className="heroine-stages">
                       <figure>
-                        <img src="/blue-character-scientist.png" alt="女主角研究员造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
+                        <PortfolioImage src="/blue-character-scientist.png" alt="女主角研究员造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                         <figcaption><span>01A</span> RESEARCHER / 理性与观察</figcaption>
                       </figure>
                       <figure>
-                        <img src="/blue-character-flight.png" alt="女主角航行训练服造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
+                        <PortfolioImage src="/blue-character-flight.png" alt="女主角航行训练服造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                         <figcaption><span>01B</span> FLIGHT SUIT / 行动与准备</figcaption>
                       </figure>
                       <figure>
-                        <img src="/blue-character-astronaut.png" alt="女主角宇航服造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
+                        <PortfolioImage src="/blue-character-astronaut.png" alt="女主角宇航服造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                         <figcaption><span>01C</span> ASTRONAUT / 远行与未知</figcaption>
                       </figure>
                     </div>
@@ -404,7 +408,7 @@ export default function Home() {
 
                   <div className="supporting-characters">
                     <figure className="character-card">
-                      <img src="/blue-character-child.png" alt="小女孩粉色连衣裙造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
+                      <PortfolioImage src="/blue-character-child.png" alt="小女孩粉色连衣裙造型的面部、正面、侧面与背面设定" loading="lazy" decoding="async" />
                       <figcaption>
                         <p>CHARACTER 02 / MEMORY</p>
                         <h4>童年形象 · 启蒙</h4>
@@ -413,7 +417,7 @@ export default function Home() {
                     </figure>
 
                     <figure className="character-card">
-                      <img src="/blue-character-casual.png" alt="女孩父亲年轻时期的深灰 T 恤与牛仔裤造型设定" loading="lazy" decoding="async" />
+                      <PortfolioImage src="/blue-character-casual.png" alt="女孩父亲年轻时期的深灰 T 恤与牛仔裤造型设定" loading="lazy" decoding="async" />
                       <figcaption>
                         <p>CHARACTER 03 / FATHER · YOUNG</p>
                         <h4>女主角父亲 · 年轻</h4>
@@ -422,7 +426,7 @@ export default function Home() {
                     </figure>
 
                     <figure className="character-card">
-                      <img src="/blue-character-senior.png" alt="女孩父亲变老后的深色西装造型设定" loading="lazy" decoding="async" />
+                      <PortfolioImage src="/blue-character-senior.png" alt="女孩父亲变老后的深色西装造型设定" loading="lazy" decoding="async" />
                       <figcaption>
                         <p>CHARACTER 04 / FATHER · AGED</p>
                         <h4>女主角父亲 · 年长</h4>
@@ -453,15 +457,15 @@ export default function Home() {
 
                   <div className="space-prop-grid">
                     <figure className="space-command">
-                      <img src="/blue-space-command.png" alt="空间站控制舱的驾驶席、工作台、顶部结构与整体空间设定" loading="lazy" decoding="async" />
+                      <PortfolioImage src="/blue-space-command.png" alt="空间站控制舱的驾驶席、工作台、顶部结构与整体空间设定" loading="lazy" decoding="async" />
                       <figcaption><span>SPACE 01</span> CONTROL DECK / 控制与观察</figcaption>
                     </figure>
                     <figure className="space-equipment">
-                      <img src="/blue-space-equipment.png" alt="空间站设备舱、舷窗、仪器墙与维护区域设定" loading="lazy" decoding="async" />
+                      <PortfolioImage src="/blue-space-equipment.png" alt="空间站设备舱、舷窗、仪器墙与维护区域设定" loading="lazy" decoding="async" />
                       <figcaption><span>SPACE 02</span> EQUIPMENT BAY / 设备与维护</figcaption>
                     </figure>
                     <figure className="space-shuttle">
-                      <img src="/blue-prop-shuttle.png" alt="黑金配色航行器的前后、侧面、顶部与底部多视图设定" loading="lazy" decoding="async" />
+                      <PortfolioImage src="/blue-prop-shuttle.png" alt="黑金配色航行器的前后、侧面、顶部与底部多视图设定" loading="lazy" decoding="async" />
                       <figcaption><span>PROP 01</span> SHUTTLE / 航行器多视图</figcaption>
                     </figure>
                   </div>
@@ -488,7 +492,7 @@ export default function Home() {
 
                   <div className="tone-options" aria-label="三种影片色调方案">
                     <figure>
-                      <div className="tone-image"><img src="/blue-tone-cool.png" alt="冷蓝色空间舱与蓝色星球的色调测试" /></div>
+                      <div className="tone-image"><PortfolioImage src="/blue-tone-cool.png" alt="冷蓝色空间舱与蓝色星球的色调测试" /></div>
                       <figcaption>
                         <p><span>TEST 01</span> COLD BLUE</p>
                         <h4>冷蓝 · 科技与疏离</h4>
@@ -497,7 +501,7 @@ export default function Home() {
                     </figure>
 
                     <figure>
-                      <div className="tone-image"><img src="/blue-tone-warm.png" alt="自然暖光照入空间舱的色调测试" /></div>
+                      <div className="tone-image"><PortfolioImage src="/blue-tone-warm.png" alt="自然暖光照入空间舱的色调测试" /></div>
                       <figcaption>
                         <p><span>TEST 02</span> NATURAL LIGHT</p>
                         <h4>自然暖光 · 真实与亲近</h4>
@@ -507,7 +511,7 @@ export default function Home() {
 
                     <figure className="is-selected">
                       <div className="tone-image">
-                        <img src="/blue-tone-final.png" alt="暗金色星体与冷灰空间舱的最终影片色调方案" />
+                        <PortfolioImage src="/blue-tone-final.png" alt="暗金色星体与冷灰空间舱的最终影片色调方案" />
                         <strong>FINAL / SELECTED</strong>
                       </div>
                       <figcaption>
@@ -539,25 +543,25 @@ export default function Home() {
                   </div>
 
                   <figure className="workflow-canvas">
-                    <img src="/blue-workflow-canvas.png" alt="《蓝》项目的完整 AI 节点画布，包含角色、场景和镜头之间的大量连接" loading="lazy" decoding="async" />
+                    <PortfolioImage src="/blue-workflow-canvas.png" alt="《蓝》项目的完整 AI 节点画布，包含角色、场景和镜头之间的大量连接" loading="lazy" decoding="async" />
                     <figcaption><span>CANVAS / 01</span> 从角色资产到连续镜头的完整工作流</figcaption>
                   </figure>
 
                   <div className="prompt-grid">
                     <figure>
-                      <div><img src="/blue-prompt-character.png" alt="女主角四视图角色设定的提示词界面" /></div>
+                      <div><PortfolioImage src="/blue-prompt-character.png" alt="女主角四视图角色设定的提示词界面" /></div>
                       <figcaption><p>01 / CHARACTER CONSISTENCY</p><h4>角色一致性</h4><span>用正面特写、正侧背视图、服装材质和光线条件建立可复用的角色基准。</span></figcaption>
                     </figure>
                     <figure>
-                      <div><img src="/blue-prompt-age.png" alt="父亲年长版本的角色生成提示词界面" /></div>
+                      <div><PortfolioImage src="/blue-prompt-age.png" alt="父亲年长版本的角色生成提示词界面" /></div>
                       <figcaption><p>02 / AGE VARIATION</p><h4>时间与年龄变化</h4><span>保留人物识别特征，通过发色、服装和体态变化构建同一角色在不同时间中的状态。</span></figcaption>
                     </figure>
                     <figure>
-                      <div><img src="/blue-prompt-motion.png" alt="依据首尾帧设计漂浮运动的提示词界面" /></div>
+                      <div><PortfolioImage src="/blue-prompt-motion.png" alt="依据首尾帧设计漂浮运动的提示词界面" /></div>
                       <figcaption><p>03 / CAMERA &amp; MOTION</p><h4>动作与运镜约束</h4><span>同时指定首尾帧、运动方向、景别和环境光，让生成结果服务于连续镜头，而不是孤立画面。</span></figcaption>
                     </figure>
                     <figure>
-                      <div><img src="/blue-prompt-dialogue.png" alt="研究员会议对话镜头的提示词界面" /></div>
+                      <div><PortfolioImage src="/blue-prompt-dialogue.png" alt="研究员会议对话镜头的提示词界面" /></div>
                       <figcaption><p>04 / SPATIAL CONTINUITY</p><h4>对话与空间连续性</h4><span>固定人物站位、视线方向和机位关系，减少对话场景中的跳轴、错位与身份漂移。</span></figcaption>
                     </figure>
                   </div>
@@ -589,7 +593,7 @@ export default function Home() {
                 </div>
 
                 <figure className="case-lead-media wuxing-lead-media">
-                  <img src="/wuxing-battle.png" alt="五行星轨首个星宿关卡的策略卡牌战斗界面" />
+                  <PortfolioImage src="/wuxing-battle.png" alt="五行星轨首个星宿关卡的策略卡牌战斗界面" />
                   <figcaption><span>PLAYABLE PROTOTYPE</span> 五行关系、阵法卡槽、角色状态与敌人机制在同一屏内完成决策反馈</figcaption>
                 </figure>
 
@@ -614,8 +618,8 @@ export default function Home() {
                     <article><span>04 / FULL SETTLE</span><h5>满阵大结算</h5><p>六格填满后，根据三生阵、三克阵、混元阵或普通满阵产生额外收益。</p></article>
                   </div>
                   <div className="case-evidence-grid two-up wuxing-evidence-grid">
-                    <figure><img src="/wuxing-map.png" alt="玄武篇章中由七个星宿构成的关卡地图" /><figcaption>PROGRESSION / 四象篇章与七星宿节点</figcaption></figure>
-                    <figure><img src="/wuxing-battle.png" alt="包含五行卡牌、双层阵法与敌人状态的战斗界面" /><figcaption>COMBAT SYSTEM / 手牌、阵法与敌人机制</figcaption></figure>
+                    <figure><PortfolioImage src="/wuxing-map.png" alt="玄武篇章中由七个星宿构成的关卡地图" /><figcaption>PROGRESSION / 四象篇章与七星宿节点</figcaption></figure>
+                    <figure><PortfolioImage src="/wuxing-battle.png" alt="包含五行卡牌、双层阵法与敌人状态的战斗界面" /><figcaption>COMBAT SYSTEM / 手牌、阵法与敌人机制</figcaption></figure>
                   </div>
                 </section>
 
@@ -623,27 +627,27 @@ export default function Home() {
                   <div className="enemy-roster-group">
                     <p>部分敌人立绘</p>
                     <div className="enemy-roster-grid">
-                      <figure tabIndex={0}><img src="/wuxing-enemy-jiaomu.png" alt="角木蛟敌人立绘" /><figcaption className="artwork-info"><strong>角木蛟</strong><span>青木缠阵</span><p>每回合标记一列；相生会强化该列效果。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-enemy-kangjin.png" alt="亢金龙敌人立绘" /><figcaption className="artwork-info"><strong>亢金龙</strong><span>金鳞威压</span><p>开场拥有金鳞护盾；有盾时攻击提升。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-enemy-weihuo.png" alt="尾火虎敌人立绘" /><figcaption className="artwork-info"><strong>尾火虎</strong><span>燃尾追击</span><p>每三回合燃尾，下一次攻击提升至 12 点。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-enemy-jishui.png" alt="箕水豹敌人立绘" /><figcaption className="artwork-info"><strong>箕水豹</strong><span>回潮奔流</span><p>周期回复护盾；生命低于一半时下次攻击 +6。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /><figcaption className="artwork-info"><strong>女土蝠</strong><span>蒙尘</span><p>每回合标记一张手牌，发动后效果减半。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /><figcaption className="artwork-info"><strong>斗木獬</strong><span>终局审判</span><p>相生累积清正；每三回合发动一次断罪。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-enemy-jiaomu.png" alt="角木蛟敌人立绘" /><figcaption className="artwork-info"><strong>角木蛟</strong><span>青木缠阵</span><p>每回合标记一列；相生会强化该列效果。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-enemy-kangjin.png" alt="亢金龙敌人立绘" /><figcaption className="artwork-info"><strong>亢金龙</strong><span>金鳞威压</span><p>开场拥有金鳞护盾；有盾时攻击提升。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-enemy-weihuo.png" alt="尾火虎敌人立绘" /><figcaption className="artwork-info"><strong>尾火虎</strong><span>燃尾追击</span><p>每三回合燃尾，下一次攻击提升至 12 点。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-enemy-jishui.png" alt="箕水豹敌人立绘" /><figcaption className="artwork-info"><strong>箕水豹</strong><span>回潮奔流</span><p>周期回复护盾；生命低于一半时下次攻击 +6。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-enemy-nvtu.png" alt="女土蝠敌人立绘" /><figcaption className="artwork-info"><strong>女土蝠</strong><span>蒙尘</span><p>每回合标记一张手牌，发动后效果减半。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-enemy-doumu.png" alt="斗木獬敌人立绘" /><figcaption className="artwork-info"><strong>斗木獬</strong><span>终局审判</span><p>相生累积清正；每三回合发动一次断罪。</p></figcaption></figure>
                     </div>
                   </div>
                   <div className="wuxing-card-group" aria-label="金木水火土五行卡牌">
                     <p>卡牌设计</p>
                     <div className="wuxing-card-row">
-                      <figure tabIndex={0}><img src="/wuxing-card-metal.png" alt="金元素卡牌" /><figcaption className="artwork-info"><strong>金</strong><span>稳定输出</span><p>造成 5 点伤害。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-wood.png" alt="木元素卡牌" /><figcaption className="artwork-info"><strong>木</strong><span>基础回复</span><p>回复 3 点生命。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-water.png" alt="水元素卡牌" /><figcaption className="artwork-info"><strong>水</strong><span>基础防御</span><p>获得 4 点护盾。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-fire.png" alt="火元素卡牌" /><figcaption className="artwork-info"><strong>火</strong><span>直接输出</span><p>造成 6 点伤害。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-earth.png" alt="土元素卡牌" /><figcaption className="artwork-info"><strong>土</strong><span>高防御</span><p>获得 6 点护盾。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-tigerclaw.png" alt="虎爪金特殊卡牌" /><figcaption className="artwork-info"><strong>虎爪金</strong><span>破盾输出</span><p>造成 6 点伤害；目标有盾时额外破盾 3 点。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-lotus.png" alt="莲花木特殊卡牌" /><figcaption className="artwork-info"><strong>莲花木</strong><span>回复＋防御</span><p>回复 4 点生命；被水生木强化时 +2 护盾。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-moonwater.png" alt="月亮水特殊卡牌" /><figcaption className="artwork-info"><strong>月亮水</strong><span>控制防御</span><p>获得 4 点护盾；敌人下回合攻击 -1。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-featherfire.png" alt="羽毛火特殊卡牌" /><figcaption className="artwork-info"><strong>羽毛火</strong><span>持续输出</span><p>造成 4 点伤害，并施加两回合灼烧。</p></figcaption></figure>
-                      <figure tabIndex={0}><img src="/wuxing-card-amberearth.png" alt="琥珀土特殊卡牌" /><figcaption className="artwork-info"><strong>琥珀土</strong><span>防御＋回复</span><p>获得 6 点护盾，同时回复 1 点生命。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-metal.png" alt="金元素卡牌" /><figcaption className="artwork-info"><strong>金</strong><span>稳定输出</span><p>造成 5 点伤害。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-wood.png" alt="木元素卡牌" /><figcaption className="artwork-info"><strong>木</strong><span>基础回复</span><p>回复 3 点生命。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-water.png" alt="水元素卡牌" /><figcaption className="artwork-info"><strong>水</strong><span>基础防御</span><p>获得 4 点护盾。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-fire.png" alt="火元素卡牌" /><figcaption className="artwork-info"><strong>火</strong><span>直接输出</span><p>造成 6 点伤害。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-earth.png" alt="土元素卡牌" /><figcaption className="artwork-info"><strong>土</strong><span>高防御</span><p>获得 6 点护盾。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-tigerclaw.png" alt="虎爪金特殊卡牌" /><figcaption className="artwork-info"><strong>虎爪金</strong><span>破盾输出</span><p>造成 6 点伤害；目标有盾时额外破盾 3 点。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-lotus.png" alt="莲花木特殊卡牌" /><figcaption className="artwork-info"><strong>莲花木</strong><span>回复＋防御</span><p>回复 4 点生命；被水生木强化时 +2 护盾。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-moonwater.png" alt="月亮水特殊卡牌" /><figcaption className="artwork-info"><strong>月亮水</strong><span>控制防御</span><p>获得 4 点护盾；敌人下回合攻击 -1。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-featherfire.png" alt="羽毛火特殊卡牌" /><figcaption className="artwork-info"><strong>羽毛火</strong><span>持续输出</span><p>造成 4 点伤害，并施加两回合灼烧。</p></figcaption></figure>
+                      <figure tabIndex={0}><PortfolioImage src="/wuxing-card-amberearth.png" alt="琥珀土特殊卡牌" /><figcaption className="artwork-info"><strong>琥珀土</strong><span>防御＋回复</span><p>获得 6 点护盾，同时回复 1 点生命。</p></figcaption></figure>
                     </div>
                   </div>
                 </section>
@@ -705,8 +709,8 @@ export default function Home() {
                     <article><span>04</span><h5>喵相册</h5><p>按时间组织成长照片，建立可回看的连续时间线。</p></article>
                   </div>
                   <div className="case-evidence-grid two-up">
-                    <figure><img src="/portfolio-p03-insight.jpg" alt="一只喵管家的产品背景与三类用户画像" /><figcaption>USER INSIGHT / 用户问题与场景拆解</figcaption></figure>
-                    <figure><img src="/portfolio-p03-architecture.jpg" alt="一只喵管家的产品目标与四模块功能架构" /><figcaption>INFORMATION ARCHITECTURE / 功能架构</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p03-insight.jpg" alt="一只喵管家的产品背景与三类用户画像" /><figcaption>USER INSIGHT / 用户问题与场景拆解</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p03-architecture.jpg" alt="一只喵管家的产品目标与四模块功能架构" /><figcaption>INFORMATION ARCHITECTURE / 功能架构</figcaption></figure>
                   </div>
                 </section>
 
@@ -734,11 +738,11 @@ export default function Home() {
                 <section className="case-section environment-reference-section" aria-label="参考驱动的世界观">
                   <div className="research-grid">
                     <div><p>建筑参考云川藏地区的形制与配色，提取黄、红、白墙体和局部金色屋顶；环境以高海拔针叶林、苔藓、草甸、雪山与云海建立气候识别。</p><p>AI 用于快速比较构图与气氛，模块化资产则让概念方向能继续进入真实场景搭建。</p></div>
-                    <figure><img src="/portfolio-p04-research.jpg" alt="藏地建筑与高海拔自然环境的参考研究" /><figcaption>REFERENCE / ARCHITECTURE &amp; ECOLOGY</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p04-research.jpg" alt="藏地建筑与高海拔自然环境的参考研究" /><figcaption>REFERENCE / ARCHITECTURE &amp; ECOLOGY</figcaption></figure>
                   </div>
                   <div className="case-evidence-grid two-up concept-final-grid">
-                    <figure><img src="/portfolio-p04-concept.jpg" alt="藏地雪山建筑场景的黑白概念草图" /><figcaption>AI CONCEPT / DIRECTION TEST</figcaption></figure>
-                    <figure><img src="/portfolio-p04-final.jpg" alt="藏地雪山建筑游戏场景最终效果" /><figcaption>UE5 RESULT / IMPLEMENTATION</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p04-concept.jpg" alt="藏地雪山建筑场景的黑白概念草图" /><figcaption>AI CONCEPT / DIRECTION TEST</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p04-final.jpg" alt="藏地雪山建筑游戏场景最终效果" /><figcaption>UE5 RESULT / IMPLEMENTATION</figcaption></figure>
                   </div>
                 </section>
 
@@ -757,9 +761,9 @@ export default function Home() {
                     <li><span>06</span><div><strong>整体氛围统一</strong><p>回到可读性、冷暖关系与视线焦点，对全局进行收敛。</p></div></li>
                   </ol>
                   <div className="case-evidence-grid three-up">
-                    <figure><img src="/portfolio-p04-interior-a.jpg" alt="室内废弃别墅从白盒到初步灯光的过程" /><figcaption>GREYBOX / STRUCTURE</figcaption></figure>
-                    <figure><img src="/portfolio-p04-interior-b.jpg" alt="室内场景资产、灯光和人物持续迭代" /><figcaption>DETAIL / LIGHTING</figcaption></figure>
-                    <figure><img src="/portfolio-p04-interior-final.jpg" alt="室内废弃别墅场景最终氛围" /><figcaption>FINAL / ATMOSPHERE</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p04-interior-a.jpg" alt="室内废弃别墅从白盒到初步灯光的过程" /><figcaption>GREYBOX / STRUCTURE</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p04-interior-b.jpg" alt="室内场景资产、灯光和人物持续迭代" /><figcaption>DETAIL / LIGHTING</figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p04-interior-final.jpg" alt="室内废弃别墅场景最终氛围" /><figcaption>FINAL / ATMOSPHERE</figcaption></figure>
                   </div>
                 </section>
 
@@ -785,17 +789,17 @@ export default function Home() {
                 </div>
 
                 <figure className="case-lead-media asset-lead-media">
-                  <img src="/portfolio-p05-hero.jpg" alt="海上小屋风格化三维场景的最终效果" />
+                  <PortfolioImage src="/portfolio-p05-hero.jpg" alt="海上小屋风格化三维场景的最终效果" />
                   <figcaption><span>ENVIRONMENT ASSET</span> 海上小屋：从整体构图到局部细节的一体化场景</figcaption>
                 </figure>
 
                 <section className="case-section asset-gallery-section" aria-label="作品资产库">
                   <div className="asset-gallery">
-                    <figure><img src="/portfolio-p05-vending.jpg" alt="黄色奖品机的正面、背面、侧面和细节" /><figcaption><span>INDUSTRIAL PROP</span><strong>奖品机</strong><p>多视图验证功能结构与可交互部件。</p></figcaption></figure>
-                    <figure><img src="/portfolio-p05-book.jpg" alt="带有牙齿和舌头的奇幻书本角色道具" /><figcaption><span>STYLIZED PROP</span><strong>奇幻书</strong><p>通过夸张轮廓与材质对比建立角色感。</p></figcaption></figure>
-                    <figure><img src="/portfolio-p05-aircraft.jpg" alt="球形风格化飞行器的三个角度" /><figcaption><span>VEHICLE</span><strong>飞行器</strong><p>在统一主体结构上组织推进器与功能细节。</p></figcaption></figure>
-                    <figure><img src="/portfolio-p05-robot.jpg" alt="球形机器人多个角度的三维模型" /><figcaption><span>CHARACTER PROP</span><strong>机器人</strong><p>用可拆分结构和橙灰配色保持识别一致。</p></figcaption></figure>
-                    <figure className="asset-wide"><img src="/portfolio-p05-door.jpg" alt="木门的正面和不同开启角度" /><figcaption><span>REALISTIC PROP</span><strong>木门</strong><p>以木纹、金属磨损和开启角度检验写实材质表达。</p></figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p05-vending.jpg" alt="黄色奖品机的正面、背面、侧面和细节" /><figcaption><span>INDUSTRIAL PROP</span><strong>奖品机</strong><p>多视图验证功能结构与可交互部件。</p></figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p05-book.jpg" alt="带有牙齿和舌头的奇幻书本角色道具" /><figcaption><span>STYLIZED PROP</span><strong>奇幻书</strong><p>通过夸张轮廓与材质对比建立角色感。</p></figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p05-aircraft.jpg" alt="球形风格化飞行器的三个角度" /><figcaption><span>VEHICLE</span><strong>飞行器</strong><p>在统一主体结构上组织推进器与功能细节。</p></figcaption></figure>
+                    <figure><PortfolioImage src="/portfolio-p05-robot.jpg" alt="球形机器人多个角度的三维模型" /><figcaption><span>CHARACTER PROP</span><strong>机器人</strong><p>用可拆分结构和橙灰配色保持识别一致。</p></figcaption></figure>
+                    <figure className="asset-wide"><PortfolioImage src="/portfolio-p05-door.jpg" alt="木门的正面和不同开启角度" /><figcaption><span>REALISTIC PROP</span><strong>木门</strong><p>以木纹、金属磨损和开启角度检验写实材质表达。</p></figcaption></figure>
                   </div>
                 </section>
 

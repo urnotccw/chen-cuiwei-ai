@@ -2,7 +2,7 @@ const experience = [
   {
     company: "Converge AI（九坤创新）",
     role: "游戏产品策划实习生",
-    period: "2026.06 - 至今",
+    period: "2026.06 - 2026.9",
     product: "Combos｜面向游戏创作者的 AI Agent 工具",
     bullets: [
       "重构 Onboarding，将用户身份、能力与创作目的转化为任务系统输入，完成 PRD 和可交互 Demo。",
